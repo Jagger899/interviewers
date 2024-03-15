@@ -7,6 +7,7 @@ const uglify = require("gulp-uglify-es").default;
 const browserSync = require("browser-sync").create();
 // import browserSync from 'browser-sync';
 // const autoprefixer = require("gulp-autoprefixer");
+const clean = require('gulp-clean');
 // import autoprefixer from "gulp-autoprefixer";
 // const webp = require("gulp-webp");
 // import webp from "gulp-webp";
