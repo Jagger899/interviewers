@@ -1,0 +1,86 @@
+$backgroundColor: #fafafa;
+$blackColor:  #080808;
+$whiteColor: #fff;
+$inactiveBlackColor: #828282;
+$swiperTitle: #3a3e4b;
+
+/* montserrat-300 */
+@font-face {
+    font-display: swap; 
+    font-family: 'Montserrat';
+    font-weight: 300;
+    src: url('../fonts/montserrat-v26-latin-300.woff2') format('woff2'),
+    url('../fonts/montserrat-v26-latin-300.woff') format('woff'),
+}
+
+  /* montserrat-500 */
+
+@font-face {
+    font-display: swap; 
+    font-family: 'Montserrat';
+    font-weight: 500;
+    src: url('../fonts/montserrat-v26-latin-500.woff2') format('woff2'),
+    url('../fonts/montserrat-v26-latin-500.woff') format('woff'), 
+}
+
+  /* montserrat-600 */
+
+@font-face {
+    font-display: swap; 
+    font-family: 'Montserrat';
+    font-weight: 600;
+    src: url('../fonts/montserrat-v26-latin-600.woff2') format('woff2'), 
+    url('../fonts/montserrat-v26-latin-600.woff') format('woff'), 
+}
+
+  /* montserrat-700 */
+
+@font-face {
+    font-display: swap; 
+    font-family: 'Montserrat';
+    font-weight: 700;
+    src: url('../fonts/montserrat-v26-latin-700.woff2') format('woff2'), 
+    url('../fonts/montserrat-v26-latin-700.woff') format('woff'), 
+}
+
+
+
+body {
+    background: $backgroundColor;
+}
+
+h1,
+h2,
+h3 {
+    font-size: 36px;
+    font-weight: 700;
+    color: $blackColor;
+    font-family: 'Montserrat';
+}
+
+p {
+    font-size: 14px;
+    font-weight:  300;
+    opacity: 0.7;
+    line-height: 171%;
+    color: $blackColor;
+    font-family: 'Montserrat';
+}
+
+a {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.6em;
+    color: $blackColor;
+    font-family: 'Montserrat';
+}
+
+ul,
+ol {
+    font-size: 14px;
+    line-height: 171%;
+    opacity: 0.7;
+    font-weight:  300;
+    color: $blackColor;
+    font-family: 'Montserrat';
+}
