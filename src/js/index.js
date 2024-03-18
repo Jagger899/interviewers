@@ -1,2 +1,3 @@
+import { burgerFunction } from "./components/header";
 
-console.log('Index is working')
+burgerFunction ();
