@@ -5,6 +5,7 @@ $blackColor: #080808;
 $whiteColor: #fff;
 $inactiveBlackColor: #828282;
 $swiperTitle: #3a3e4b;
+$newsCard: #f2f2f2;
 
 // fonts
 
@@ -47,33 +48,45 @@ $swiperTitle: #3a3e4b;
     url("../fonts/montserrat-v26-latin-700.woff") format("woff");
 }
 
-// breakpoints
+//Adieu
 
-@include breakpoints(xxl) {
-  .breakpoints-xxl {
-    max-width: 1312px;
-    margin: 0 auto;
-  }
+@font-face {
+  font-display: swap;
+  font-family: "Adieu";
+  font-weight: 400;
+  src: url("../fonts/Adieu-Light.fec6a319.woff2") format("woff2"),
+    url("../fonts/Adieu-Light.9bb25a50.woff") format("woff");
 }
 
-@include breakpoints(xl) {
-  .breakpoints-xl {
+//FreightBigProMedium-Italic
+
+@font-face {
+  font-display: swap;
+  font-family: "FreightBigProMedium-Italic";
+  font-weight: 400;
+  src: url("../fonts/FreightBigProMedium-Italic.woff2") format("woff2"),
+    url("../fonts/FreightBigProMedium-Italic.woff") format("woff");
+}
+
+// breakpoints
+
+[class*="__container"] {
+  max-width: 1312px;
+  margin: 0 auto;
+
+  @include breakpoints(xl) {
     width: 93%;
     min-width: 912px;
     padding: 0 20px;
   }
-}
 
-@include breakpoints(md) {
-  .breakpoints-md {
+  @include breakpoints(md) {
     width: 93%;
     min-width: 672px;
     padding: 0 20px;
   }
-}
 
-@include breakpoints(sm) {
-  .breakpoints-sm {
+  @include breakpoints(sm) {
     width: 100%;
     min-width: 327px;
     padding: 0 24px;
@@ -97,6 +110,10 @@ h3 {
   font-weight: 700;
   color: $blackColor;
   font-family: "Montserrat";
+
+  @include breakpoints(sm) {
+    font-size: 26px;
+  }
 }
 
 p {
@@ -129,12 +146,3 @@ ol {
 select {
   font-family: "Montserrat";
 }
-
-// .look {
-//   overflow: hidden;
-
-//   @include breakpoints(md) {
-//     height: 1024px;
-//     overflow: hidden;
-//   }
-// }

@@ -1,0 +1,70 @@
+.button {
+  &__transparency {
+    padding: 15px 48px;
+    border: $inactiveBlackColor 1px solid;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+      color: $backgroundColor;
+      background: $inactiveBlackColor;
+    }
+  }
+
+  &__white {
+    padding: 15px 48px;
+    background: $whiteColor;
+    border: $whiteColor 1px solid;
+    transition: all 0.5s ease-in-out;
+
+    @include breakpoints(xl) {
+      padding: 13px 51px;
+    }
+
+    &:hover {
+      background: transparent;
+      color: $whiteColor;
+    }
+  }
+}
+
+.select {
+  &__city {
+    padding: 1px 1px 1px 22px;
+    width: 118px;
+    color: $whiteColor;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    border: 2px solid $whiteColor;
+    border-radius: 88px;
+  }
+
+  &__value {
+    color: $whiteColor;
+    background: $blackColor;
+  }
+}
+
+.link {
+  position: relative;
+  transition: border 0.5s ease-in-out;
+
+  &:hover {
+    color: $blackColor;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    background: $swiperTitle;
+    width: 0%;
+    height: 1px;
+    left: 0;
+    bottom: -5px;
+    position: absolute;
+    transition: width 0.5s ease-in-out;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
