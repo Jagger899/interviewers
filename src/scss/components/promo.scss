@@ -1,0 +1,484 @@
+@import "../components/discover-link.scss";
+
+.promo {
+    position: relative;
+    // top: -96px;
+    &__content {
+        position: absolute;
+        top: 0;
+        z-index: 20;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    &__swiper-pagination {
+        top: 61.9%;
+        left: 72%;
+        width: 13%;
+        background-color: rgb(255, 255, 255, 0.32);
+        height: 2px;
+        z-index: 1;
+    }
+
+    &__left-img {
+        height: 744px;
+        width: 100%;
+        object-fit: cover;
+
+        @include breakpoints(md) {
+            height: 767px;
+            object-fit: fill;
+        }
+
+        @include breakpoints(sm) {
+            height: 1025px;
+            object-fit: fill;
+        }
+
+        @include breakpoints(xs) {
+            height: 612px;
+            object-fit: fill;
+        }
+    }
+
+    &__right-img {
+        height: 744px;
+        width: 100%;
+        object-fit: cover;
+
+        @include breakpoints(md) {
+            height: 767px;
+            object-fit: fill;
+        }
+
+        @include breakpoints(sm) {
+            height: 1025px;
+            object-fit: fill;
+        }
+
+        @include breakpoints(xs) {
+            height: 612px;
+            object-fit: fill;
+        }
+    }
+
+    &__content-top {
+        max-width: 694px;
+        margin-top: 278px;
+
+        @include breakpoints(md) {
+            margin-top: 341px;
+            max-width: 562px;
+        }
+
+        @include breakpoints(sm) {
+            margin-top: 447px;
+        }
+
+        @include breakpoints(xs) {
+            margin-top: 290px;
+        }
+    }
+
+    &__content-title {
+        max-width: 743px;
+        padding-bottom: 34px;
+        padding-left: 200px;
+        pointer-events: none;
+        font-size: 56px;
+        font-weight: 700;
+        color: $whiteColor;
+
+        @include breakpoints(md) {
+            font-size: 48px;
+            padding-left: 144px;
+            max-width: 562px;
+            padding-bottom: 28px;
+        }
+
+        @include breakpoints(sm) {
+            padding-left: 107px;
+            font-size: 44px;
+            max-width: 344px;
+        }
+
+        @include breakpoints(xs) {
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 98%;
+            padding-left: 8px;
+            padding-bottom: 32px;
+        }
+    }
+
+    &__button-prev {
+        display: flex;
+        position: absolute;
+        top: 0;
+        top: 60.9%;
+        left: 69%;
+        gap: 11px;
+        align-items: center;
+        z-index: 2;
+        cursor: pointer;
+
+        @include breakpoints(md) {
+            top: 65.4%;
+            left: 61%;
+        }
+
+        @include breakpoints(xs) {
+            top: 34.4%;
+            left: 7%;
+        }
+    }
+
+    &__button-next {
+        display: flex;
+        position: absolute;
+        right: 11.9%;
+        top: 60.9%;
+        gap: 7px;
+        align-items: center;
+        z-index: 2;
+        cursor: pointer;
+
+        @include breakpoints(md) {
+            right: 16.4%;
+            top: 65.4%;
+        }
+
+        @include breakpoints(xs) {
+            right: 48.4%;
+            top: 34.4%;
+        }
+    }
+
+    &__button-svg {
+        width: 4px;
+        height: 8px;
+    }
+
+    &__number {
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0.72px;
+        color: $whiteColor;
+    }
+
+    &__content-link {
+        padding-left: 215px;
+        font-weight: 700;
+        font-size: 10px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: $whiteColor;
+
+        @include breakpoints(md) {
+            padding-left: 164px;
+        }
+
+        @include breakpoints(xs) {
+            padding-left: 25px;
+        }
+    }
+
+    &__right {
+        position: absolute;
+        right: -61px;
+        bottom: 162px;
+
+        @include breakpoints(md) {
+            right: -92px;
+            bottom: 166px;
+        }
+
+        @include breakpoints(sm) {
+            right: -134px;
+            bottom: 195px;
+        }
+
+        @include breakpoints(xs) {
+            right: -72px;
+            bottom: 114px;
+        }
+    }
+
+    &__right-text {
+        transform: rotate(-90deg);
+        position: absolute;
+        top: 158px;
+        left: 55px;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.66px;
+        color: $whiteColor;
+
+        @include breakpoints(md) {
+            top: 139px;
+            left: 72px;
+        }
+
+        @include breakpoints(sm) {
+            left: 106px;
+        }
+    }
+
+    &__right-title {
+        transform: rotate(-90deg);
+        max-width: 318px;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 97.52%;
+        letter-spacing: 1.92px;
+        color: transparent;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: $whiteColor;
+
+        @include breakpoints(md) {
+            font-size: 32px;
+            line-height: 98%;
+            letter-spacing: 0.04em;
+        }
+
+        @include breakpoints(sm) {
+            font-size: 32px;
+            line-height: 98%;
+            letter-spacing: 0.04em;
+            max-width: 365px;
+        }
+
+        @include breakpoints(xs) {
+            font-size: 18px;
+            line-height: 98%;
+            letter-spacing: 0.04em;
+        }
+    }
+
+    &__content-bottom {
+        position: absolute;
+        bottom: 40px;
+        left: 63px;
+        z-index: 2;
+
+        @include breakpoints(md) {
+            left: 56px;
+            bottom: 33px;
+        }
+
+        @include breakpoints(sm) {
+            left: 47px;
+        }
+
+        @include breakpoints(xs) {
+            left: 24px;
+            bottom: 16px;
+        }
+    }
+
+    .content-bottom {
+        &__inner {
+            display: flex;
+            align-items: center;
+        }
+
+        &__socials {
+            display: flex;
+            gap: 16px;
+            margin-right: 121px;
+
+            @include breakpoints(md) {
+                margin-right: 77px;
+            }
+
+            @include breakpoints(sm) {
+                margin-right: 62px;
+            }
+
+            @include breakpoints(xs) {
+                display: none;
+            }
+        }
+
+        &__social {
+            font-weight: 600;
+            font-size: 11px;
+            letter-spacing: 0.06em;
+            color: $whiteColor;
+            transition: transform 300ms ease-in-out;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        &__dropdown {
+            margin-right: 72px;
+
+            @include breakpoints(md) {
+                margin-right: 40px;
+            }
+
+            @include breakpoints(sm) {
+                margin-right: 20px;
+            }
+
+            @include breakpoints(xs) {
+                margin-right: 56px;
+            }
+        }
+
+        &__info {
+            display: flex;
+            gap: 31px;
+
+            @include breakpoints(md) {
+                gap: 40px;
+            }
+
+            @include breakpoints(sm) {
+                gap: 31px;
+            }
+
+            @include breakpoints(xs) {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        &__link {
+            font-weight: 600;
+            font-size: 11px;
+            letter-spacing: 0.06em;
+            color: $whiteColor;
+            transition: transform 300ms ease-in-out;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .dropdown {
+        position: relative;
+        &__box {
+            display: flex;
+
+            align-items: center;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 9px;
+            backdrop-filter: blur(2px);
+            box-shadow: inset 0 -0px 0px 0 rgba(255, 255, 255, 0.23),
+                0 1px 1px 0 rgba(0, 0, 0, 0.2);
+            width: 117px;
+            height: 24px;
+            padding: 0 10px;
+            transition: all 300ms ease-in-out;
+            cursor: pointer;
+
+            &:hover {
+                background: rgba(146, 144, 144, 0.5);
+            }
+        }
+
+        &__svg-geo {
+            width: 10px;
+            height: 10px;
+            margin-right: 6px;
+        }
+
+        &__svg-arrow {
+            width: 9px;
+            height: 6px;
+            position: absolute;
+            right: 8px;
+            transition: transform 300ms ease-in-out;
+
+            &_rotate {
+                transform: rotate(180deg);
+            }
+        }
+
+        &__text {
+            font-weight: 600;
+            font-size: 11px;
+            letter-spacing: 0.06em;
+            color: $whiteColor;
+        }
+
+        &__menu {
+            position: absolute;
+            z-index: 7;
+            background: rgba(109, 108, 108, 0.5);
+            width: 100%;
+            opacity: 0;
+            visibility: hidden;
+            padding: 5px 10px;
+            transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out;
+
+            &_open {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        &__menu-item {
+            font-weight: 600;
+            font-size: 11px;
+            letter-spacing: 0.06em;
+            color: $whiteColor;
+            white-space: nowrap;
+            cursor: pointer;
+            &_active {
+                color: $inactiveBlackColor;
+            }
+        }
+    }
+}
+
+.swiper-slide {
+    width: 80%;
+}
+
+.swiper-slide:nth-child(1n) {
+    width: 85%;
+}
+
+.swiper-slide:nth-child(2n) {
+    width: 80%;
+}
+
+.swiper-slide:nth-child(3n) {
+    width: 80%;
+}
+
+.swiper-slide:last-child {
+    width: 100%;
+}
+
+.swiper-horizontal
+    > .swiper-pagination-progressbar.swiper-pagination-progressbar.swiper-pagination-horizontal {
+    top: 61.9%;
+    left: 72%;
+    width: 13%;
+    background-color: rgb(255, 255, 255, 0.32);
+    height: 2px;
+    z-index: 1;
+
+    @include breakpoints(md) {
+        top: 65.9%;
+        left: 65.5%;
+    }
+
+    @include breakpoints(xs) {
+        top: 35.4%;
+        left: 17.5%;
+        width: 88px;
+    }
+}
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background: $whiteColor !important;
+}

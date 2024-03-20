@@ -1,4 +1,14 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 5;
+  &_black {
+    background: rgba(0,0,0,0.6);
+  }
+
   &__content {
     padding-top: 22px;
     display: flex;
@@ -59,6 +69,27 @@
     @include breakpoints(xl) {
       display: none;
     }
+  }
+
+  &__link {
+    position: relative;
+    transition: border 0.5s ease-in-out;
+  }
+
+  &__link::after {
+    content: "";
+    display: inline-block;
+    background: $blackColor;
+    width: 0%;
+    height: 3%;
+    left: -5%;
+    bottom: -5px;
+    position: absolute;
+    transition: width 0.5s ease-in-out;
+  }
+
+  &__link:hover::after {
+    width: 120%;
   }
 
   &__block-button {
