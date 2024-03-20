@@ -1,0 +1,59 @@
+@import "../components/discover-link.scss";
+
+.philosophy {
+    padding: 140px 0;
+    font-family: "Montserrat";
+
+    &__container {
+        max-width: 1258px;
+
+        @include breakpoints(xl) {
+          padding-right: 0;
+          margin-right: 0;
+          padding-left: 197px;
+        }
+    }
+
+    &__top-inner {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 78px;
+    }
+
+    &__descr {
+        max-width: 515px;
+        margin-top: 80px;
+    }
+
+    &__top-img {
+        width: 513px;
+        aspect-ratio: 1 / 1.18;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 36px;
+        margin-bottom: 28px;
+    }
+
+    &__text-box {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-bottom: 64px;
+    }
+
+    &__link {
+      left: 41px;
+      &::before {
+        background: red;
+        left: 160px;
+      }
+
+      &::after {
+        background: red;
+        left: -34px;
+      }
+      
+    }
+}

@@ -1,0 +1,31 @@
+.discover-link {
+  position: relative;
+  font-family: "Montserrat";
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 202px;
+      transform: translate(-50%);
+      height: 1px;
+      width: 8px;
+      background: rgba(255, 255, 255, 0.4);
+    }
+    &::before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        transform: translate(-50%);
+        left: 359px;
+        height: 1px;
+        width: 56px;
+        background: rgba(255, 255, 255, 0.4);
+    }
+}

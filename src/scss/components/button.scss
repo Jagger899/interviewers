@@ -1,0 +1,9 @@
+.button {
+    display: flex;
+    align-items: center;
+    gap: 83px;
+
+    @include breakpoints(xl) {
+      gap: 56px;
+    }
+}

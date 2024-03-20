@@ -3,8 +3,10 @@
 $breakpoints: (
   xxl: 1920px,
   xl: 1440px,
-  md: 1020px,
+  md:1024px,
   sm: 767px,
+  xs:768px,
+  xxs:375px,
 );
 
 @mixin breakpoints($breakpoint) {

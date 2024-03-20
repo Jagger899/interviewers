@@ -7,11 +7,18 @@
     <title>Main</title>
   </head>
   <body>
-    @@include('components/header.html')
-    @@include('components/footer.html')
+    <div class="wrapper">
+      @@include('components/header.html')
+      <main class="main">
+        @@include('components/promo.html')
+        @@include('components/philosophy.html')
+      </main>
+    </div>
 
+    @@include('components/footer.html')
     <!-- @@include('components/footer.html') -->
 
+    @@include('components/sprite.html')
     <script src="./js/index.bundle.js"></script>
   </body>
 </html>
