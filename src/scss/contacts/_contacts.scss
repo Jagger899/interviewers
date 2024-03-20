@@ -1,8 +1,7 @@
 .contacts {
   &__background-container {
-    background: url(../images/reused/reused-10.png);
+    background: url(../images/reused/reused-10.png) no-repeat;
     height: 100vh;
-    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 
@@ -133,7 +132,7 @@
       bottom: -93px;
 
       @include breakpoints(sm) {
-        right: 0%;
+        right: 0;
         left: 0;
         bottom: -82px;
       }
