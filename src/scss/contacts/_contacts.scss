@@ -1,171 +1,170 @@
 .contacts {
-  &__background-container {
-    background: url(../images/reused/reused-10.png) no-repeat;
-    height: 100vh;
-    background-position: center;
-    background-size: cover;
+    &__background-container {
+        background: url(../images/reused/reused-10.png) no-repeat;
+        height: 100vh;
+        background-position: center;
+        background-size: cover;
 
-    @include breakpoints(md) {
-      height: 123vh;
+        @include breakpoints(md) {
+            height: 123vh;
+        }
+
+        @include breakpoints(sm) {
+            height: 100vh;
+        }
     }
 
-    @include breakpoints(sm) {
-      height: 100vh;
-    }
-  }
+    &__content {
+        width: 80%;
+        margin: 0 auto 135px;
+        padding-top: 181px;
 
-  &__content {
-    width: 80%;
-    margin: 0 auto 135px;
+        @include breakpoints(xl) {
+            width: 78%;
+            padding-top: 210px;
+        }
 
-    @include breakpoints(xl) {
-      width: 78%;
-      margin: 0 auto 175px;
-    }
+        @include breakpoints(md) {
+            margin: 0 auto 305px;
+        }
 
-    @include breakpoints(md) {
-      margin: 0 auto 305px;
-    }
-
-    @include breakpoints(sm) {
-      width: 100%;
-      margin: 0 auto 46px;
-    }
-  }
-
-  &__title {
-    color: $whiteColor;
-    padding-top: 110px;
-
-    @include breakpoints(xl) {
-      padding-top: 130px;
-      font-size: 32px;
+        @include breakpoints(sm) {
+            width: 100%;
+            margin: 0 auto 46px;
+        }
     }
 
-    @include breakpoints(md) {
-      padding-top: 273px;
+    &__title {
+        color: $whiteColor;
+
+        @include breakpoints(xl) {
+            font-size: 32px;
+        }
+
+        @include breakpoints(md) {
+            padding-top: 273px;
+        }
+
+        @include breakpoints(sm) {
+            padding-top: 58px;
+            font-size: 26px;
+        }
     }
 
-    @include breakpoints(sm) {
-      padding-top: 58px;
-      font-size: 26px;
-    }
-  }
+    &__main-text {
+        position: relative;
+        color: $whiteColor;
+        margin-top: 14px;
+        width: 390px;
 
-  &__main-text {
-    position: relative;
-    color: $whiteColor;
-    margin-top: 14px;
-    width: 390px;
-
-    @include breakpoints(sm) {
-      width: 90%;
-    }
-  }
-
-  &__contact {
-    position: relative;
-    margin-top: 60px;
-    display: flex;
-    justify-content: space-between;
-
-    @include breakpoints(xl) {
-      margin-top: 55px;
+        @include breakpoints(sm) {
+            width: 90%;
+        }
     }
 
-    @include breakpoints(md) {
-      margin-top: 50px;
+    &__contact {
+        position: relative;
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+
+        @include breakpoints(xl) {
+            margin-top: 51px;
+        }
+
+        @include breakpoints(md) {
+            margin-top: 50px;
+        }
+
+        @include breakpoints(sm) {
+            margin: 40px auto 0;
+            width: 98%;
+        }
     }
 
-    @include breakpoints(sm) {
-      margin: 40px auto 0;
-      width: 98%;
+    &__city-contact {
+        display: flex;
+        gap: 115px;
+
+        @include breakpoints(xl) {
+            gap: 60px;
+        }
+
+        @include breakpoints(sm) {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 30px;
+        }
     }
-  }
 
-  &__city-contact {
-    display: flex;
-    gap: 115px;
-
-    @include breakpoints(xl) {
-      gap: 60px;
+    &__items {
+        color: $whiteColor;
     }
 
-    @include breakpoints(sm) {
-      width: 100%;
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-      gap: 30px;
+    &__item-title {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 137%;
+        margin-bottom: 14px;
+
+        @include breakpoints(sm) {
+            margin-bottom: 5px;
+        }
     }
-  }
 
-  &__items {
-    color: $whiteColor;
-  }
-
-  &__item-title {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 137%;
-    margin-bottom: 14px;
-
-    @include breakpoints(sm) {
-      margin-bottom: 5px;
+    &__item {
+        font-size: 11px;
+        letter-spacing: 0.06em;
+        line-height: 200%;
     }
-  }
 
-  &__item {
-    font-size: 11px;
-    letter-spacing: 0.06em;
-    line-height: 200%;
-  }
-
-  &__link {
-    color: $whiteColor;
-  }
-
-  @include breakpoints(md) {
-    &__social-block {
-      position: absolute;
-      right: 10%;
-
-      bottom: -93px;
-
-      @include breakpoints(sm) {
-        right: 0;
-        left: 0;
-        bottom: -82px;
-      }
-    }
-  }
-
-  &__social-networks {
-    margin-top: 18px;
-    display: flex;
-    gap: 16px;
-
-    @include breakpoints(md) {
-      margin-top: 6px;
-    }
-  }
-
-  &__social-item {
-    color: $whiteColor;
-  }
-
-  &__button {
-    margin-top: 78px;
-
-    @include breakpoints(xl) {
-      margin-top: 67px;
+    &__link {
+        color: $whiteColor;
     }
 
     @include breakpoints(md) {
-      margin-top: 57px;
+        &__social-block {
+            position: absolute;
+            right: 10%;
+
+            bottom: -93px;
+
+            @include breakpoints(sm) {
+                right: 0;
+                left: 0;
+                bottom: -82px;
+            }
+        }
     }
 
-    @include breakpoints(sm) {
-      margin-top: 135px;
+    &__social-networks {
+        margin-top: 18px;
+        display: flex;
+        gap: 16px;
+
+        @include breakpoints(md) {
+            margin-top: 6px;
+        }
     }
-  }
+
+    &__social-item {
+        color: $whiteColor;
+    }
+
+    &__button {
+        margin-top: 78px;
+
+        @include breakpoints(xl) {
+            margin-top: 67px;
+        }
+
+        @include breakpoints(md) {
+            margin-top: 57px;
+        }
+
+        @include breakpoints(sm) {
+            margin-top: 135px;
+        }
+    }
 }

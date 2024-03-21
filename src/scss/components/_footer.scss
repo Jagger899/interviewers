@@ -1,61 +1,70 @@
 .footer {
-  &__copyright-block {
-      align-items: center;
-    display: flex;
-    justify-content: space-between;
+    &__copyright-block {
+        position: relative;
+        width: 100%;
+        // top: 90%;
+        transform: translateY(-200%);
 
-    @include breakpoints(sm) {
-      flex-direction: column;
-      align-items: start;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include breakpoints(xl) {
+            width: 89%;
+        }
+
+        @include breakpoints(sm) {
+            flex-direction: column;
+            align-items: start;
+        }
     }
-  }
 
-  &__copyright {
-    font-size: 12px;
-    line-height: 152%;
-  }
-
-  &__logo-block {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    @include breakpoints(sm) {
-      margin-top: 10px;
+    &__copyright {
+        font-size: 12px;
+        line-height: 152%;
     }
-  }
 
-  &__made {
-    margin-right: 22px;
-    font-size: 12px;
+    &__logo-block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-    @include breakpoints(xl) {
-      margin-right: 35px;
+        @include breakpoints(sm) {
+            margin-top: 10px;
+        }
     }
-  }
 
-  &__logo {
-    width: 80px;
-  }
+    &__made {
+        margin-right: 22px;
+        font-size: 12px;
 
-  &__first-text {
-    text-align: start;
-    font-size: 12px;
-    line-height: 80%;
-    font-family: "Adieu";
-  }
+        @include breakpoints(xl) {
+            margin-right: 35px;
+        }
+    }
 
-  &__last-text {
-    margin-top: 2px;
-    font-size: 15px;
-    line-height: 80%;
-    text-align: end;
-    font-family: "FreightBigProMedium-Italic";
-  }
+    &__logo {
+        width: 80px;
+    }
 
-  // color
+    &__first-text {
+        text-align: start;
+        font-size: 12px;
+        line-height: 80%;
+        font-family: "Adieu";
+    }
 
-  &__white-text {
-    color: $whiteColor;
-  }
+    &__last-text {
+        margin-top: 2px;
+        font-size: 15px;
+        line-height: 80%;
+        text-align: end;
+        font-family: "FreightBigProMedium-Italic";
+    }
+
+    // color
+
+    &__white-text {
+        color: $whiteColor;
+    }
 }

@@ -1,16 +1,12 @@
 import { burgerFunction } from "./components/header";
-import { contactsFunction } from "./components/contacts";
 import { mainSwiper } from "./components/swiper";
 import { dropdownWork } from "./components/dropdown";
 
-
-document.addEventListener('DOMContentLoaded', async function () {
-  burgerFunction();
-  mainSwiper();
-  dropdownWork();
-  burgerFunction();
-  contactsFunction();
-})
+document.addEventListener("DOMContentLoaded", async function () {
+    burgerFunction();
+    mainSwiper();
+    dropdownWork();
+});
 
 const header = document.querySelector(".header");
 
@@ -21,4 +17,3 @@ window.addEventListener("scroll", function () {
         header.classList.remove("header_black");
     }
 });
-
