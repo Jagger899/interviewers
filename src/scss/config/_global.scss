@@ -1,116 +1,119 @@
-
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
-$backgroundColor: #fafafa;
-$blackColor: #080808;
-$whiteColor: #fff;
-$inactiveBlackColor: #828282;
-$swiperTitle: #3a3e4b;
-$newsCard: #f2f2f2;
 html {
-  height: 100%;
-  scroll-behavior: smooth;
+    height: 100%;
+    scroll-behavior: smooth;
 }
 
 .wrapper {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    &_contact {
+        overflow: hidden;
+        height: 100vh;
+
+        @include breakpoints(md) {
+            height: 123vh;
+        }
+    }
 }
 
 .main {
-  flex: 1 1 auto;
+    flex: 1 1 auto;
 }
 
 // fonts
 
 /* montserrat-300 */
 @font-face {
-  font-display: swap;
-  font-family: "Montserrat";
-  font-weight: 300;
-  src: url("../fonts/montserrat-v26-latin-300.woff2") format("woff2"),
-    url("../fonts/montserrat-v26-latin-300.woff") format("woff");
+    font-display: swap;
+    font-family: "Montserrat";
+    font-weight: 300;
+    src: url("../fonts/montserrat-v26-latin-300.woff2") format("woff2"),
+        url("../fonts/montserrat-v26-latin-300.woff") format("woff");
 }
 
 /* montserrat-500 */
 
 @font-face {
-  font-display: swap;
-  font-family: "Montserrat";
-  font-weight: 500;
-  src: url("../fonts/montserrat-v26-latin-500.woff2") format("woff2"),
-    url("../fonts/montserrat-v26-latin-500.woff") format("woff");
+    font-display: swap;
+    font-family: "Montserrat";
+    font-weight: 500;
+    src: url("../fonts/montserrat-v26-latin-500.woff2") format("woff2"),
+        url("../fonts/montserrat-v26-latin-500.woff") format("woff");
 }
 
 /* montserrat-600 */
 
 @font-face {
-  font-display: swap;
-  font-family: "Montserrat";
-  font-weight: 600;
-  src: url("../fonts/montserrat-v26-latin-600.woff2") format("woff2"),
-    url("../fonts/montserrat-v26-latin-600.woff") format("woff");
+    font-display: swap;
+    font-family: "Montserrat";
+    font-weight: 600;
+    src: url("../fonts/montserrat-v26-latin-600.woff2") format("woff2"),
+        url("../fonts/montserrat-v26-latin-600.woff") format("woff");
 }
 
 /* montserrat-700 */
 
 @font-face {
-  font-display: swap;
-  font-family: "Montserrat";
-  font-weight: 700;
-  src: url("../fonts/montserrat-v26-latin-700.woff2") format("woff2"),
-    url("../fonts/montserrat-v26-latin-700.woff") format("woff");
+    font-display: swap;
+    font-family: "Montserrat";
+    font-weight: 700;
+    src: url("../fonts/montserrat-v26-latin-700.woff2") format("woff2"),
+        url("../fonts/montserrat-v26-latin-700.woff") format("woff");
 }
 
 //Adieu
 
 @font-face {
-  font-display: swap;
-  font-family: "Adieu";
-  font-weight: 400;
-  src: url("../fonts/Adieu-Light.fec6a319.woff2") format("woff2"),
-    url("../fonts/Adieu-Light.9bb25a50.woff") format("woff");
+    font-display: swap;
+    font-family: "Adieu";
+    font-weight: 400;
+    src: url("../fonts/Adieu-Light.fec6a319.woff2") format("woff2"),
+        url("../fonts/Adieu-Light.9bb25a50.woff") format("woff");
 }
 
 //FreightBigProMedium-Italic
 
 @font-face {
-  font-display: swap;
-  font-family: "FreightBigProMedium-Italic";
-  font-weight: 400;
-  src: url("../fonts/FreightBigProMedium-Italic.woff2") format("woff2"),
-    url("../fonts/FreightBigProMedium-Italic.woff") format("woff");
+    font-display: swap;
+    font-family: "FreightBigProMedium-Italic";
+    font-weight: 400;
+    src: url("../fonts/FreightBigProMedium-Italic.woff2") format("woff2"),
+        url("../fonts/FreightBigProMedium-Italic.woff") format("woff");
 }
 
 // breakpoints
 
 [class*="__container"] {
-  max-width: 1312px;
-  margin: 0 auto;
-
-  @include breakpoints(xl) {
-    width: 93%;
-    min-width: 912px;
-    padding: 0 20px;
-  }
-
-  @include breakpoints(md) {
-    width: 93%;
-    min-width: 672px;
-    padding: 0 20px;
-  }
-
-  @include breakpoints(sm) {
+    max-width: 1312px;
     width: 100%;
-    min-width: 327px;
-    padding: 0 24px;
-  }
+    margin: 0 auto;
+
+    @include breakpoints(xl) {
+        width: 93%;
+        min-width: 912px;
+        padding: 0 20px;
+    }
+
+    @include breakpoints(md) {
+        width: 93%;
+        min-width: 672px;
+        padding: 0 20px;
+    }
+
+    @include breakpoints(sm) {
+        width: 100%;
+        min-width: 327px;
+        padding: 0 24px;
+    }
 }
 
 // global-style
@@ -118,49 +121,49 @@ html {
 h1,
 h2,
 h3 {
-  font-size: 36px;
-  font-weight: 700;
-  color: $blackColor;
-  font-family: "Montserrat";
+    font-size: 36px;
+    font-weight: 700;
+    color: $blackColor;
+    font-family: "Montserrat";
 
-  @include breakpoints(sm) {
-    font-size: 26px;
-  }
+    @include breakpoints(sm) {
+        font-size: 26px;
+    }
 }
 
 p {
-  font-size: 14px;
-  font-weight: 300;
-  opacity: 0.7;
-  line-height: 171%;
-  color: $blackColor;
-  font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: 300;
+    opacity: 0.7;
+    line-height: 171%;
+    color: $blackColor;
+    font-family: "Montserrat";
 }
 
 a {
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  color: $blackColor;
-  font-family: "Montserrat";
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: $blackColor;
+    font-family: "Montserrat";
 }
 
 ul,
 ol {
-  font-size: 14px;
-  line-height: 171%;
-  opacity: 0.7;
-  font-weight: 300;
-  color: $blackColor;
-  font-family: "Montserrat";
+    font-size: 14px;
+    line-height: 171%;
+    opacity: 0.7;
+    font-weight: 300;
+    color: $blackColor;
+    font-family: "Montserrat";
 }
 
 select {
-  font-family: "Montserrat";
+    font-family: "Montserrat";
 }
 
-[class*=__container] {
-  max-width: 1342px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
+// [class*="__container"] {
+//     max-width: 1342px;
+//     margin: 0 auto;
+//     padding: 0 15px;
+// }

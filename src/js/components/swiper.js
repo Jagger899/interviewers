@@ -30,4 +30,3 @@ export const mainSwiper = function () {
       progressNumber.textContent = "0" + activeSlide;
   });
 }
-
