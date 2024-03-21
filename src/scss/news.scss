@@ -1,0 +1,10 @@
+@import "./config/vars";
+@import "./config/reset";
+@import "./config/mixins";
+@import "./config/global";
+
+
+@import "./components/button";
+@import "./components/header";
+@import "./news/news-card";
+@import "./components/footer";
