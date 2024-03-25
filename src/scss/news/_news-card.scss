@@ -5,14 +5,34 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @include breakpoints(xl) {
+            margin: 160px auto 0;
+            width: 77%;
+            flex-direction: column;
+            align-items: start;
+        }
+
+        @include breakpoints(md) {
+            margin: 140px auto 0;
+        }
     }
 
-    //   &__title {
-    //   }
+    @include breakpoints(xl) {
+       &__title {
+           font-size: 32px;
+       }
+    }
+
 
     &__link-items {
         display: flex;
         gap: 32px;
+
+        @include breakpoints(xl) {
+            margin-top: 20px;
+            gap: 26px;
+        }
     }
 
     &__link-item {
@@ -21,10 +41,19 @@
 
     &__cards {
         margin-top: 123px;
-        padding-bottom: 96px;
+        padding-bottom: 86px;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(49%, 1fr));
         gap: 7px;
+
+        @include breakpoints(xl) {
+            margin-top: 102px;
+            gap: 5px;
+        }
+
+        @include breakpoints(md) {
+            margin-top: 92px;
+        }
     }
 
     &__card {
@@ -47,6 +76,15 @@
             left: 4%;
             top: 50%;
             width: 100%;
+
+            @include breakpoints(xl) {
+                top: 35%;
+                left: 5%;
+            }
+
+            @include breakpoints(md) {
+                top: 56%;
+            }
         }
 
         &-title-white {
@@ -57,32 +95,93 @@
             position: absolute;
             bottom: 56px;
             left: 56px;
+
+            @include breakpoints(xl) {
+                font-size: 20px;
+                bottom: 46px;
+                left: 46px;
+            }
+
+            @include breakpoints(md) {
+                font-size: 16px;
+                bottom: 38px;
+                left: 32px;
+                width: 158px;
+            }
         }
 
         &-title {
             font-size: 28px;
             width: 365px;
+
+            @include breakpoints(xl) {
+                font-size: 20px;
+                width: 273px;
+            }
+
+            @include breakpoints(md) {
+                margin-bottom: 38px;
+                font-size: 16px;
+                width: 208px;
+            }
         }
 
         &-text {
             margin: 24px 0 56px 0;
             width: 433px;
 
-            &::after {
-                content: "";
+            @include breakpoints(xl) {
+                width: 348px;
+                margin: 24px 0 40px 0;
+            }
+
+            @include breakpoints(md) {
+                display: none;
             }
         }
 
         &-link {
+            position: relative;
             margin-left: 17px;
             font-weight: 700;
             font-size: 10px;
             letter-spacing: 0.12em;
             text-transform: uppercase;
+
+            &::after {
+                content: "";
+                position: absolute;
+                right: -64%;
+                top: 50%;
+                display: flex;
+                width: 56px;
+                height: 1px;
+                background: $newsLineCard;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                display: flex;
+                top: 50%;
+                width: 8px;
+                height: 1px;
+                background: $newsLineCard;
+            }
         }
     }
 
     &__img {
         width: 50%;
+    }
+
+    &__pagination {
+        display: flex;
+
+        &-value {
+        }
+
+        &-img {
+        }
     }
 }
