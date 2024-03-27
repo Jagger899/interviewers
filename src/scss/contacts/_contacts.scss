@@ -1,36 +1,37 @@
 .contacts {
     &__background-container {
         background: url(../images/reused/reused-10.png) no-repeat;
-        height: 100vh;
-        background-position: center;
+        min-height: 100vh;
+        background-position: center center;
         background-size: cover;
 
         @include breakpoints(md) {
-            height: 123vh;
+            //height: 123vh;
         }
 
         @include breakpoints(sm) {
-            height: 100vh;
+            //height: 100vh;
         }
     }
 
     &__content {
         width: 80%;
-        margin: 0 auto 135px;
-        padding-top: 181px;
+        margin: 0 auto;
+        padding: 181px 0 135px;
 
         @include breakpoints(xl) {
             width: 78%;
-            padding-top: 210px;
+            padding: 210px 0 170px;
         }
 
         @include breakpoints(md) {
-            margin: 0 auto 305px;
+            padding: 70px 0 340px;
+            //margin: 0 auto 305px;
         }
 
         @include breakpoints(sm) {
             width: 100%;
-            margin: 0 auto 46px;
+            padding: 39px 0 128px;
         }
     }
 

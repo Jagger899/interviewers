@@ -1,16 +1,18 @@
 .footer {
+    position: relative;
+    height: 0;
+
     &__copyright-block {
-        position: relative;
+        position: absolute;
         width: 100%;
         // top: 90%;
-        transform: translateY(-200%);
-
+        transform: translateY(-160%);
         display: flex;
         justify-content: space-between;
         align-items: center;
 
         @include breakpoints(xl) {
-            width: 89%;
+            width: 96%;
         }
 
         @include breakpoints(sm) {
