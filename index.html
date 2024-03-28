@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Main</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header header__background background-trriger-tr">
+    <div class="header header__container">
+        <div class="header__content">
+            <nav class="header__link-block">
+                <a class="header__logo text-trriger" href="index.html">Logo</a>
+                <ul class="header__link-items">
+                    <li>
+                        <a class="link text-trriger" href="#">Projects</a>
+                    </li>
+                    <li>
+                        <a class="link text-trriger" href="#">About us</a>
+                    </li>
+                    <li>
+                        <a class="link text-trriger" href="news.html">Blog</a>
+                    </li>
+                    <li>
+                        <a class="link text-trriger" href="contacts.html"
+                            >Contacts</a
+                        >
+                    </li>
+                </ul>
+
+                <div class="header__burger-menu">
+                    <div class="header__burger-icon background-trriger">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="header__burger-background">
+                        <ul class="header__burger-items header__container">
+                            <li class="header__burger-item-container">
+                                <a class="header__burger-item" href="#">Home</a>
+                            </li>
+                            <li class="header__burger-item-container">
+                                <a class="header__burger-item" href="#"
+                                    >Projects</a
+                                >
+                            </li>
+                            <li class="header__burger-item-container">
+                                <a class="header__burger-item" href="#"
+                                    >About us</a
+                                >
+                            </li>
+                            <li class="header__burger-item-container">
+                                <a class="header__burger-item" href="news.html">Blog</a>
+                            </li>
+                            <li class="header__burger-item-container">
+                                <a class="header__burger-item" href="contacts.html"
+                                    >Contacts</a
+                                >
+                            </li>
+                            <li class="header__burger-section">
+                                <a class="header__burger-button" href="#"
+                                    >Send Request</a
+                                >
+                            </li>
+                        </ul>
+                        <div class="header__burger-contact header__container">
+                            <ul class="header__burger-contact-items">
+                                <li>
+                                    <a
+                                        class="header__burger-contact-item"
+                                        href="#"
+                                        >Fb</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        class="header__burger-contact-item"
+                                        href="#"
+                                        >In</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        class="header__burger-contact-item"
+                                        href="#"
+                                        >Be</a
+                                    >
+                                </li>
+                            </ul>
+                            <div class="header__burger-select">
+                                <select class="select__city" name="city">
+                                    <option class="select__value" value="1">
+                                        Berlin
+                                    </option>
+                                    <option class="select__value" value="2">
+                                        Kyiv
+                                    </option>
+                                    <option class="select__value" value="3">
+                                        Lviv
+                                    </option>
+                                </select>
+                                <svg class="header__burger-svg">
+                                    <use xlink:href="#geolocation"></use>
+                                </svg>
+                                <div class="header__burger-contact-sm">
+                                    <p class="header__burger-tel">
+                                        +380935705222
+                                    </p>
+                                    <a class="header__burger-link" href="#"
+                                        >info@hi-light.pl</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="header__block-button">
+                <p class="header__language text-trriger">En</p>
+                <a class="header__button button-trriger" href="#"
+                    >Send Request</a
+                >
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="header__none">
+    <svg>
+        <symbol id="geolocation" viewBox="0 0 10 10">
+            <g>
+                <path
+                    d="M5.00053 0C3.00355 0 1.37891 1.62465 1.37891 3.6216C1.37891 6.09988 4.6199 9.73815 4.75789 9.89182C4.8875 10.0362 5.11379 10.0359 5.24316 9.89182C5.38115 9.73815 8.62215 6.09988 8.62215 3.6216C8.62211 1.62465 6.99748 0 5.00053 0ZM5.00053 5.44373C3.9958 5.44373 3.17842 4.62633 3.17842 3.6216C3.17842 2.61688 3.99582 1.79949 5.00053 1.79949C6.00523 1.79949 6.82262 2.61689 6.82262 3.62162C6.82262 4.62635 6.00523 5.44373 5.00053 5.44373Z"
+                    fill="white"
+                />
+            </g>
+        </symbol>
+    </svg>
+</div>
+
+      <main class="main">
+        <section class="promo">
+    <!-- Slider main container -->
+    <div class="swiper promo__swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide promo__slide">
+                <img
+                    src="../../images/main/main-1.png"
+                    alt="photo"
+                    class="promo__left-img"
+                />
+            </div>
+
+            <div class="swiper-slide promo__slide">
+                <img
+                    src="../../images/main/main-2.png"
+                    alt="photo"
+                    class="promo__right-img"
+                />
+            </div>
+
+            <div class="swiper-slide promo__slide">
+                <img
+                    src="../../images/main/main-8.png"
+                    alt="photo"
+                    class="promo__left-img"
+                />
+            </div>
+
+            <div class="swiper-slide promo__slide">
+                <img
+                    src="../../images/main/main-1.png"
+                    alt="photo"
+                    class="promo__right-img"
+                />
+            </div>
+
+            <!-- <div class="swiper-slide promo__slide">
+                <img src="../../images/main/main-2.png" alt="photo" class="promo__left-img"/>
+            </div> -->
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-scrollbar promo__swiper-scrollbar"></div>
+        <div class="promo__swiper-pagination"></div>
+
+        <div class="promo__button-prev">
+            <svg class="promo__button-svg">
+                <use href="#left-arrow"></use>
+            </svg>
+            <span class="promo__number promo__number_left">01</span>
+        </div>
+        <div class="promo__button-next">
+            <span class="promo__number">04</span>
+            <svg class="promo__button-svg">
+                <use href="#right-arrow"></use>
+            </svg>
+        </div>
+    </div>
+    <div class="promo__content">
+        <div class="promo__container">
+            <div class="promo__content-top">
+                <h1 class="promo__content-title">Thoughtful making of space</h1>
+
+                <a class="discover-link promo__content-link">Discover more</a>
+            </div>
+
+            <div class="promo__right">
+                <p class="promo__right-text">Next Project</p>
+                <h2 class="promo__right-title">Perfect proportions</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="promo__content-bottom content-bottom">
+        <div class="content-bottom__inner">
+            <div class="content-bottom__socials">
+                <a href="#" class="content-bottom__social">Fb</a>
+                <a href="#" class="content-bottom__social">In</a>
+                <a href="#" class="content-bottom__social">Be</a>
+            </div>
+            <div class="content-bottom__dropdown dropdown">
+                <div class="dropdown__box">
+                    <svg class="dropdown__svg-geo">
+                        <use href="#geolocation"></use>
+                    </svg>
+                    <p class="dropdown__text">Berlin</p>
+                    <svg class="dropdown__svg-arrow">
+                        <use href="#arrow-bottom"></use>
+                    </svg>
+                </div>
+                <ul class="dropdown__menu">
+                    <li class="dropdown__menu-item">New York</li>
+                    <li class="dropdown__menu-item">Barselona</li>
+                    <li class="dropdown__menu-item dropdown__menu-item_active">
+                        Berlin
+                    </li>
+                    <li class="dropdown__menu-item">Zorya</li>
+                </ul>
+            </div>
+            <div class="content-bottom__info">
+                <a href="tel:+380983527547" class="content-bottom__link"
+                    >+380983527547</a
+                >
+                <a href="email:info@gmail.com" class="content-bottom__link"
+                    >E: info@gmail.com</a
+                >
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section class="philosophy">
+
+    <div class="philosophy__container">
+
+        <div class="philosophy__top-inner">
+
+            <div class="philosophy__descr">
+                <h2 class="philosophy__title">Company Philosophy</h2>
+                <div class="philosophy__text-box">
+                    <p class="philosophy__text">
+                        The basic philosophy of our studio is to create
+                        individual, aesthetically stunning solutions for our
+                        customers by lightning-fast development of projects
+                        employing unique styles and architecture. Even if you
+                        don't have a ready sketch of what you want - we will
+                        help you get the result.
+                    </p>
+                    <p class="philosophy__text">
+                        We can also help you create harmony out of seemingly
+                        completely incompatible elements in the interior or the
+                        exterior design. Do you want to combine classics and
+                        abstract art? Modern and retro? Love everything
+                        associated with the 1940's? No problem!
+                    </p>
+                </div>
+                <a href="#" class="discover-link philosophy__link">
+                        Discover more
+                </a>
+            </div>
+
+            <img
+                src="../../images/main/main-2.png"
+                alt="photo"
+                class="philosophy__top-img"
+            />
+        </div>
+        <div class="philosophy__bottom-inner">
+            <div class="philosophy__photo-box">
+                <img
+                    src="../../images/main/main-3.png"
+                    alt="photo"
+                    class="philosophy__img-first"
+                />
+                <img
+                    src="../../images/main/main-3.png"
+                    alt="photo"
+                    class="philosophy__img-first"
+                />
+            </div>
+            <blockquote class="philosophy__quote">We can also help you create harmony out of seemingly completely incompatible elements in the interior or the exterior design. </blockquote>
+        </div>
+    </div>
+</section>
+
+        <div class="contacts__background-container">
+  <main class="contacts contacts__container">
+    <div class="contacts__content">
+      <h2 class="contacts__title">Get in touch</h2>
+      <p class="contacts__main-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+        ullamcorper eu mauris vitae posuere.
+      </p>
+      <div class="contacts__contact">
+        <div class="contacts__city-contact">
+          <ul class="contacts__items">
+            <li class="contacts__item-title">Kyiv</li>
+            <li class="contacts__item">(209) 555-0104</li>
+            <li class="contacts__item">6391 Elgin St. Celina,</li>
+            <li class="contacts__item">Delaware 10299</li>
+          </ul>
+          <ul class="contacts__items">
+            <li class="contacts__item-title">Lviv</li>
+            <li class="contacts__item">(209) 555-0104</li>
+            <li class="contacts__item">6391 Elgin St. Celina,</li>
+            <li class="contacts__item">Delaware 10299</li>
+          </ul>
+          <ul class="contacts__items">
+            <li class="contacts__item-title">Kharkiv</li>
+            <li class="contacts__item">(209) 555-0104</li>
+            <li class="contacts__item">6391 Elgin St. Celina,</li>
+            <li class="contacts__item">Delaware 10299</li>
+          </ul>
+        </div>
+        <div class="contacts__social-block">
+          <a class="contacts__link" href="#">info@gmail.com</a>
+          <ul class="contacts__social-networks">
+            <li>
+              <a class="contacts__social-item" href="#">Fb</a>
+            </li>
+            <li>
+              <a class="contacts__social-item" href="#">In</a>
+            </li>
+            <li>
+              <a class="contacts__social-item" href="#">Be</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="contacts__button">
+        <a class="button__white" href="#">Make reques</a>
+      </div>
+    </div>
+  </main>
+</div>
+
+      </main>
+    </div>
+
+    <footer class="footer footer__container">
+    <div class="footer__copyright-block">
+        <p class="footer__copyright footer__text-trriger">
+            © Copyright 2018. All rights reserved
+        </p>
+        <div class="footer__logo-block">
+            <p class="footer__made footer__text-trriger">Made with love in</p>
+            <div class="footer__logo">
+                <p class="footer__first-text footer__text-trriger">The First</p>
+                <p class="footer__last-text footer__text-trriger">The Last</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <svg
+    style="position: absolute; width: 0; height: 0"
+    xmlns="http://www.w3.org/2000/svg"
+>
+    <symbol id="geolocation" viewBox="0 0 10 10">
+        <g>
+            <path
+                d="M5.00053 0C3.00355 0 1.37891 1.62465 1.37891 3.6216C1.37891 6.09988 4.6199 9.73815 4.75789 9.89182C4.8875 10.0362 5.11379 10.0359 5.24316 9.89182C5.38115 9.73815 8.62215 6.09988 8.62215 3.6216C8.62211 1.62465 6.99748 0 5.00053 0ZM5.00053 5.44373C3.9958 5.44373 3.17842 4.62633 3.17842 3.6216C3.17842 2.61688 3.99582 1.79949 5.00053 1.79949C6.00523 1.79949 6.82262 2.61689 6.82262 3.62162C6.82262 4.62635 6.00523 5.44373 5.00053 5.44373Z"
+                fill="white"
+            />
+        </g>
+    </symbol>
+
+    <symbol id="left-arrow" viewBox="0 0 6 10" fill="none">
+        <path d="M5 9L1 5L5 1" stroke="white" stroke-width="0.75" />
+    </symbol>
+
+    <symbol id="right-arrow" viewBox="0 0 6 10">
+        <path d="M1 1L5 5L1 9" stroke="white" stroke-width="0.75" fill="none" />
+    </symbol>
+
+    <symbol id="arrow-bottom" viewBox="0 0 9 6">
+        <path
+            d="M8 1L4.5 4.5L1 1"
+            stroke="white"
+            stroke-width="1.4"
+            fill="none"
+        />
+    </symbol>
+
+    <symbol id="arrow-right-input" viewBox="0 0 17 14" fill="none">
+        <path d="M0 7H16" stroke="white" />
+        <path d="M10 1L16 7L10 13" stroke="white" />
+    </symbol>
+
+    <symbol id="arrow-left-pagination" viewBox="0 0 11 8" fill="none">
+        <path d="M10.6667 4H1.33341" stroke="#080808" />
+        <path d="M4.8335 0.5L1.3335 4L4.8335 7.5" stroke="#080808" />
+    </symbol>
+
+    <symbol id="arrow-right-pagination" viewBox="0 0 11 8" fill="none">
+        <path d="M0.333252 4H9.66659" stroke="#080808" />
+        <path d="M6.1665 0.5L9.6665 4L6.1665 7.5" stroke="#080808" />
+    </symbol>
+
+    <symbol id="facebook" viewBox="0 0 25 24" fill="none">
+        <rect width="24.7742" height="24" rx="12" fill="#3F5C95" />
+        <path
+            d="M14.7097 7.80587V9.15341H13.8712C13.2063 9.15341 13.081 9.45593 13.081 9.88677V10.8585H14.6615L14.4495 12.371H13.081V16.2578H11.433V12.371H10.0645V10.8585H11.433V9.7401C11.433 8.44756 12.2714 7.7417 13.4857 7.7417C14.064 7.7417 14.5651 7.77837 14.7097 7.80587Z"
+            fill="white"
+        />
+    </symbol>
+
+    <symbol id="twitter" viewBox="0 0 25 24" fill="none">
+        <rect x="0.7742" width="24" height="24" rx="12" fill="#38A7DE" />
+        <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M7.74194 15.2918C8.6558 15.9023 9.74076 16.2578 10.9072 16.2578C14.7056 16.2578 16.7824 12.9812 16.7824 10.1401C16.7824 10.0469 16.7804 9.95483 16.7764 9.86275C17.1799 9.55936 17.5302 9.18093 17.8065 8.7498C17.4366 8.92118 17.0385 9.03615 16.6209 9.08725C17.0471 8.82272 17.3737 8.4001 17.5287 7.89872C17.1296 8.14462 16.6873 8.32346 16.2173 8.4198C15.8409 8.00251 15.3039 7.7417 14.7101 7.7417C13.5698 7.7417 12.6449 8.70349 12.6449 9.89042C12.6449 10.0597 12.6635 10.2231 12.6987 10.3806C10.9827 10.2912 9.46046 9.43534 8.44294 8.13451C8.2653 8.4528 8.16314 8.82112 8.16314 9.21552C8.16314 9.96122 8.52748 10.6196 9.08153 11.005C8.74286 10.9949 8.42482 10.8975 8.14603 10.7362C8.14603 10.7452 8.14603 10.7543 8.14603 10.7633C8.14603 11.8044 8.8586 12.6741 9.80215 12.8716C9.62954 12.9211 9.44687 12.9467 9.25867 12.9467C9.12531 12.9467 8.99598 12.9339 8.87018 12.9083C9.13236 13.7631 9.89525 14.3848 10.7985 14.4013C10.092 14.9783 9.20281 15.3211 8.2346 15.3211C8.06803 15.3211 7.90398 15.3125 7.74194 15.2918Z"
+            fill="white"
+        />
+    </symbol>
+
+    <symbol id="LikedIn" viewBox="0 0 25 24" fill="none">
+        <circle cx="12.7742" cy="12" r="12" fill="#0077B7" />
+        <g clip-path="url(#clip0_1_1195)">
+            <path
+                d="M18.5778 17.0349V17.0344H18.5805V13.0593C18.5805 11.1147 18.1619 9.6167 15.8885 9.6167C14.7956 9.6167 14.0622 10.2164 13.7627 10.785H13.7311V9.79825H11.5756V17.0344H13.8201V13.4513C13.8201 12.5079 13.9989 11.5957 15.1673 11.5957C16.3184 11.5957 16.3356 12.6723 16.3356 13.5119V17.0349H18.5778Z"
+                fill="white"
+            />
+            <path
+                d="M7.92091 9.79834H10.1681V17.0345H7.92091V9.79834Z"
+                fill="white"
+            />
+            <path
+                d="M9.0441 6.19336C8.32559 6.19336 7.74255 6.77639 7.74255 7.49491C7.74255 8.21342 8.32559 8.80865 9.0441 8.80865C9.76262 8.80865 10.3457 8.21342 10.3457 7.49491C10.3452 6.77639 9.76217 6.19336 9.0441 6.19336V6.19336Z"
+                fill="white"
+            />
+        </g>
+        <defs>
+            <clipPath id="clip0_1_1195">
+                <rect
+                    width="10.8387"
+                    height="10.8387"
+                    fill="white"
+                    transform="translate(7.74255 6.19336)"
+                />
+            </clipPath>
+        </defs>
+    </symbol>
+
+    <symbol id="link" viewBox="0 0 24 24" fill="none">
+        <g clip-path="url(#clip0_16648_90)">
+            <path
+                d="M11.6452 9.32258L12.4194 8.54839C13.2745 7.69324 14.661 7.69324 15.5161 8.54839C16.3713 9.40354 16.3713 10.79 15.5161 11.6452L14.7419 12.4194M13.1935 13.9677L11.6452 15.5161C10.79 16.3713 9.40354 16.3713 8.54839 15.5161C7.69324 14.661 7.69324 13.2745 8.54839 12.4194L10.0968 10.871"
+                stroke="#080808"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+            <path
+                d="M10.0946 13.9672L13.9656 10.0962"
+                stroke="#080808"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+            <circle
+                opacity="0.2"
+                cx="12.0344"
+                cy="12.0322"
+                r="11.5"
+                stroke="#080808"
+            />
+        </g>
+        <defs>
+            <clipPath id="clip0_16648_90">
+                <rect width="24" height="24" fill="white" />
+            </clipPath>
+        </defs>
+    </symbol>
+</svg>
+
+    <script src="./js/index.bundle.js"></script>
+  </body>
+</html>
