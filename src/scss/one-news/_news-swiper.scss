@@ -1,0 +1,111 @@
+.news-page {
+    &__swiper-container {
+        margin-top: 140px;
+        position: relative;
+        padding-bottom: 170px;
+
+        @include breakpoints(xl) {
+            margin-top: 125px;
+            padding-bottom: 160px;
+        }
+
+        @include breakpoints(md) {
+            margin-top: 103px;
+            padding-bottom: 133px;
+        }
+
+        @include breakpoints(sm) {
+            margin-top: 80px;
+            padding-bottom: 158px;
+        }
+    }
+
+    &__block {
+        margin-top: 70px;
+        width: 130%;
+        overflow: hidden;
+        margin-right: 0;
+        margin-left: 2%;
+
+        @include breakpoints(xl) {
+            margin-top: 53px;
+            width: 110%;
+            margin-left: 11%;
+        }
+
+        @include breakpoints(md) {
+            margin-top: 50px;
+        }
+
+        @include breakpoints(sm) {
+            margin-top: 40px;
+            margin-left: 0%;
+        }
+    }
+
+    &__swiper {
+        width: 1490px;
+
+        @include breakpoints(xl) {
+            width: 1370px;
+        }
+
+        @include breakpoints(md) {
+            width: 1570px;
+        }
+
+        @include breakpoints(sm) {
+            width: 1290px;
+        }
+    }
+
+    &__swiper-title {
+        width: 79%;
+        margin: 0 auto;
+
+        @include breakpoints(xl) {
+            width: 77%;
+            font-size: 32px;
+        }
+
+        @include breakpoints(sm) {
+            width: 100%;
+            font-size: 26px;
+        }
+    }
+
+    &__slide-img {
+        @include breakpoints(xl) {
+            width: 87%;
+        }
+
+        @include breakpoints(md) {
+            width: 95%;
+        }
+
+        @include breakpoints(sm) {
+            width: 92%;
+        }
+    }
+
+    &__slide-title {
+        width: 80%;
+        padding-top: 25px;
+        font-size: 14px;
+        line-height: 137%;
+
+        @include breakpoints(sm) {
+            padding-top: 23px;
+        }
+    }
+
+    &__slide-text {
+        padding-top: 15px;
+        font-size: 10px;
+        line-height: 171%;
+
+        @include breakpoints(sm) {
+            padding-top: 12px;
+        }
+    }
+}

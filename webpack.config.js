@@ -4,6 +4,7 @@ const config = {
         index: "./src/js/index.js",
         news: "./src/js/news.js",
         contacts: "./src/js/contacts.js",
+        pageNews: "./src/js/one-news.js",
     },
 
     output: {

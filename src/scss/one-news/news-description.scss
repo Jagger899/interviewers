@@ -1,0 +1,303 @@
+.news-page {
+    &__content {
+        padding-top: 210px;
+
+        @include breakpoints(xl) {
+            padding-top: 160px;
+        }
+
+        @include breakpoints(md) {
+            padding-top: 140px;
+        }
+
+        @include breakpoints(sm) {
+            padding-top: 115px;
+        }
+    }
+
+    &__description {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        margin: 0 auto;
+
+        @include breakpoints(xl) {
+            width: 77%;
+        }
+
+        @include breakpoints(sm) {
+            width: 100%;
+        }
+
+        &-title {
+            width: 55%;
+            padding-bottom: 20px;
+
+            @include breakpoints(xl) {
+                font-size: 32px;
+                width: 65%;
+                padding-bottom: 24px;
+            }
+
+            @include breakpoints(md) {
+                width: 85%;
+                padding-bottom: 13px;
+            }
+
+            @include breakpoints(sm) {
+                width: 100%;
+                font-size: 26px;
+                padding-bottom: 16px;
+            }
+        }
+
+        &-text {
+            width: 77%;
+
+            @include breakpoints(xl) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__text-content {
+        width: 80%;
+        margin: 0 auto;
+
+        @include breakpoints(xl) {
+            width: 77%;
+        }
+
+        @include breakpoints(sm) {
+            width: 100%;
+        }
+    }
+
+    &__text {
+        width: 68%;
+
+        @include breakpoints(xl) {
+            width: 100%;
+        }
+    }
+
+    &__share {
+        padding: 8px 5px 0 0;
+
+        &-title {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 171%;
+        }
+
+        &-items {
+            margin-top: 10px;
+            display: flex;
+            gap: 8px;
+        }
+
+        &-item {
+            width: 24px;
+            height: 24px;
+        }
+
+        &-svg {
+            height: 24px;
+        }
+
+        &-adaptive {
+            display: none;
+
+            @include breakpoints(xl) {
+                margin-top: 50px;
+                display: block;
+            }
+
+            @include breakpoints(md) {
+                margin-top: 40px;
+            }
+
+            @include breakpoints(sm) {
+                margin-top: 34px;
+            }
+        }
+
+        @include breakpoints(xl) {
+            &-none {
+                display: none;
+            }
+        }
+    }
+
+    &__main {
+        margin-top: 96px;
+
+        @include breakpoints(xl) {
+            margin-top: 70px;
+        }
+
+        @include breakpoints(md) {
+            margin-top: 63px;
+        }
+
+        @include breakpoints(sm) {
+            margin-top: 55px;
+        }
+
+        &-img-block {
+            width: 100%;
+            position: relative;
+
+            @include breakpoints(sm) {
+                overflow: hidden;
+                aspect-ratio: 16/11;
+            }
+        }
+
+        &-img {
+            @include breakpoints(sm) {
+                position: absolute;
+                left: -10%;
+                max-width: 150%;
+            }
+        }
+    }
+
+    &__minor-title {
+        margin: 96px 0 17px 0;
+        width: 40%;
+        font-size: 16px;
+        line-height: 137%;
+
+        @include breakpoints(xl) {
+            width: 58%;
+            margin: 88px 0 23px 0;
+        }
+
+        @include breakpoints(md) {
+            margin: 72px 0 23px 0;
+            width: 80%;
+        }
+
+        @include breakpoints(sm) {
+            margin: 56px 0 23px 0;
+            width: 100%;
+        }
+    }
+
+    &__numbered-items {
+        font-weight: 500;
+        display: flex;
+        flex-direction: column;
+        margin: 40px 0 40px 15px;
+        gap: 12px;
+
+        @include breakpoints(xl) {
+            margin: 22px 0 30px 15px;
+        }
+
+        @include breakpoints(md) {
+            margin: 32px 0 32px 15px;
+            gap: 10px;
+        }
+
+        @include breakpoints(sm) {
+            margin: 23px 0 32px 15px;
+        }
+    }
+
+    &__numbered-item {
+        font-weight: 300;
+    }
+
+    &__img-block {
+        display: grid;
+        margin-top: 98px;
+        gap: 8px;
+        grid-template-columns: repeat(auto-fill, minmax(49%, 1fr));
+
+        @include breakpoints(xl) {
+            margin-top: 60px;
+        }
+
+        @include breakpoints(md) {
+            margin-top: 75px;
+        }
+
+        @include breakpoints(sm) {
+            margin-top: 43px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-bottom: 10px;
+        }
+    }
+
+    &__img-first {
+        width: 100%;
+        position: relative;
+
+        &:nth-child(1) {
+            grid-column: 1/3;
+        }
+
+        @include breakpoints(sm) {
+            overflow: hidden;
+            aspect-ratio: 16/11;
+        }
+    }
+
+    &__img-item {
+        &:nth-child(1) {
+            @include breakpoints(sm) {
+                position: absolute;
+                left: -10%;
+                max-width: 150%;
+            }
+        }
+    }
+
+    &__completion-items {
+        display: flex;
+        flex-direction: column;
+        margin: 40px 0 40px 18px;
+        list-style: circle !important;
+        gap: 12px;
+
+        @include breakpoints(xl) {
+            margin: 32px 0 32px 15px;
+        }
+
+        @include breakpoints(md) {
+            margin: 34px 0 32px 15px;
+            gap: 10px;
+        }
+
+        @include breakpoints(sm) {
+            margin: 30px 0 32px 15px;
+        }
+    }
+
+    &__completion-item {
+    }
+
+    &__line {
+        margin-top: 98px;
+        width: 100%;
+        height: 1px;
+        background: $inactiveBlackColor;
+        opacity: 0.16;
+
+        @include breakpoints(xl) {
+            margin-top: 90px;
+        }
+
+        @include breakpoints(md) {
+            margin-top: 74px;
+        }
+
+        @include breakpoints(sm) {
+            margin-top: 64px;
+        }
+    }
+}
