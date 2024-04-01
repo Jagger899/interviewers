@@ -4,7 +4,7 @@ import { dropdownWork } from "./components/dropdown";
 import { preloaderLoad } from "./components/preloader";
 
 document.addEventListener("DOMContentLoaded", async function () {
-  preloaderLoad();
+    preloaderLoad();
     burgerFunction();
     mainSwiper();
     dropdownWork();
