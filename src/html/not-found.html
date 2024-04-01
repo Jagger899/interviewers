@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/404.css">
+  <title>Error</title>
+</head>
+<body>
+  <div class="wrapper">
+    @@include('./components/header.html',{
+    'colors': 'white'
+  })
+    <main>
+      <div class="not-found">
+        <div class="not-found__container">
+          <div class="not-found__content">
+            <h2 class="not-found__title">Page not found</h2>
+            <p class="not-found__text">Something went wrong. Page not found</p>
+            <a href="#" class="discover-link not-found__link">go to main</a>
+          </div>
+        </div>
+      </div>
+    </main>
+    @@include('components/footer.html')
+  </div>
+
+  <script src="./js/notFound.bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+@import "./config/vars";
+@import "./config/reset";
+@import "./config/mixins";
+@import "./config/global";
+
+.preloader {
+    background: $blackColor;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 30;
+    transition: opacity 3000ms linear;
+
+    &_hidden {
+      opacity: 0;
+    }
+
+    &__loader {
+        font-weight: 300;
+        font-size: 24px;
+        letter-spacing: 0.26em;
+        color: $backgroundColor;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        transform: translate(-50%,-50%);
+
+        &_isload {
+          gap: 0;
+        }
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: 24px;
+        letter-spacing: 0.26em;
+        color: $backgroundColor;
+    }
+
+    &__percents {
+        font-weight: 300;
+        font-size: 24px;
+        letter-spacing: 0.26em;
+        color: $backgroundColor;
+        opacity: 0.6;
+    }
+}

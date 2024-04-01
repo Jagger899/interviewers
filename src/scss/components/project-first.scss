@@ -1,0 +1,293 @@
+.projects-first {
+    background: $blackColor;
+    padding: 140px 0 202px;
+    overflow: hidden;
+
+    @include breakpoints(md) {
+        padding-top: 122px;
+    }
+
+    @include breakpoints(sm) {
+        padding-top: 102px;
+    }
+
+    @include breakpoints(xs) {
+        padding-top: 80px;
+    }
+
+    &__container {
+
+      @include breakpoints(xl) {
+        max-width: 1354px;
+      }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 36px;
+        color: $whiteColor;
+        text-align: center;
+        margin-bottom: 34px;
+
+        @include breakpoints(md) {
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+
+        @include breakpoints(xs) {
+            font-size: 26px;
+            margin-bottom: 24px;
+            text-align: left;
+        }
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 171%;
+        text-align: center;
+        color: $inactiveBlackColor;
+        max-width: 449px;
+        margin: 0 auto 129px;
+
+        @include breakpoints(md) {
+            margin-bottom: 115px;
+        }
+
+        @include breakpoints(sm) {
+            margin-bottom: 94px;
+        }
+
+        @include breakpoints(xs) {
+            font-size: 14px;
+            text-align: left;
+            margin: 0 auto 80px 0;
+        }
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        margin-bottom: 178px;
+
+        @include breakpoints(md) {
+            gap: 6px;
+        }
+
+        @include breakpoints(sm) {
+            // grid-template-columns: 1fr;
+            // justify-items: center;
+            // align-items: center;
+            display: flex;
+            flex-direction: column;
+            // justify-content: center;
+            // align-items: center;
+        }
+    }
+
+    &__card {
+        height: 653px;
+
+        @include breakpoints(md) {
+            height: 453px;
+        }
+
+        @include breakpoints(sm) {
+            height: 672px;
+            // max-width: 672px;
+            // margin: 0 auto;
+        }
+
+        @include breakpoints(xs) {
+            height: 327px;
+        }
+    }
+
+    .card {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 32px;
+
+        @include breakpoints(md) {
+            padding: 32px 30px 34px;
+        }
+
+        @include breakpoints(sm) {
+            padding: 32px;
+        }
+
+        &__list {
+            display: none;
+            gap: 24px;
+
+            @include breakpoints(md) {
+                display: flex;
+            }
+        }
+
+        &__item {
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 171%;
+            color: $backgroundColor;
+        }
+
+        &__descr {
+            display: none;
+
+            @include breakpoints(md) {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+            }
+        }
+
+        &__text {
+            color: $backgroundColor;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 127%;
+        }
+
+        &__link {
+            color: $backgroundColor;
+            font-weight: 700;
+            font-size: 10px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-left: 13px;
+
+            &::after {
+                left: -14px;
+            }
+
+            &::before {
+                left: 145px;
+            }
+        }
+
+        &_first {
+            background-image: url("../images/projects/projects-1.png");
+        }
+
+        &_second {
+            background-image: url("../images/projects/projects-2.png");
+        }
+
+        &_third {
+            background-image: url("../images/projects/projects-3.png");
+            grid-column: 1 / -1;
+            padding-right: 85px;
+
+            .card__descr {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                @include breakpoints(sm) {
+                    flex-direction: column;
+                }
+            }
+
+            .card__text {
+                max-width: 179px;
+            }
+        }
+
+        &_fourth {
+            background-image: url("../images/projects/projects-4.png");
+        }
+
+        &_fivth {
+            background-image: url("../images/projects/projects-5.png");
+            background-size: 243px 323px;
+            background-color: $backgroundColor;
+
+            @include breakpoints(md) {
+                background-size: 168px 223px;
+            }
+        }
+    }
+
+    &__gallary {
+        max-width: 1046px;
+        margin: 0 auto;
+        position: relative;
+        // display: flex;
+        // flex-direction: column;
+        z-index: 1;
+
+        @include breakpoints(md) {
+            max-width: 455px;
+        }
+    }
+
+    &__gallary-descr {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 142%;
+        color: $whiteColor;
+        opacity: 1;
+        max-width: 424px;
+        margin-bottom: 23px;
+
+        @include breakpoints(md) {
+            text-align: center;
+            max-width: 366px;
+            margin: 0 auto 23px;
+            font-size: 32px;
+            line-height: 142%;
+        }
+    }
+
+    &__gallary-box {
+        // align-self: flex-end;
+        max-width: 339px;
+        margin: 0 0 0 auto;
+
+        @include breakpoints(md) {
+            margin-left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 455px;
+        }
+    }
+
+    &__gallary-text {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 171%;
+        color: $whiteColor;
+        margin-bottom: 53px;
+        max-width: 339px;
+
+        @include breakpoints(md) {
+            text-align: center;
+            max-width: 455px;
+            margin: 0 auto 70px;
+        }
+    }
+
+    &__button {
+        margin-left: 20px;
+    }
+
+    &__gallary-img {
+        position: absolute;
+        aspect-ratio: 1.57 / 1;
+        width: 738px;
+        top: -68px;
+        right: 168px;
+        z-index: -1;
+
+        @include breakpoints(md) {
+            display: none;
+        }
+    }
+}

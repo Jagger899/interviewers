@@ -22,3 +22,4 @@ task(
     parallel("server:docs")
   )
 );
+
