@@ -7,12 +7,18 @@
     <title>Main</title>
   </head>
   <body>
+    @@include('./components/preloader.html')
     <div class="wrapper">
-      @@include('./components/header.html')
+      @@include('./components/header.html',{
+        'colors': 'white'
+      })
       <main class="main">
         @@include('components/promo.html')
         @@include('components/philosophy.html')
+        @@include('components/projects-first.html')
+        @@include('components/projects-second.html')
         @@include('contacts/contacts.html')
+
       </main>
     </div>
 

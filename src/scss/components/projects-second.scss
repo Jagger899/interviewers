@@ -1,0 +1,244 @@
+.projects-second {
+    height: 814px;
+    position: relative;
+
+    @include breakpoints(md) {
+        height: 790px;
+    }
+
+    @include breakpoints(sm) {
+        height: 831px;
+    }
+
+    @include breakpoints(xs) {
+        height: 675px;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    &__content-box {
+        max-width: 427px;
+        // height: 100%;
+
+        @include breakpoints(xs) {
+            max-width: 265px;
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 56px;
+        margin-bottom: 18px;
+
+        @include breakpoints(sm) {
+            font-size: 44px;
+        }
+
+        @include breakpoints(xs) {
+            font-size: 32px;
+        }
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 171%;
+        text-align: center;
+    }
+
+    &__img {
+        position: absolute;
+        aspect-ratio: 1.5 / 1;
+
+        &_first {
+            width: 348px;
+            top: 184px;
+            left: 0;
+            z-index: 2;
+            left: -141px;
+
+            @include breakpoints(md) {
+                width: 295px;
+                top: 114px;
+                left: -237px;
+                top: 218px;
+            }
+
+            @include breakpoints(sm) {
+                width: 249px;
+                top: 199px;
+                left: -165px;
+            }
+
+            @include breakpoints(xs) {
+                width: 156px;
+                top: 99px;
+                left: -88px;
+            }
+        }
+
+        &_second {
+            width: 271px;
+            top: 62px;
+            z-index: 1;
+            left: 144px;
+
+            @include breakpoints(md) {
+                width: 229px;
+                left: 2px;
+                top: 114px;
+            }
+
+            @include breakpoints(xs) {
+                width: 122px;
+                top: 37px;
+                left: 53px;
+            }
+        }
+
+        &_third {
+            width: 348px;
+            right: 319px;
+            top: -142px;
+            z-index: -1;
+
+            @include breakpoints(md) {
+                width: 295px;
+                right: 276px;
+                top: -61px;
+            }
+
+            @include breakpoints(sm) {
+                width: 274px;
+                right: 90px;
+                top: -30px;
+            }
+
+            @include breakpoints(xs) {
+                width: 172px;
+                top: 112px;
+                right: -93px;
+            }
+        }
+
+        &_fourth {
+            width: 271px;
+            right: 111px;
+            top: 62px;
+
+            @include breakpoints(md) {
+                width: 230px;
+                top: 114px;
+                right: 100;
+                z-index: -2;
+            }
+
+            @include breakpoints(sm) {
+                width: 213px;
+                top: 132px;
+                right: -74px;
+            }
+
+            @include breakpoints(xs) {
+              display: none;
+            }
+        }
+
+        &_fivth {
+            width: 402px;
+            aspect-ratio: 1.43 / 1;
+            bottom: 104px;
+            right: -106px;
+
+            @include breakpoints(md) {
+                width: 340px;
+                bottom: 127px;
+                right: -152px;
+            }
+
+            @include breakpoints(sm) {
+                width: 317px;
+                bottom: 128px;
+                right: -253px;
+            }
+
+            @include breakpoints(xs) {
+                width: 199px;
+                bottom: 122px;
+                right: -141px;
+            }
+        }
+
+        &_sixth {
+            width: 214px;
+            right: 453px;
+            bottom: -49px;
+            z-index: -1;
+
+            @include breakpoints(md) {
+                right: 306px;
+                width: 181px;
+                bottom: 0;
+            }
+
+            @include breakpoints(sm) {
+                width: 169px;
+                right: 159px;
+                bottom: -22px;
+            }
+
+            @include breakpoints(xs) {
+                width: 106px;
+                right: 40px;
+                bottom: -13px;
+            }
+        }
+
+        &_seventh {
+            width: 285px;
+            bottom: 61px;
+            left: 278px;
+
+            @include breakpoints(md) {
+                width: 241px;
+                bottom: 91px;
+                left: 58px;
+            }
+
+            @include breakpoints(sm) {
+                width: 222px;
+                bottom: 64px;
+                left: 45px;
+            }
+
+            @include breakpoints(xs) {
+                width: 106px;
+                left: 22px;
+                bottom: 144px;
+            }
+        }
+
+        &_eighth {
+            width: 271px;
+            bottom: -90px;
+            left: -126px;
+            z-index: -1;
+
+            @include breakpoints(md) {
+                display: none;
+            }
+
+            @include breakpoints(xs) {
+              display: block;
+              width: 146px;
+              bottom: 69px;
+              left: -60px;
+            }
+        }
+    }
+}

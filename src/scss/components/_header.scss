@@ -4,6 +4,7 @@
     left: 0;
     right: 0;
     z-index: 5;
+
     &_black {
         background: rgba(0, 0, 0, 0.6);
     }
@@ -11,7 +12,37 @@
     &__background {
         width: 100%;
         height: 96px;
-        background: $whiteColor;
+        // background: $whiteColor;
+    }
+
+    &_white-colors .logo {
+        color: $whiteColor;
+    }
+
+    &_white-colors {
+        .link {
+            color: $whiteColor;
+
+            &::after {
+              background: $whiteColor;
+            }
+        }
+        .header__language {
+            color: $whiteColor;
+        }
+        .header__logo {
+            color: $whiteColor;
+        }
+        .header__button {
+            color: $whiteColor;
+            border-color: rgba(255,255,255,0.4);
+
+            &:hover {
+              background: $whiteColor;
+              border-color: rgba(0,0,0,0.4);
+              color: $blackColor;
+            }
+        }
     }
 
     &__content {
@@ -412,8 +443,6 @@
         &:hover {
             color: $whiteColor;
         }
-
-
     }
 
     &__white-button {
