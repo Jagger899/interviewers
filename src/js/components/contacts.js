@@ -10,6 +10,11 @@ export const contactsFunction = () => {
         add.classList.add("header__white-text");
     });
 
-    const background = document.querySelector(".background-trriger-tr")
-    background.classList.add("header__transperent")
+    const footer = document.querySelectorAll(".footer__text-trriger");
+    footer.forEach((add) => {
+        add.classList.add("footer__white-text");
+    });
+
+    const background = document.querySelector(".background-trriger-tr");
+    background.classList.add("header__transperent");
 };

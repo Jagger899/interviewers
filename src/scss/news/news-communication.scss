@@ -1,0 +1,178 @@
+.news {
+    &__background {
+        background: url("../images/news/news-4.png") no-repeat;
+        aspect-ratio: 20/8;
+        background-size: cover;
+
+        @include breakpoints(xl) {
+            aspect-ratio: 20/11.5;
+        }
+
+        @include breakpoints(md) {
+            aspect-ratio: 20/14;
+        }
+
+        @include breakpoints(sm) {
+            aspect-ratio: 20/28;
+        }
+    }
+
+    &__communication {
+        margin-top: 135px;
+        padding: 138px 0 0 135px;
+
+        @include breakpoints(xl) {
+            margin-top: 119px;
+            padding: 124px 0 0 125px;
+        }
+
+        @include breakpoints(md) {
+            margin-top: 98px;
+            padding: 105px 0 0 95px;
+        }
+
+        @include breakpoints(sm) {
+            margin-top: 75px;
+            padding: 80px 0 0 25px;
+        }
+
+        &-title {
+            color: $whiteColor;
+            width: 424px;
+            line-height: 142%;
+
+            @include breakpoints(xl) {
+                font-size: 32px;
+                line-height: 122%;
+                width: 360px;
+            }
+
+            @include breakpoints(sm) {
+                font-size: 26px;
+                width: 90%;
+            }
+        }
+
+        &-block {
+            display: flex;
+            width: 89%;
+            justify-content: end;
+            margin-top: 25px;
+
+            @include breakpoints(xl) {
+                width: 85%;
+                margin-top: 20px;
+            }
+
+            @include breakpoints(sm) {
+                margin-top: 24px;
+                width: 98%;
+            }
+        }
+
+        &-block-item {
+            width: 382px;
+
+            @include breakpoints(xl) {
+                width: 342px;
+            }
+
+            @include breakpoints(md) {
+                width: 100%;
+            }
+        }
+
+        &-text {
+            width: 366px;
+            color: $whiteColor;
+
+            @include breakpoints(xl) {
+                width: 342px;
+            }
+
+            @include breakpoints(md) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__form {
+        margin-top: 43px;
+        font-size: 20px;
+        font-family: Montserrat, sans-serif;
+        font-weight: 300;
+        position: relative;
+        z-index: 2;
+
+        @include breakpoints(xl) {
+            margin-top: 31px;
+            font-size: 16px;
+        }
+
+        @include breakpoints(md) {
+            margin-top: 41px;
+        }
+
+        @include breakpoints(sm) {
+            margin-top: 38px;
+        }
+
+        &-input {
+            padding: 0 35px 10px 0;
+            color: $whiteColor;
+            width: 100%;
+            border-bottom: solid 1px $newsFormImput;
+            transition: border-bottom 0.5s ease-in-out;
+
+            @include breakpoints(sm) {
+                width: 95%;
+            }
+
+            &:focus {
+                border-bottom: solid 1px $backgroundColor;
+            }
+
+            &::placeholder {
+                color: $whiteColor;
+                opacity: 0.7;
+            }
+        }
+
+        &-button {
+            position: absolute;
+            top: 4%;
+            right: 1%;
+            opacity: 0.5;
+            transition: opacity 0.5s ease-in-out;
+
+            @include breakpoints(xl) {
+                top: 12%;
+            }
+
+            @include breakpoints(md) {
+                right: 2%;
+                top: 19%;
+            }
+
+            @include breakpoints(sm) {
+                top: 17%;
+                right: 6%;
+            }
+
+            &:focus,
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        &-img {
+            width: 20px;
+            height: 17px;
+
+            @include breakpoints(xl) {
+                width: 16px;
+                height: 12px;
+            }
+        }
+    }
+}
