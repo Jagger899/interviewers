@@ -9,6 +9,16 @@
         background: rgba(0, 0, 0, 0.6);
     }
 
+    &__background {
+        width: 100%;
+        height: 96px;
+        // background: $whiteColor;
+    }
+
+    &_white-colors .logo {
+        color: $whiteColor;
+    }
+
     &_white-colors {
         .link {
             color: $whiteColor;
@@ -35,19 +45,6 @@
         }
     }
 
-    &__background {
-        width: 100%;
-        height: 96px;
-        background: $whiteColor;
-
-        @include breakpoints(md) {
-            height: 86px;
-        }
-
-        @include breakpoints(sm) {
-            height: 60px;
-        }
-    }
     &__content {
         padding: 22px 0;
         margin: 0 auto;
@@ -470,4 +467,3 @@
         background: transparent;
     }
 }
-
