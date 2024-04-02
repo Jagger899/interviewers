@@ -1,0 +1,46 @@
+.promo {
+    &__background {
+        background: url("../images/about/about-1.png");
+        background-position: center center;
+        background-size: cover;
+        margin-top: 90px;
+        padding: 236px 0 210px;
+
+        @include breakpoints(md) {
+            margin-top: 50px;
+        }
+
+        @include breakpoints(sm) {
+            padding: 220px 0 170px;
+            margin-top: 0;
+        }
+    }
+
+    &__title {
+        width: 383px;
+        color: $whiteColor;
+        text-align: center;
+        margin: 0 auto;
+
+        @include breakpoints(xl) {
+            font-size: 32px;
+            width: 340px;
+        }
+
+        @include breakpoints(sm) {
+            font-size: 26px;
+            width: 280px;
+        }
+    }
+
+    &__text {
+        width: 383px;
+        color: $whiteColor;
+        text-align: center;
+        margin: 13px auto;
+
+        @include breakpoints(sm) {
+            width: 80%;
+        }
+    }
+}

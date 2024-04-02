@@ -3,8 +3,9 @@ const config = {
     entry: {
         index: "./src/js/index.js",
         news: "./src/js/news.js",
-      contacts: "./src/js/contacts.js",
-      notFound: "./src/js/notFound.js"
+        contacts: "./src/js/contacts.js",
+        pageNews: "./src/js/one-news.js",
+        about: "./src/js/about.js",
     },
 
     output: {

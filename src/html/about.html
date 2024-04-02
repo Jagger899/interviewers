@@ -3,19 +3,18 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="css/one-news.css" />
-        <title>Title</title>
+        <link rel="stylesheet" href="css/about.css" />
+        <title>About</title>
     </head>
     <body>
         <div class="wrapper">
             @@include('components/header.html')
             <main class="main">
-                @@include('one-news/news-description.html')
-                @@include('one-news/news-swiper.html')
+                @@include('about/promo.html') @@include('about/philosophy.html')
             </main>
             @@include('components/footer.html')
             @@include('components/sprite.html')
         </div>
-        <script src="./js/pageNews.bundle.js"></script>
+        <script src="./js/about.bundle.js"></script>
     </body>
 </html>
