@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="css/news.css" />
-        <title>News</title>
+        <link rel="stylesheet" href="css/about.css" />
+        <title>About</title>
     </head>
     <body>
         <div class="wrapper">
@@ -147,130 +147,62 @@
 </div>
 
             <main class="main">
-                <section class="news news__container">
-    <div class="news__title-container">
-        <h2 class="news__title">Our latest news</h2>
-        <ul class="news__link-items">
-            <li
-                data-filter="all"
-                class="news__link-item link news__link_active"
-            >
-                All
-            </li>
-            <li data-filter="blog" class="news__link-item link">Blog</li>
-            <li data-filter="news" class="news__link-item link">News</li>
-            <li data-filter="advice" class="news__link-item link">
-                Advice from the designer
-            </li>
-        </ul>
+                <section class="promo">
+    <div class="promo__background">
+        <h2 class="promo__title">Company Philosophy</h2>
+        <p class="promo__text">
+            The basic philosophy of our studio is to create individual,
+            aesthetically stunning solutions for our customers by lightning-fast
+            development of projects employing unique styles and architecture.
+        </p>
     </div>
-    <div class="news__cards">
-        <div class="news__card cards blog">
-            <div class="news__card-text-area">
-                <h3 class="news__card-title">
-                    5 smart tips for productive collaboration with the designer
-                </h3>
-                <p class="news__card-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Cras vel gravida urna. Donec blandit sapien eu diam
-                    ullamcorper euismod. Nam tempus pellentesque ligula ut
-                    aliquam.
-                </p>
-                <a class="news__card-link" href="#">Discover more</a>
-            </div>
-            <img class="news__img" src="../images/news/news-1.png" alt="" />
-        </div>
-        <div class="news__card-img-hidden cards news">
-            <a href="#" class="news__card-img">
-                <h3 class="news__card-title-white">
-                    Non-standard plinth options
-                </h3>
-                <img
-                    class="news__img-link"
-                    src="../images/news/news-2.png"
-                    alt=""
-                />
-            </a>
-        </div>
-
-        <div class="news__card-img-hidden cards news">
-            <a href="/one-news.html" class="news__card-img">
-                <h3 class="news__card-title-white">
-                    Interior design, LCD Rybalsky
-                </h3>
-                <img
-                    class="news__img-link"
-                    src="../images/news/news-3.png"
-                    alt=""
-                />
-            </a>
-        </div>
-
-        <div class="news__card cards advice">
-            <div class="news__card-text-area">
-                <h3 class="news__card-title">
-                    5 smart tips for productive collaboration with the designer
-                </h3>
-                <p class="news__card-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Cras vel gravida urna. Donec blandit sapien eu diam
-                    ullamcorper euismod. Nam tempus pellentesque ligula ut
-                    aliquam.
-                </p>
-                <a class="news__card-link" href="#">Discover more</a>
-            </div>
-            <img class="news__img" src="../images/news/news-1.png" alt="" />
-        </div>
-    </div>
-    <ul class="news__pagination">
-        <li class="news__pagination-value">
-            <a>
-                <svg class="news__pagination-img">
-                    <use href="#arrow-left-pagination"></use>
-                </svg>
-            </a>
-        </li>
-        <li class="news__pagination-value"><a> 01 </a></li>
-        <li class="news__pagination-value"><a> 02 </a></li>
-        <li class="news__pagination-value"><a> 03 </a></li>
-        <li class="news__pagination-value"><a> ... </a></li>
-        <li class="news__pagination-value"><a> 15 </a></li>
-        <li class="news__pagination-value">
-            <a>
-                <svg class="news__pagination-img">
-                    <use href="#arrow-right-pagination"></use>
-                </svg>
-            </a>
-        </li>
-    </ul>
 </section>
+ <section class="philosophy philosophy__container">
+    <div>
+        <div class="swiper">
+            <div>
+                <h2>Company Philosophy</h2>
+                <p>
+                    The basic philosophy of our studio is to create individual,
+                    aesthetically stunning solutions for our customers by
+                    lightning-fast development of projects employing unique
+                    styles and architecture.
+                </p>
+                <div>
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
 
-                <section class="news">
-    <div class="news__background">
-        <div class="news__communication news__container">
-            <h2 class="news__communication-title">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </h2>
-            <div class="news__communication-block">
-                <div class="news__communication-block-item">
-                    <p class="news__communication-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Aliquam ullamcorper eu mauris vitae posuere. Ut at
-                        luctus ligula. Nunc ante felis, aliquam.
-                    </p>
-                    <form class="news__form">
-                        <input
-                            class="news__form-input"
-                            type="email"
-                            name="email"
-                            placeholder="Email"
-                        />
-                        <button class="news__form-button">
-                            <svg class="news__form-img">
-                                <use href="#arrow-right-input"></use>
-                            </svg>
-                        </button>
-                    </form>
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev">
+                        <svg>
+                            <use href="#left-arrow"></use>
+                        </svg>
+                        <span>01</span>
+                    </div>
+                    <div class="swiper-button-next">
+                        <span>04</span>
+                        <svg>
+                            <use href="#right-arrow"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img src="../images/about/about-2.png" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="../images/about/about-3.png" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="../images/about/about-4.png" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="../images/about/about-5.png" />
                 </div>
             </div>
         </div>
@@ -415,6 +347,6 @@
 </svg>
 
         </div>
-        <script src="./js/news.bundle.js"></script>
+        <script src="./js/about.bundle.js"></script>
     </body>
 </html>
