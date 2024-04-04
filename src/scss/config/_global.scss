@@ -25,6 +25,11 @@ html {
     // overflow: hidden;
 }
 
+.body {
+  &_lock {
+    overflow: hidden;
+  }
+}
 // fonts
 
 /* montserrat-300 */
