@@ -6,9 +6,66 @@
     <link rel="stylesheet" href="css/main.css" />
     <title>Main</title>
   </head>
-  <body>
+  <body class="body">
+    <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/main.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="preloader" id="preloader">
+            <div class="preloader__loader">
+                <p class="preloader__text">HI</p>
+                <span class="preloader__percents">
+                  <span id="percents">0</span>%
+                </span>
+            </div>
+        </div>
+    </body>
+</html>
+
+    <div class="modal">
+    <a href="#" class="modal__close">
+      <svg class="modal__close-svg">
+        <use href="#modal-close"></use>
+      </svg>
+    </a>
+    <div class="modal__content">
+      <div class="modal__top-box">
+        <h2 class="modal__title">Calculate the cost of work</h2>
+        <div class="modal__form form">
+            <input type="text" class="form__input" placeholder="Name" />
+            <input type="tel" class="form__input" placeholder="Phone" />
+            <input type="email" class="form__input" placeholder="Email" />
+            <input type="text" class="form__input" placeholder="Last name" />
+            <input type="text" class="form__input" placeholder="Your city" />
+            <div class="dropdown form__dropdown">
+               <div class="dropdown__box-modal">
+                    <p class="dropdown__text">Property type</p>
+                    <svg class="dropdown__svg-arrow">
+                        <use href="#arrow-bottom"></use>
+                    </svg>
+                </div>
+                <ul class="dropdown__menu">
+                    <li class="dropdown__menu-item">Kitchen</li>
+                    <li class="dropdown__menu-item">Bathroom</li>
+                    <li class="dropdown__menu-item dropdown__menu-item_active">
+                        Floor
+                    </li>
+                    <li class="dropdown__menu-item">Guestroom</li>
+                </ul>
+            </div>
+            <textarea name="" id="" cols="30" rows="3" class="form__text-area" placeholder="Your comment"></textarea>
+        </div>
+    </div>
+    </div>
+    
+</div>
     <div class="wrapper">
-      <header class="header header__background background-trriger-tr">
+      <header class="header header__background background-trriger-tr header_white-colors">
     <div class="header header__container">
         <div class="header__content">
             <nav class="header__link-block">
@@ -155,7 +212,7 @@
             <!-- Slides -->
             <div class="swiper-slide promo__slide">
                 <img
-                    src="../../images/main/main-1.png"
+                    src="./images/main/main-1.png"
                     alt="photo"
                     class="promo__left-img"
                 />
@@ -163,7 +220,7 @@
 
             <div class="swiper-slide promo__slide">
                 <img
-                    src="../../images/main/main-2.png"
+                    src="./images/main/main-2.png"
                     alt="photo"
                     class="promo__right-img"
                 />
@@ -171,7 +228,7 @@
 
             <div class="swiper-slide promo__slide">
                 <img
-                    src="../../images/main/main-8.png"
+                    src="./images/main/main-8.png"
                     alt="photo"
                     class="promo__left-img"
                 />
@@ -179,7 +236,7 @@
 
             <div class="swiper-slide promo__slide">
                 <img
-                    src="../../images/main/main-1.png"
+                    src="./images/main/main-1.png"
                     alt="photo"
                     class="promo__right-img"
                 />
@@ -290,7 +347,7 @@
             </div>
 
             <img
-                src="../../images/main/main-2.png"
+                src="./images/main/main-3.png"
                 alt="photo"
                 class="philosophy__top-img"
             />
@@ -298,14 +355,14 @@
         <div class="philosophy__bottom-inner">
             <div class="philosophy__photo-box">
                 <img
-                    src="../../images/main/main-3.png"
+                    src="./images/main/main-4.png"
                     alt="photo"
                     class="philosophy__img-first"
                 />
                 <img
-                    src="../../images/main/main-3.png"
+                    src="./images/main/main-5.png"
                     alt="photo"
-                    class="philosophy__img-first"
+                    class="philosophy__img-second"
                 />
             </div>
             <blockquote class="philosophy__quote">We can also help you create harmony out of seemingly completely incompatible elements in the interior or the exterior design. </blockquote>
@@ -313,6 +370,125 @@
     </div>
 </section>
 
+        <section class="projects-first">
+    <div class="projects-first__container">
+        <h2 class="projects-first__title">Our Projects</h2>
+        <p class="projects-first__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+            ullamcorper eu mauris vitae posuere. Ut at luctus ligula. Nunc ante
+            felis, aliquam eu enim sed, ornare pretium velit.
+        </p>
+
+        <div class="projects-first__cards">
+            <div class="projects-first__card card card_first">
+                <ul class="card__list">
+                    <li class="card__item">Lodz</li>
+                    <li class="card__item">16.10.2018</li>
+                    <li class="card__item">80 sq.m</li>
+                </ul>
+                <div class="card__descr">
+                    <p class="card__text">Eyewear store interior</p>
+
+                    <a href="#" class="discover-link card__link">
+                        Discover more
+                    </a>
+                </div>
+            </div>
+
+            <div class="projects-first__card card card_second">
+                <ul class="card__list">
+                    <li class="card__item">Lodz</li>
+                    <li class="card__item">16.10.2018</li>
+                    <li class="card__item">80 sq.m</li>
+                </ul>
+                <div class="card__descr">
+                    <p class="card__text">Minimalist style home</p>
+                    <a href="#" class="discover-link card__link">
+                        Discover more
+                    </a>
+                </div>
+            </div>
+
+            <div class="projects-first__card card card_third">
+                <ul class="card__list">
+                    <li class="card__item">Lodz</li>
+                    <li class="card__item">16.10.2018</li>
+                    <li class="card__item">80 sq.m</li>
+                </ul>
+                <div class="card__descr">
+                    <p class="card__text">Residence by the lighthouse</p>
+                    <a href="#" class="discover-link card__link">
+                        Discover more
+                    </a>
+                </div>
+            </div>
+
+            <div class="projects-first__card card card_fourth">
+                <ul class="card__list">
+                    <li class="card__item">Lodz</li>
+                    <li class="card__item">16.10.2018</li>
+                    <li class="card__item">80 sq.m</li>
+                </ul>
+
+                <div class="card__descr">
+                    <p class="card__text">Eyewear store interior</p>
+                    <a href="#" class="discover-link card__link">
+                        Discover more
+                    </a>
+                </div>
+            </div>
+
+            <div class="projects-first__card card card_fivth"></div>
+        </div>
+
+        <div class="projects-first__gallary">
+            <p class="projects-first__gallary-descr">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+
+            <div class="projects-first__gallary-box">
+                <p class="projects-first__gallary-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Aliquam ullamcorper eu mauris vitae posuere. Ut at
+                    luctus ligula. Nunc ante felis, aliquam eu enim sed,
+                    ornare pretium velit.
+                </p>
+                <a href="#" class="button__white projects-first__button">Make request</a>
+            </div>
+
+            <img src="./images/reused/reused-1.png" alt="" class="projects-first__gallary-img">
+        </div>
+    </div>
+</section>
+
+        <section class="projects-second">
+  <div class="projects-second__container">
+    <div class="projects-second__content-box">
+       <h2 class="projects-second__title">
+      @lorem.ipsum
+    </h2>
+    <p class="projects-second__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper eu mauris vitae posuere. </p>
+    </div>
+   
+  </div>
+
+  <img src="./images/reused/reused-6.png" alt="photo" class="projects-second__img projects-second__img_first">
+
+  <img src="./images/reused/reused-5.png" alt="photo" class="projects-second__img projects-second__img_second">
+
+  <img src="./images/reused/reused-3.png" alt="photo" class="projects-second__img projects-second__img_third">
+
+  <img src="./images/reused/reused-4.png" alt="photo" class="projects-second__img projects-second__img_fourth">
+
+  <img src="./images/reused/reused-7.png" alt="photo" class="projects-second__img projects-second__img_fivth">
+
+  <img src="./images/reused/reused-2.png" alt="photo" class="projects-second__img projects-second__img_sixth">
+
+  <img src="./images/reused/reused-8.png" alt="photo" class="projects-second__img projects-second__img_seventh">
+
+  <img src="./images/reused/reused-3.png" alt="photo" class="projects-second__img projects-second__img_eighth">
+  
+</section>
         <div class="contacts__background-container">
   <main class="contacts contacts__container">
     <div class="contacts__content">
@@ -364,6 +540,7 @@
   </main>
 </div>
 
+
       </main>
     </div>
 
@@ -404,12 +581,12 @@
         <path d="M1 1L5 5L1 9" stroke="white" stroke-width="0.75" fill="none" />
     </symbol>
 
-    <symbol id="arrow-bottom" viewBox="0 0 9 6">
+    <symbol id="arrow-bottom" viewBox="0 0 9 6" fill="currentColor">
         <path
             d="M8 1L4.5 4.5L1 1"
             stroke="white"
             stroke-width="1.4"
-            fill="none"
+            
         />
     </symbol>
 
@@ -501,6 +678,11 @@
                 <rect width="24" height="24" fill="white" />
             </clipPath>
         </defs>
+    </symbol>
+
+    <symbol id="modal-close" viewBox="0 0 16 16">
+      <rect width="21.6845" height="0.942805" transform="matrix(0.707106 -0.707107 0.707106 0.707107 0 15.3335)" fill="white" />
+      <rect width="21.6845" height="0.942805" transform="matrix(0.707106 0.707107 -0.707106 0.707107 0.666504 0.000488281)" fill="white" />
     </symbol>
 </svg>
 

@@ -7,8 +7,65 @@
         <title>About</title>
     </head>
     <body>
+        <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/main.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="preloader" id="preloader">
+            <div class="preloader__loader">
+                <p class="preloader__text">HI</p>
+                <span class="preloader__percents">
+                  <span id="percents">0</span>%
+                </span>
+            </div>
+        </div>
+    </body>
+</html>
+
+        <div class="modal">
+    <a href="#" class="modal__close">
+      <svg class="modal__close-svg">
+        <use href="#modal-close"></use>
+      </svg>
+    </a>
+    <div class="modal__content">
+      <div class="modal__top-box">
+        <h2 class="modal__title">Calculate the cost of work</h2>
+        <div class="modal__form form">
+            <input type="text" class="form__input" placeholder="Name" />
+            <input type="tel" class="form__input" placeholder="Phone" />
+            <input type="email" class="form__input" placeholder="Email" />
+            <input type="text" class="form__input" placeholder="Last name" />
+            <input type="text" class="form__input" placeholder="Your city" />
+            <div class="dropdown form__dropdown">
+               <div class="dropdown__box-modal">
+                    <p class="dropdown__text">Property type</p>
+                    <svg class="dropdown__svg-arrow">
+                        <use href="#arrow-bottom"></use>
+                    </svg>
+                </div>
+                <ul class="dropdown__menu">
+                    <li class="dropdown__menu-item">Kitchen</li>
+                    <li class="dropdown__menu-item">Bathroom</li>
+                    <li class="dropdown__menu-item dropdown__menu-item_active">
+                        Floor
+                    </li>
+                    <li class="dropdown__menu-item">Guestroom</li>
+                </ul>
+            </div>
+            <textarea name="" id="" cols="30" rows="3" class="form__text-area" placeholder="Your comment"></textarea>
+        </div>
+    </div>
+    </div>
+    
+</div>
         <div class="wrapper">
-            <header class="header header__background background-trriger-tr">
+            <header class="header header__background background-trriger-tr ">
     <div class="header header__container">
         <div class="header__content">
             <nav class="header__link-block">
@@ -246,12 +303,12 @@
         <path d="M1 1L5 5L1 9" stroke="white" stroke-width="0.75" fill="none" />
     </symbol>
 
-    <symbol id="arrow-bottom" viewBox="0 0 9 6">
+    <symbol id="arrow-bottom" viewBox="0 0 9 6" fill="currentColor">
         <path
             d="M8 1L4.5 4.5L1 1"
             stroke="white"
             stroke-width="1.4"
-            fill="none"
+            
         />
     </symbol>
 
@@ -343,6 +400,11 @@
                 <rect width="24" height="24" fill="white" />
             </clipPath>
         </defs>
+    </symbol>
+
+    <symbol id="modal-close" viewBox="0 0 16 16">
+      <rect width="21.6845" height="0.942805" transform="matrix(0.707106 -0.707107 0.707106 0.707107 0 15.3335)" fill="white" />
+      <rect width="21.6845" height="0.942805" transform="matrix(0.707106 0.707107 -0.707106 0.707107 0.666504 0.000488281)" fill="white" />
     </symbol>
 </svg>
 
