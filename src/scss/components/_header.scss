@@ -7,12 +7,30 @@
 
     &_black {
         background: rgba(0, 0, 0, 0.6);
+        a {
+            color: $whiteColor;
+        }
+
+        .header__button {
+            color: $whiteColor;
+            border-color: rgba(255, 255, 255, 0.4);
+
+            &:hover {
+                background: $whiteColor;
+                border-color: rgba(0, 0, 0, 0.4);
+                color: $blackColor;
+            }
+        }
+
+        .header__language {
+            color: $whiteColor;
+        }
     }
 
     &__background {
         width: 100%;
         height: 96px;
-        // background: $whiteColor;
+        //background: $whiteColor;
     }
 
     &_white-colors .logo {
@@ -24,7 +42,7 @@
             color: $whiteColor;
 
             &::after {
-              background: $whiteColor;
+                background: $whiteColor;
             }
         }
         .header__language {
@@ -35,14 +53,26 @@
         }
         .header__button {
             color: $whiteColor;
-            border-color: rgba(255,255,255,0.4);
+            border-color: rgba(255, 255, 255, 0.4);
 
             &:hover {
-              background: $whiteColor;
-              border-color: rgba(0,0,0,0.4);
-              color: $blackColor;
+                background: $whiteColor;
+                border-color: rgba(0, 0, 0, 0.4);
+                color: $blackColor;
             }
         }
+
+        .header__burger-icon {
+            span {
+                background: $whiteColor;
+            }
+        }
+
+        //.header__background {
+        //    width: 100%;
+        //    height: 96px;
+        //    background: rgba(0, 0, 0, 0.4);
+        //}
     }
 
     &__content {
@@ -245,8 +275,6 @@
         height: 768px;
         background: $blackColor;
         opacity: 0.98;
-        z-index: 0;
-        // overflow: hidden;
         transition: top 0.5s ease-in-out;
         z-index: 1;
 
