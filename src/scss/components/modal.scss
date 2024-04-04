@@ -1,6 +1,142 @@
+@import "../components/promo.scss";
+
 .modal {
-  position: fixed;
-  width: 1046px;
-  background: $newsCard;
-  z-index: 36;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    padding-top: 75px;
+    z-index: 30;
+    background: $blackColor;
+    left: 0;
+    transition: opacity 900ms ease-in-out, visibility 300ms ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+     overflow-y: auto;
+     overflow-x: hidden;
+
+     &_active {
+      opacity: 1;
+      visibility: visible;
+     }
+
+  &__content {
+    width: 1046px;
+    background: $newsCard;
+    margin: 0 auto;
+    transition: transform 900ms ease-in-out;
+    transform: perspective(600px) translate(0px, -120%) rotateX(45deg);
+
+    &_active {
+       transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+    }
+  }
+
+
+    &__close {
+      position: absolute;
+      right: 40px;
+      top: 90px;
+    }
+
+    &__close-svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    &__top-box {
+        background: $whiteColor;
+        padding: 44px 70px;
+    }
+
+    &__title {
+        margin-bottom: 38px;
+        text-align: center;
+    }
+
+    &__form {
+        // display: flex;
+        // flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 38px 36px;
+    }
+
+    .form {
+        &__input {
+            width: 312px;
+            gap: 38px;
+            font-weight: 600;
+            font-size: 11px;
+            letter-spacing: 0.06em;
+            color: $swiperTitle;
+            padding: 0 0 11px;
+            border-bottom: 1px solid rgba(214, 214, 214, 0.3);
+        }
+
+        &__text-area {
+          resize: none;
+          grid-column: 1 / -1;
+          outline: none;
+        }
+    }
+
+    .dropdown {
+        position: relative;
+        &__box-modal {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 300ms ease-in-out;
+            cursor: pointer;
+        }
+
+        &__svg-arrow {
+            width: 9px;
+            height: 6px;
+            position: absolute;
+            right: 8px;
+            transition: transform 300ms ease-in-out;
+
+            &_rotate {
+                transform: rotate(180deg);
+            }
+        }
+
+        &__text {
+            font-weight: 600;
+            font-size: 11px;
+            letter-spacing: 0.06em;
+            color: $swiperTitle;
+        }
+
+        &__menu {
+            position: absolute;
+            z-index: 7;
+            background: rgba(109, 108, 108, 0.5);
+            width: 100%;
+            opacity: 0;
+            visibility: hidden;
+            padding: 5px 10px;
+            transition:
+                opacity 300ms ease-in-out,
+                visibility 300ms ease-in-out;
+
+            &_open {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        &__menu-item {
+            font-weight: 600;
+            font-size: 11px;
+            letter-spacing: 0.06em;
+            color: $whiteColor;
+            white-space: nowrap;
+            cursor: pointer;
+            &_active {
+                color: $inactiveBlackColor;
+            }
+        }
+    }
 }
