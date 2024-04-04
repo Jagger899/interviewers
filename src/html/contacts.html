@@ -8,8 +8,11 @@
     </head>
     <body>
         @@include('./components/preloader.html')
+        @@include('./components/modal.html')
         <div class="wrapper">
             @@include('./components/header.html', { 'colors': 'white'})
+        <div class="wrapper wrapper_contact">
+            @@include('./components/header.html')
             <main class="main">@@include('./contacts/contacts.html')</main>
             @@include('components/footer.html', { 'colors': 'white'})
         </div>
