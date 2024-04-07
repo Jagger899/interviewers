@@ -1,37 +1,177 @@
 <div class="modal">
     <a href="#" class="modal__close">
-      <svg class="modal__close-svg">
-        <use href="#modal-close"></use>
-      </svg>
+        <svg class="modal__close-svg">
+            <use href="#modal-close"></use>
+        </svg>
     </a>
     <div class="modal__content">
-      <div class="modal__top-box">
-        <h2 class="modal__title">Calculate the cost of work</h2>
-        <div class="modal__form form">
-            <input type="text" class="form__input" placeholder="Name" />
-            <input type="tel" class="form__input" placeholder="Phone" />
-            <input type="email" class="form__input" placeholder="Email" />
-            <input type="text" class="form__input" placeholder="Last name" />
-            <input type="text" class="form__input" placeholder="Your city" />
-            <div class="dropdown form__dropdown">
-               <div class="dropdown__box-modal">
-                    <p class="dropdown__text">Property type</p>
-                    <svg class="dropdown__svg-arrow">
-                        <use href="#arrow-bottom"></use>
-                    </svg>
+        <div class="modal__box">
+            <h2 class="modal__title">Calculate the cost of work</h2>
+            <h2 class="modal__title-mobile">Make request</h2>
+            <div class="modal__form form">
+                <input type="text" class="form__input" placeholder="Name" />
+                <input type="tel" class="form__input" placeholder="Phone" />
+                <input type="email" class="form__input" placeholder="Email" />
+                <input
+                    type="text"
+                    class="form__input"
+                    placeholder="Last name"
+                />
+                <input
+                    type="text"
+                    class="form__input"
+                    placeholder="Your city"
+                />
+                <div class="dropdown form__dropdown">
+                    <div class="dropdown__box-modal">
+                        <p class="dropdown__text">Property type</p>
+                        <svg class="dropdown__svg-arrow dropdown__svg-arrow_modal">
+                            <use href="#arrow-modal"></use>
+                        </svg>
+                    </div>
+                    <ul class="dropdown__menu">
+                        <li class="dropdown__menu-item">Kitchen</li>
+                        <li class="dropdown__menu-item">Bathroom</li>
+                        <li
+                            class="dropdown__menu-item dropdown__menu-item_active"
+                        >
+                            Floor
+                        </li>
+                        <li class="dropdown__menu-item">Guestroom</li>
+                    </ul>
                 </div>
-                <ul class="dropdown__menu">
-                    <li class="dropdown__menu-item">Kitchen</li>
-                    <li class="dropdown__menu-item">Bathroom</li>
-                    <li class="dropdown__menu-item dropdown__menu-item_active">
-                        Floor
-                    </li>
-                    <li class="dropdown__menu-item">Guestroom</li>
-                </ul>
+                <textarea
+                    name=""
+                    id=""
+                    cols="30"
+                    rows="3"
+                    class="form__text-area"
+                    placeholder="Your comment"
+                ></textarea>
             </div>
-            <textarea name="" id="" cols="30" rows="3" class="form__text-area" placeholder="Your comment"></textarea>
         </div>
+
+        <div class="modal__box">
+            <p class="modal__filter-name">Area (m2)</p>
+            <form id="change-form" class="modal__change-box change-box">
+              <ul class="change-box__list">
+                  <li class="change-box__item">
+                      <input type="radio" id="to-50"
+                      class="change-box__input" value="to 50"
+                      name="radio"/>
+                      
+                      <label for="to-50" class="change-box__label"
+                          >to 50</label
+                      >
+                  </li>
+
+                  <li class="change-box__item">
+                      <input
+                          id="to-50-150"
+                          type="radio"
+                          class="change-box__input"
+                          value="50-150"
+                          checked
+                          name="radio"
+                      />
+                      <label for="to-50-150" class="change-box__label"
+                          >50-150</label
+                      >
+                  </li>
+
+                  <li class="change-box__item">
+                      <input
+                          id="to-150-250"
+                          type="radio"
+                          class="change-box__input"
+                          value="150-250"
+                          name="radio"
+                      />
+
+                      <label for="to-150-250" class="change-box__label"
+                          >150-250
+                      </label>
+                  </li>
+
+                  <li class="change-box__item">
+                      <input
+                          id="to-250-400"
+                          type="radio"
+                          class="change-box__input"
+                          value="250-400"
+                          name="radio"
+                      />
+
+                      <label for="to-250-400" class="change-box__label"
+                          >250-400
+                      </label>
+                  </li>
+
+                  <li class="change-box__item">
+                      <input type="radio" id="to-400-600" class="change-box__input" value="400-600" name="radio" />
+                      
+                      <label for="to-400-600" class="change-box__label"
+                          >400-600</label
+                      >
+                  </li>
+
+                  <li class="change-box__item">
+                      <input type="radio" id="to-600-800" class="change-box__input" value="600-800" name="radio"/>
+
+                      <label for="to-600-800" class="change-box__label"
+                          >600-800</label
+                      >
+                  </li>
+
+                  <li class="change-box__item">
+                      
+                      <input type="radio" id="to-800-1000" class="change-box__input" value="800-1000" name="radio"/>
+
+                      <label for="to-800-1000"  class="change-box__label"
+                          >800-1000</label
+                      >
+                  </li>
+
+                  <li class="change-box__item">
+                     
+                      <input type="radio" class="change-box__input" value="1000+" name="radio" id="to-1000+"/>
+
+                       <label for="to-1000+" class="change-box__label"
+                          >1000+</label
+                      >
+                  </li>
+              </ul>
+
+              <div class="change-box__user-req">
+                <div class="change-box__add-file">
+                  <label for="file" class="change-box__file-label">
+                    <svg>
+                      <use href="#add-file"></use>
+                    </svg>
+                  </label>
+                  <input type="file" id="file" class="change-box__file">
+                  <div class="change-box__text-box">
+                    <p class="change-box__text">Attach your file</p>
+                    <p class="change-box__text">File size not more than 10 MB</p>
+                  </div>
+                </div>
+                <a href="#" id="modal-first-button" class="button button__transparency">Send Request</a>
+              </div>
+              
+              <p class="change-box__descr">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+            </form>
+        </div>
+
     </div>
+
+    <div class="modal__request">
+      <div class="modal__request-box">
+      <h2 class="modal__request-title">Thank you for your message!</h2>
+
+      <p class="modal__request-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper eu mauris vitae posuere. Ut at luctus ligula. Nunc ante felis, aliquam eu enim sed, ornare pretium velit.</p>
+
+      <a href="#" id="modal-second-button" class="button button__transparency button__transparency_req">Send againt</a>
+      </div>
+      
     </div>
-    
 </div>

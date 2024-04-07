@@ -4,53 +4,112 @@
     position: fixed;
     width: 100%;
     height: 100%;
+    padding: 75px 15px 93px;
     padding-top: 75px;
+    padding-bottom: 93px;
     z-index: 30;
     background: $blackColor;
     left: 0;
-    transition: opacity 900ms ease-in-out, visibility 300ms ease-in-out;
+    transition:
+        opacity 900ms ease-in-out,
+        visibility 300ms ease-in-out;
     opacity: 0;
     visibility: hidden;
-     overflow-y: auto;
-     overflow-x: hidden;
-
-     &_active {
-      opacity: 1;
-      visibility: visible;
-     }
-
-  &__content {
-    width: 1046px;
-    background: $newsCard;
-    margin: 0 auto;
-    transition: transform 900ms ease-in-out;
-    transform: perspective(600px) translate(0px, -120%) rotateX(45deg);
+    overflow-y: auto;
+    overflow-x: hidden;
 
     &_active {
-       transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+        opacity: 1;
+        visibility: visible;
     }
-  }
 
+    &__content {
+        max-width: 1046px;
+        background: $newsCard;
+        margin: 0 auto;
+        padding: 56px 123px 57px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        transition: transform 900ms ease-in-out;
+        transform: perspective(600px) translate(0px, -120%) rotateX(45deg);
+
+        &_active {
+            transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+        }
+
+        @include breakpoints(md) {
+            max-width: 808px;
+            padding: 32px 51px;
+        }
+
+        @include breakpoints(sm) {
+            padding: 32px 40px;
+        }
+
+        @include breakpoints(xs) {
+            padding: 0;
+            max-width: 327px;
+        }
+    }
 
     &__close {
-      position: absolute;
-      right: 40px;
-      top: 90px;
+        position: absolute;
+        right: 40px;
+        top: 40px;
+
+        @include breakpoints(xxs) {
+            right: 30px;
+        }
     }
 
     &__close-svg {
-      width: 16px;
-      height: 16px;
+        width: 16px;
+        height: 16px;
     }
 
-    &__top-box {
+    &__box {
         background: $whiteColor;
         padding: 44px 70px;
+
+        @include breakpoints(md) {
+            padding: 44px 52px;
+        }
+
+        &::nth-child(2) {
+            @include breakpoints(md) {
+                padding-left: 29px;
+            }
+        }
+
+        @include breakpoints(sm) {
+            padding: 44px 56px;
+        }
+
+        @include breakpoints(xs) {
+            padding: 24px 24px 40px;
+        }
     }
 
     &__title {
         margin-bottom: 38px;
         text-align: center;
+
+        @include breakpoints(md) {
+            display: none;
+        }
+    }
+
+    &__title-mobile {
+        display: none;
+
+        @include breakpoints(md) {
+            display: block;
+            text-align: center;
+            font-weight: 700;
+            font-size: 24px;
+            margin-bottom: 38px;
+        }
     }
 
     &__form {
@@ -59,29 +118,46 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 38px 36px;
+
+        @include breakpoints(sm) {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
     }
 
     .form {
         &__input {
+            font-family: "Montserrat";
             width: 312px;
-            gap: 38px;
             font-weight: 600;
+            gap: 38px;
             font-size: 11px;
             letter-spacing: 0.06em;
             color: $swiperTitle;
             padding: 0 0 11px;
             border-bottom: 1px solid rgba(214, 214, 214, 0.3);
+
+            @include breakpoints(md) {
+                font-weight: 500;
+            }
+
+            @include breakpoints(xs) {
+                width: 279px;
+            }
         }
 
         &__text-area {
-          resize: none;
-          grid-column: 1 / -1;
-          outline: none;
+            resize: none;
+            grid-column: 1 / -1;
+            outline: none;
+            border-bottom: 1px solid rgba(214, 214, 214, 0.3);
         }
     }
 
     .dropdown {
         position: relative;
+
         &__box-modal {
             display: flex;
             justify-content: space-between;
@@ -91,12 +167,13 @@
         }
 
         &__svg-arrow {
-            width: 9px;
-            height: 6px;
-            position: absolute;
-            right: 8px;
-            transition: transform 300ms ease-in-out;
-
+            &_modal {
+                width: 9px;
+                height: 6px;
+                position: absolute;
+                right: 8px;
+                transition: transform 300ms ease-in-out;
+            }
             &_rotate {
                 transform: rotate(180deg);
             }
@@ -113,6 +190,7 @@
             position: absolute;
             z-index: 7;
             background: rgba(109, 108, 108, 0.5);
+            border-radius: 0 0 6px 6px;
             width: 100%;
             opacity: 0;
             visibility: hidden;
@@ -124,6 +202,10 @@
             &_open {
                 opacity: 1;
                 visibility: visible;
+
+                @include breakpoints(sm) {
+                    background: rgb(71, 71, 71);
+                }
             }
         }
 
@@ -137,6 +219,289 @@
             &_active {
                 color: $inactiveBlackColor;
             }
+        }
+    }
+
+    &__filter-name {
+        font-weight: 600;
+        font-size: 11px;
+        letter-spacing: 0.06em;
+        color: $swiperTitle;
+        margin-bottom: 24px;
+        opacity: 1;
+    }
+
+    .change-box {
+        &__list {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            z-index: 2;
+            margin-bottom: 54px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 96%;
+                height: 1px;
+                background: rgba(0, 0, 0, 0.04);
+                background: red;
+                bottom: 9px;
+                z-index: 0;
+                left: 13px;
+
+                @include breakpoints(xs) {
+                    width: 90%;
+                }
+            }
+
+            &::before {
+                display: none;
+
+                @include breakpoints(sm) {
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    // width: 520px;
+                    width: 96%;
+                    background: green;
+                    left: 13px;
+                    height: 1px;
+                    bottom: 89px;
+                    z-index: 0;
+
+                    @include breakpoints(xs) {
+                        width: 90%;
+                    }
+                }
+            }
+
+            @include breakpoints(md) {
+                margin-bottom: 36px;
+            }
+
+            @include breakpoints(sm) {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                row-gap: 30px;
+                // margin-left: -15px;
+            }
+        }
+
+        &__item {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            z-index: 4;
+
+            @include breakpoints(sm) {
+                // max-width: 50px;
+                &:first-child {
+                    align-items: flex-start;
+                }
+
+                &:nth-child(4) {
+                    align-items: flex-end;
+                }
+
+                &:nth-child(5) {
+                    align-items: flex-start;
+                }
+
+                &:nth-child(8) {
+                    align-items: flex-end;
+                }
+            }
+        }
+
+        &__label {
+            font-weight: 500;
+            font-size: 9px;
+            letter-spacing: 0.06em;
+            color: rgba(58, 62, 75, 0.55);
+            font-family: inherit;
+        }
+
+        &__input {
+            width: 18px;
+            height: 18px;
+            outline: none;
+            appearance: none;
+            position: relative;
+            background: #afb0b2;
+            border-radius: 50%;
+            border: 7px solid #f7f7f6;
+            transition: border 300ms ease-in-out;
+            cursor: pointer;
+
+            &:checked {
+                background: $whiteColor;
+                border: 7px solid #1d1f26;
+            }
+
+            &:checked ~ .change-box__label {
+                color: $swiperTitle;
+            }
+        }
+
+        &__user-req {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 38px;
+        }
+
+        &__add-file {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            @include breakpoints(md) {
+                display: none;
+            }
+        }
+
+        &__file {
+            display: none;
+        }
+
+        &__file-label {
+            width: 39px;
+            height: 39px;
+            border-radius: 50%;
+            border: 1px solid rgba(58, 62, 75, 0.08);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f7f7f6;
+            cursor: pointer;
+        }
+
+        &__file-label svg {
+            width: 9px;
+            height: 9px;
+        }
+
+        &__text-box {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        &__text {
+            &:first-child {
+                font-weight: 600;
+                font-size: 11px;
+                letter-spacing: 0.06em;
+                opacity: 1;
+            }
+
+            &:nth-child(2) {
+                font-weight: 500;
+                font-size: 9px;
+                letter-spacing: 0.06em;
+                color: rgba(58, 62, 75, 0.45);
+            }
+        }
+
+        .button__transparency {
+            color: $whiteColor;
+            background: $swiperTitle;
+
+            &:hover {
+                color: $swiperTitle;
+                background: $whiteColor;
+            }
+
+            @include breakpoints(md) {
+                margin: 0 auto;
+            }
+        }
+
+        &__descr {
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 141%;
+            letter-spacing: 0.06em;
+            text-align: center;
+            color: $modalFormColor;
+
+            @include breakpoints(md) {
+                display: none;
+            }
+        }
+    }
+
+    &__request {
+        position: absolute;
+        width: 706px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 405px;
+        background: $whiteColor;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+
+        transition: opacity 1200ms ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+        // transform: perspective(600px) translate(0px, 130%) rotateX(-45deg);
+
+        &_active {
+            // transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+            z-index: 1;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        @include breakpoints(sm) {
+            width: 520px;
+        }
+
+        @include breakpoints(xs) {
+            width: 327px;
+        }
+    }
+
+    &__request-title {
+        font-weight: 700;
+        font-size: 24px;
+        text-align: center;
+        color: $swiperTitle;
+        margin-bottom: 24px;
+    }
+
+    &__request-text {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 171%;
+        text-align: center;
+        max-width: 448px;
+        margin-bottom: 40px;
+
+        @include breakpoints(xs) {
+            max-width: 279px;
+        }
+    }
+
+    .button__transparency {
+        color: $whiteColor;
+        background: $swiperTitle;
+
+        &:hover {
+            color: $swiperTitle;
+            background: $whiteColor;
+        }
+
+        &_req {
+            width: 183px;
+            display: block;
+            margin: 0 auto;
         }
     }
 }
