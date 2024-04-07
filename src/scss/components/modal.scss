@@ -44,12 +44,12 @@
         }
 
         @include breakpoints(sm) {
-          padding: 32px 40px;
+            padding: 32px 40px;
         }
 
         @include breakpoints(xs) {
-          padding: 0;
-          max-width: 327px;
+            padding: 0;
+            max-width: 327px;
         }
     }
 
@@ -59,7 +59,7 @@
         top: 40px;
 
         @include breakpoints(xxs) {
-          right: 30px;
+            right: 30px;
         }
     }
 
@@ -73,21 +73,21 @@
         padding: 44px 70px;
 
         @include breakpoints(md) {
-          padding: 44px 52px;
+            padding: 44px 52px;
         }
 
         &::nth-child(2) {
-          @include breakpoints(md) {
-            padding-left: 29px;
-          }
+            @include breakpoints(md) {
+                padding-left: 29px;
+            }
         }
 
         @include breakpoints(sm) {
-          padding: 44px 56px;
+            padding: 44px 56px;
         }
 
         @include breakpoints(xs) {
-          padding: 24px 24px 40px;
+            padding: 24px 24px 40px;
         }
     }
 
@@ -102,7 +102,7 @@
 
     &__title-mobile {
         display: none;
-  
+
         @include breakpoints(md) {
             display: block;
             text-align: center;
@@ -120,9 +120,9 @@
         gap: 38px 36px;
 
         @include breakpoints(sm) {
-          display: flex;
-          flex-direction: column;
-          gap: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
         }
     }
 
@@ -139,11 +139,11 @@
             border-bottom: 1px solid rgba(214, 214, 214, 0.3);
 
             @include breakpoints(md) {
-              font-weight: 500;
+                font-weight: 500;
             }
 
             @include breakpoints(xs) {
-              width: 279px;
+                width: 279px;
             }
         }
 
@@ -167,12 +167,13 @@
         }
 
         &__svg-arrow {
-            width: 9px;
-            height: 6px;
-            position: absolute;
-            right: 8px;
-            transition: transform 300ms ease-in-out;
-
+            &_modal {
+                width: 9px;
+                height: 6px;
+                position: absolute;
+                right: 8px;
+                transition: transform 300ms ease-in-out;
+            }
             &_rotate {
                 transform: rotate(180deg);
             }
@@ -203,7 +204,7 @@
                 visibility: visible;
 
                 @include breakpoints(sm) {
-                  background: rgb(71, 71, 71);
+                    background: rgb(71, 71, 71);
                 }
             }
         }
@@ -231,7 +232,6 @@
     }
 
     .change-box {
-
         &__list {
             display: flex;
             justify-content: space-between;
@@ -251,40 +251,40 @@
                 left: 13px;
 
                 @include breakpoints(xs) {
-                  width: 90%;
+                    width: 90%;
                 }
             }
 
             &::before {
-              display: none;
+                display: none;
 
-              @include breakpoints(sm) {
-                display: block;
-                content: '';
-                position: absolute;
-                // width: 520px;
-                width: 96%;
-                background: green;
-                left: 13px;
-                height: 1px;
-                bottom: 89px;
-                z-index: 0;
+                @include breakpoints(sm) {
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    // width: 520px;
+                    width: 96%;
+                    background: green;
+                    left: 13px;
+                    height: 1px;
+                    bottom: 89px;
+                    z-index: 0;
 
-                @include breakpoints(xs) {
-                  width: 90%;
+                    @include breakpoints(xs) {
+                        width: 90%;
+                    }
                 }
-              }
             }
 
             @include breakpoints(md) {
-              margin-bottom: 36px;
+                margin-bottom: 36px;
             }
 
             @include breakpoints(sm) {
-              display: grid;
-              grid-template-columns: repeat(4, 1fr);
-              row-gap: 30px;
-              // margin-left: -15px;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                row-gap: 30px;
+                // margin-left: -15px;
             }
         }
 
@@ -297,22 +297,22 @@
             z-index: 4;
 
             @include breakpoints(sm) {
-              // max-width: 50px;
-              &:first-child {
-                align-items: flex-start;
-              }
+                // max-width: 50px;
+                &:first-child {
+                    align-items: flex-start;
+                }
 
-              &:nth-child(4) {
-                align-items: flex-end;
-              }
+                &:nth-child(4) {
+                    align-items: flex-end;
+                }
 
-              &:nth-child(5) {
-                align-items: flex-start;
-              }
+                &:nth-child(5) {
+                    align-items: flex-start;
+                }
 
-              &:nth-child(8) {
-                align-items: flex-end;
-              }
+                &:nth-child(8) {
+                    align-items: flex-end;
+                }
             }
         }
 
@@ -359,7 +359,7 @@
             gap: 12px;
 
             @include breakpoints(md) {
-              display: none;
+                display: none;
             }
         }
 
@@ -416,7 +416,7 @@
             }
 
             @include breakpoints(md) {
-              margin: 0 auto;
+                margin: 0 auto;
             }
         }
 
@@ -429,7 +429,7 @@
             color: $modalFormColor;
 
             @include breakpoints(md) {
-              display: none;
+                display: none;
             }
         }
     }
@@ -460,11 +460,11 @@
         }
 
         @include breakpoints(sm) {
-          width: 520px;
+            width: 520px;
         }
 
         @include breakpoints(xs) {
-          width: 327px;
+            width: 327px;
         }
     }
 
@@ -485,7 +485,7 @@
         margin-bottom: 40px;
 
         @include breakpoints(xs) {
-          max-width: 279px;
+            max-width: 279px;
         }
     }
 
