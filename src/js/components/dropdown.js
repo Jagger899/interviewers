@@ -1,23 +1,18 @@
 export const dropdownWork = function () {
     const dropdown = document.querySelector(".dropdown");
-    const dropdownBox = document.querySelector(".dropdown__box");
-    const dropdownBoxModal = document.querySelector(".dropdown__box-modal");
+    const dropdownBox = document.querySelectorAll(".dropdown__box");
     const menu = document.querySelectorAll(".dropdown__menu");
     const options = document.querySelectorAll(".dropdown__menu-item");
     const arrowSvg = document.querySelector(".dropdown__svg-arrow");
     const selectedText = document.querySelectorAll(".dropdown__text");
-    //
-    dropdownBoxModal.addEventListener("click", () => {
-        arrowSvg.classList.toggle("dropdown__svg-arrow_rotate");
-        menu.forEach((item) => {
-            item.classList.toggle("dropdown__menu_open");
-        });
-    });
 
-    dropdownBox.addEventListener("click", () => {
-        arrowSvg.classList.toggle("dropdown__svg-arrow_rotate");
-        menu.forEach((item) => {
-            item.classList.toggle("dropdown__menu_open");
+
+    dropdownBox.forEach((box) => {
+        box.addEventListener("click", () => {
+            arrowSvg.classList.toggle("dropdown__svg-arrow_rotate");
+            menu.forEach((item) => {
+                item.classList.toggle("dropdown__menu_open");
+            });
         });
     });
 
