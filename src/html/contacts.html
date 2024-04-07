@@ -10,9 +10,10 @@
         @@include('./components/preloader.html')
         @@include('./components/modal.html')
         <div class="wrapper wrapper_contact">
-            @@include('./components/header.html')
+            @@include('./components/header.html',{ 'colors': 'white' })
             <main class="main">@@include('./contacts/contacts.html')</main>
             @@include('components/footer.html')
+            @@include('components/sprite.html')
         </div>
 
         <script src="./js/contacts.bundle.js"></script>
