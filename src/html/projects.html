@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/projects.css" />
+        <title>Projects</title>
+    </head>
+    <body>
+        @@include('./components/preloader.html')
+        @@include('./components/modal.html')
+        <div class="wrapper">
+            @@include('./components/header.html')
+            <main class="main">
+                @@include('./projects/descr.html')
+                @@include('./projects/projects-first.html')
+            </main>
+            @@include('./components/footer.html',{ 'page': 'projects' })
+            @@include('./components/sprite.html')
+        </div>
+        <script src="./js/projects.bundle.js"></script>
+    </body>
+</html>
