@@ -370,7 +370,8 @@
             background: rgba(255, 255, 255, 0.5);
             border-radius: 9px;
             backdrop-filter: blur(2px);
-            box-shadow: inset 0 -0px 0px 0 rgba(255, 255, 255, 0.23),
+            box-shadow:
+                inset 0 -0px 0px 0 rgba(255, 255, 255, 0.23),
                 0 1px 1px 0 rgba(0, 0, 0, 0.2);
             width: 117px;
             height: 24px;
@@ -416,7 +417,9 @@
             opacity: 0;
             visibility: hidden;
             padding: 5px 10px;
-            transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out;
+            transition:
+                opacity 300ms ease-in-out,
+                visibility 300ms ease-in-out;
 
             &_open {
                 opacity: 1;
@@ -438,25 +441,25 @@
     }
 }
 
-.swiper-slide {
-    width: 80%;
-}
-
-.swiper-slide:nth-child(1n) {
-    width: 85%;
-}
-
-.swiper-slide:nth-child(2n) {
-    width: 80%;
-}
-
-.swiper-slide:nth-child(3n) {
-    width: 80%;
-}
-
-.swiper-slide:last-child {
-    width: 100%;
-}
+//.swiper-slide {
+//    width: 80%;
+//}
+//
+//.swiper-slide:nth-child(1n) {
+//    width: 85%;
+//}
+//
+//.swiper-slide:nth-child(2n) {
+//    width: 80%;
+//}
+//
+//.swiper-slide:nth-child(3n) {
+//    width: 80%;
+//}
+//
+//.swiper-slide:last-child {
+//    width: 100%;
+//}
 
 .swiper-horizontal
     > .swiper-pagination-progressbar.swiper-pagination-progressbar.swiper-pagination-horizontal {
