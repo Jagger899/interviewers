@@ -54,8 +54,8 @@
                 <div class="dropdown form__dropdown">
                     <div class="dropdown__box-modal">
                         <p class="dropdown__text">Property type</p>
-                        <svg class="dropdown__svg-arrow">
-                            <use href="#arrow-bottom"></use>
+                        <svg class="dropdown__svg-arrow dropdown__svg-arrow_modal">
+                            <use href="#arrow-modal"></use>
                         </svg>
                     </div>
                     <ul class="dropdown__menu">
@@ -433,7 +433,7 @@
                     </svg>
                     <p class="dropdown__text">Berlin</p>
                     <svg class="dropdown__svg-arrow">
-                        <use href="#arrow-bottom"></use>
+                        <use href="#arrow-promo"></use>
                     </svg>
                 </div>
                 <ul class="dropdown__menu">
@@ -722,12 +722,21 @@
         <path d="M1 1L5 5L1 9" stroke="white" stroke-width="0.75" fill="none" />
     </symbol>
 
-    <symbol id="arrow-bottom" viewBox="0 0 9 6" fill="currentColor">
+    <symbol id="arrow-promo" viewBox="0 0 9 6">
         <path
             d="M8 1L4.5 4.5L1 1"
             stroke="white"
             stroke-width="1.4"
-            
+            fill="none"
+        />
+    </symbol>
+
+    <symbol viewBox="0 0 9 6" id="arrow-modal">
+        <path
+            d="M8 1L4.5 4.5L1 1"
+            stroke="#313131"
+            stroke-width="1.2"
+            fill="#000000"
         />
     </symbol>
 
@@ -822,8 +831,18 @@
     </symbol>
 
     <symbol id="modal-close" viewBox="0 0 16 16">
-      <rect width="21.6845" height="0.942805" transform="matrix(0.707106 -0.707107 0.707106 0.707107 0 15.3335)" fill="white" />
-      <rect width="21.6845" height="0.942805" transform="matrix(0.707106 0.707107 -0.707106 0.707107 0.666504 0.000488281)" fill="white" />
+        <rect
+            width="21.6845"
+            height="0.942805"
+            transform="matrix(0.707106 -0.707107 0.707106 0.707107 0 15.3335)"
+            fill="white"
+        />
+        <rect
+            width="21.6845"
+            height="0.942805"
+            transform="matrix(0.707106 0.707107 -0.707106 0.707107 0.666504 0.000488281)"
+            fill="white"
+        />
     </symbol>
 
     <symbol viewBox="0 0 9 9" id="add-file">
