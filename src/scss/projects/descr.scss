@@ -1,0 +1,85 @@
+.descr {
+    margin-top: 208px;
+    margin-bottom: 124px;
+
+    @include breakpoints(md) {
+      margin-top: 162px;
+    }
+
+    @include breakpoints(sm) {
+      margin-top: 138px;
+      margin-bottom: 96px;
+    }
+
+    @include breakpoints(xs) {
+      margin-top: 116px;
+      margin-bottom: 64px;
+    }
+
+    &__box {
+        max-width: 1044px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin: 0 auto;
+
+        @include breakpoints(md) {
+          flex-direction: column;
+          margin-left: 102px;
+        }
+
+        @include breakpoints(xs) {
+          margin-left: 0;
+        }
+    }
+
+    &__title {
+      @include breakpoints(md) {
+        margin-bottom: 24px;
+        font-size: 32px;
+      }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 171%;
+        max-width: 449px;
+        margin-bottom: 32px;
+
+        @include breakpoints(xs) {
+          max-width: 327px;
+        }
+    }
+
+    &__tabs {
+        display: flex;
+        gap: 32px;
+    }
+
+    &__tabs-link {
+      position: relative;
+      color: $inactiveBlackColor;
+        &_active {
+            color: $blackColor;
+            opacity: 1;
+            &::after {
+                content: "";
+                display: inline-block;
+                background: $swiperTitle;
+                width: 100%;
+                height: 1px;
+                left: 0;
+                bottom: -5px;
+                position: absolute;
+                transition: width 0.5s ease-in-out;
+            }
+        }
+    }
+}
