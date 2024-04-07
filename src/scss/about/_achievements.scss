@@ -1,0 +1,140 @@
+.achievements {
+    &__content {
+        margin: 164px auto 0;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+
+        @include breakpoints(xl) {
+            margin: 194px auto 0;
+            width: 94%;
+        }
+
+        @include breakpoints(md) {
+            width: 100%;
+            margin: 120px auto 0;
+            flex-wrap: wrap;
+            row-gap: 0;
+            column-gap: 20px;
+        }
+
+        @include breakpoints(sm) {
+            margin: 80px auto 0;
+        }
+    }
+
+    &__block-img {
+        @include breakpoints(md) {
+            //width: 80%;
+            margin: 0 auto;
+        }
+    }
+
+    &__main-img {
+        @include breakpoints(xl) {
+            max-width: 516px;
+            object-fit: cover;
+        }
+
+        @include breakpoints(xl) {
+            width: 100%;
+        }
+
+        @include breakpoints(md) {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        @include breakpoints(sm) {
+            width: 100%;
+        }
+    }
+
+    &__block {
+        margin-top: 88px;
+        display: flex;
+        flex-direction: column;
+        gap: 45px;
+        width: 45%;
+
+        @include breakpoints(xl) {
+            width: 39%;
+        }
+
+        @include breakpoints(md) {
+            gap: 30px;
+            width: 40%;
+            margin: 40px auto;
+        }
+
+        @include breakpoints(sm) {
+            width: 90%;
+        }
+    }
+
+    &__items {
+        display: flex;
+        gap: 50px;
+
+        @include breakpoints(sm) {
+            width: 65%;
+            margin: 0 auto;
+            justify-content: space-between;
+        }
+    }
+
+    &__item-block {
+        width: 130px;
+
+        @include breakpoints(xl) {
+            width: 110px;
+        }
+
+        @include breakpoints(sm) {
+            width: 80px;
+        }
+    }
+
+    &__item-number {
+        font-size: 56px;
+        font-weight: 700;
+        line-height: 130%;
+
+        @include breakpoints(xl) {
+            font-size: 45px;
+        }
+
+        @include breakpoints(md) {
+            font-size: 30px;
+        }
+    }
+
+    &__item-text {
+        line-height: 132%;
+        width: 94px;
+    }
+
+    &__text {
+        margin-top: 30px;
+        width: 370px;
+
+        @include breakpoints(xl) {
+            width: 100%;
+        }
+
+        @include breakpoints(xl) {
+            margin-top: 15px;
+        }
+    }
+
+    &__support-img {
+        position: absolute;
+        bottom: -40px;
+        right: -130px;
+
+        @include breakpoints(xl) {
+            display: none;
+        }
+    }
+}

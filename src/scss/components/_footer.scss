@@ -2,10 +2,29 @@
     position: relative;
     height: 0;
 
+    // color
+
+    &_white-colors {
+        .footer__first-text {
+            color: $whiteColor;
+        }
+
+        .footer__last-text {
+            color: $whiteColor;
+        }
+
+        .footer__copyright {
+            color: $whiteColor;
+        }
+
+        .footer__made {
+            color: $whiteColor;
+        }
+    }
+
     &__copyright-block {
         position: absolute;
         width: 100%;
-        // top: 90%;
         transform: translateY(-160%);
         display: flex;
         justify-content: space-between;
@@ -76,11 +95,5 @@
         line-height: 80%;
         text-align: end;
         font-family: "FreightBigProMedium-Italic";
-    }
-
-    // color
-
-    &__white-text {
-        color: $whiteColor;
     }
 }

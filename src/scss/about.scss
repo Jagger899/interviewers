@@ -3,7 +3,11 @@
 @import "./config/mixins";
 @import "./config/global";
 @import "./components/button";
+@import "./components/preloader.scss";
+@import "./404.scss";
 
 @import "./components/header";
 @import "./about/promo";
+@import "./about/philosophi";
+@import "./about/achievements";
 @import "./components/footer";
