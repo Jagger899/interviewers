@@ -1,0 +1,384 @@
+.projects {
+    overflow: hidden;
+    padding: 140px 263px;
+
+    &__container {
+        @include breakpoints(xl) {
+            max-width: 1354px;
+        }
+    }
+
+    &__descr-box {
+        max-width: 715px;
+        margin-bottom: 140px;
+    }
+
+    &__descr-title {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 137%;
+        max-width: 419px;
+        margin-bottom: 17px;
+    }
+
+    &__descr-text {
+        margin-bottom: 40px;
+    }
+
+    &__descr-link {
+        margin-left: 16px;
+        position: relative;
+        font-family: "Montserrat";
+        display: flex;
+        justify-content: space-between;
+        font-weight: 700;
+        font-size: 10px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+
+        &::after {
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: -16px;
+            transform: translate(-50%);
+            height: 1px;
+            width: 8px;
+            background: rgba(49, 49, 49, 0.2);
+        }
+        &::before {
+            position: absolute;
+            content: "";
+            top: 50%;
+            transform: translate(-50%);
+            left: 150px;
+            height: 1px;
+            width: 56px;
+            background: rgba(49, 49, 49, 0.2);
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 36px;
+        color: $whiteColor;
+        text-align: center;
+        margin-bottom: 34px;
+
+        @include breakpoints(md) {
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+
+        @include breakpoints(xs) {
+            font-size: 26px;
+            margin-bottom: 24px;
+            text-align: left;
+        }
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 171%;
+        text-align: center;
+        color: $inactiveBlackColor;
+        max-width: 449px;
+        margin: 0 auto 129px;
+
+        @include breakpoints(md) {
+            margin-bottom: 115px;
+        }
+
+        @include breakpoints(sm) {
+            margin-bottom: 94px;
+        }
+
+        @include breakpoints(xs) {
+            font-size: 14px;
+            text-align: left;
+            margin: 0 auto 80px 0;
+        }
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        margin-bottom: 80px;
+
+        // @include breakpoints(md) {
+        //     margin-bottom: 124px;
+        // }
+
+        // @include breakpoints(sm) {
+        //     display: flex;
+        //     flex-direction: column;
+        // }
+
+        // @include breakpoints(md) {
+        //     gap: 6px;
+        // }
+    }
+
+    &__card {
+        height: 653px;
+
+        @include breakpoints(md) {
+            height: 453px;
+        }
+
+        @include breakpoints(sm) {
+            height: 672px;
+            // max-width: 672px;
+            // margin: 0 auto;
+        }
+
+        @include breakpoints(xs) {
+            height: 327px;
+        }
+    }
+
+    .card {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 32px;
+        position: relative;
+
+        @include breakpoints(md) {
+            padding: 32px 30px 34px;
+        }
+
+        @include breakpoints(sm) {
+            padding: 32px;
+        }
+
+        &__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 0;
+            opacity: 0;
+            // visibility: hidden;
+            transition: opacity 300ms ease-in-out;
+        }
+
+        &__list {
+            position: relative;
+            z-index: 1;
+            opacity: 0;
+            visibility: hidden;
+            display: flex;
+            gap: 24px;
+            transition:
+                opacity 300ms ease-in-out,
+                visibility 300ms ease-in-out;
+        }
+
+        &__item {
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 171%;
+            color: $backgroundColor;
+        }
+
+        &__descr {
+            position: relative;
+            z-index: 1;
+            opacity: 0;
+            visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            transition:
+                opacity 300ms ease-in-out,
+                visibility 300ms ease-in-out;
+
+            @include breakpoints(md) {
+            }
+        }
+
+        &:hover {
+            .card__list {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .card__descr {
+                opacity: 1;
+                visibility: visible;
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            .card__overlay {
+                opacity: 1;
+            }
+        }
+
+        &__text {
+            color: $backgroundColor;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 127%;
+        }
+
+        &__link {
+            color: $backgroundColor;
+            font-weight: 700;
+            font-size: 10px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-left: 13px;
+
+            &::after {
+                left: -14px;
+            }
+
+            &::before {
+                left: 145px;
+            }
+        }
+
+        &_first {
+            background-image: url("../images/one-projects/one-projects-2.png");
+        }
+
+        &_second {
+            background-image: url("../images/projects/projects-2.png");
+        }
+
+        &_third {
+            background-image: url("../images/one-projects/one-projects-2.png");
+            grid-column: 1 / -1;
+            padding-right: 85px;
+
+            .card__descr {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                @include breakpoints(sm) {
+                    flex-direction: column;
+                }
+            }
+
+            .card__text {
+                max-width: 179px;
+            }
+        }
+
+        &_fourth {
+            background-image: url("../images/one-projects/one-projects-3.png");
+        }
+
+        &_fivth-pr {
+            background-image: url("../images/one-projects/one-projects-4.png");
+        }
+
+        &_sixth {
+            background-image: url("../images/one-projects/one-projects-5.png");
+            grid-column: 1 / -1;
+        }
+    }
+
+    .button {
+      margin: 0 auto 140px;
+      width: 204px;
+      text-align: center;
+      padding: 17px 48px;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      
+    }
+
+    &__gallary {
+        max-width: 1046px;
+        margin: 0 auto;
+        position: relative;
+        // display: flex;
+        // flex-direction: column;
+        z-index: 1;
+        margin-bottom: 230px;
+
+        @include breakpoints(md) {
+            max-width: 455px;
+            margin-bottom: 146px;
+        }
+    }
+
+    &__gallary-descr {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 142%;
+        color: $blackColor;
+        opacity: 1;
+        max-width: 424px;
+        margin-bottom: 23px;
+
+        @include breakpoints(md) {
+            text-align: center;
+            max-width: 366px;
+            margin: 0 auto 23px;
+            font-size: 32px;
+            line-height: 142%;
+        }
+    }
+
+    &__gallary-box {
+        // align-self: flex-end;
+        max-width: 339px;
+        margin: 0 0 0 auto;
+
+        @include breakpoints(md) {
+            margin-left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 455px;
+        }
+    }
+
+    &__gallary-text {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 171%;
+        color: $blackColor;
+        margin-bottom: 53px;
+        max-width: 339px;
+
+        @include breakpoints(md) {
+            text-align: center;
+            max-width: 455px;
+            margin: 0 auto 70px;
+        }
+    }
+
+    &__button {
+        margin-left: 20px;
+        color: $blackColor;
+        border: 1px solid rgba(0, 0, 0, 0.32);
+    }
+
+    &__gallary-img {
+        position: absolute;
+        aspect-ratio: 1.57 / 1;
+        width: 738px;
+        top: -68px;
+        right: 168px;
+        z-index: -1;
+
+        @include breakpoints(md) {
+            display: none;
+        }
+    }
+}

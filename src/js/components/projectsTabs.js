@@ -6,7 +6,6 @@ export const projectsTabsWork = function () {
     tabLink.addEventListener('click', event => {
       event.preventDefault();
       const tabId = tabLink.getAttribute('data-tab');
-      console.log(tabId)
       const currentTab = document.querySelector(tabId);
 
       tabsLinks.forEach((link) => {

@@ -1,0 +1,156 @@
+.promo {
+    position: relative;
+    height: 744px;
+    padding: 262px 0 40px;
+    overflow: hidden;
+
+    @include breakpoints(md) {
+      height: 703px;
+      padding: 231px 0 32px;
+    }
+
+    @include breakpoints(sm) {
+      height: 959px;
+      padding: 350px 0 32px;
+    }
+
+    @include breakpoints(xs) {
+      height: 542px;
+      padding: 107px 0 25px;
+    }
+
+    &__container {
+        max-width: 1394px;
+    }
+
+    &__top-content {
+        padding-left: 115px;
+        margin-bottom: 162px;
+
+        @include breakpoints(md) {
+          padding-left: 103px;
+          margin-bottom: 176px;
+        }
+
+        @include breakpoints(sm) {
+          margin-bottom: 311px;
+          width: 464px;
+          padding-left: 76px;
+        }
+
+        @include breakpoints(xs) {
+          width: 327px;
+          padding-left: 0;
+          margin-bottom: 80px;
+        }
+    }
+
+    &__title {
+        color: $whiteColor;
+        margin-bottom: 24px;
+
+        @include breakpoints(md) {
+          font-size: 32px;
+          max-width: 293px;
+        }
+
+        @include breakpoints(xs) {
+          font-size: 26px;
+          margin-bottom: 16px;
+        }
+    }
+
+    &__descr {
+        color: $whiteColor;
+        opacity: 1;
+        max-width: 462px;
+        margin-bottom: 65px;
+
+        @include breakpoints(md) {
+          margin-bottom: 48px;
+        }
+
+        @include breakpoints(sm) {
+          margin-bottom: 32px;
+        }
+    }
+
+    &__info {
+        display: flex;
+        gap: 32px;
+
+        @include breakpoints(xs) {
+          flex-direction: column;
+          gap: 24px;
+        }
+    }
+
+    &__info-box {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 16px;
+
+        @include breakpoints(md) {
+          flex-direction: row;
+          gap: 14px;
+        }
+    }
+
+    &__info-svg {
+        width: 16px;
+        height: 17px;
+
+        &_geo {
+            width: 12px;
+        }
+    }
+
+    &__info-text {
+        font-weight: 600;
+        font-size: 11px;
+        letter-spacing: 0.06em;
+        color: $whiteColor;
+        margin-left: 27px;
+
+        @include breakpoints(md) {
+          margin-left: 0;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        top: 0;
+        // bottom: 0;
+        left: 0;
+        z-index: -2;
+
+        @include breakpoints(sm) {
+          aspect-ratio: 1 / 1.25;
+        }
+    }
+
+    &__bottom-content {
+        display: flex;
+    }
+
+    &__bottom-text {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 171%;
+        color: $whiteColor;
+        margin-right: 111px;
+    }
+
+    &__bottom-socials {
+      display: flex;
+      gap: 8px;
+    }
+
+    &__bottom-svg {
+        width: 24px;
+        height: 24px;
+    }
+}

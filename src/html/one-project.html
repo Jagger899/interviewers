@@ -3,13 +3,22 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/one-project.css" />
         <title>Project</title>
     </head>
     <body>
         @@include('./components/preloader.html')
         @@include('./components/modal.html')
         <div class="wrapper">
-          @@include('./components/header.html')
+            @@include('./components/header.html',{ 'colors': 'white' })
+            <div class="main">
+              @@include('./one-project/promo.html')
+              @@include('./one-project/projects.html')
+              @@include('./one-project/gallary.html')
+            </div>
+            <!-- @@include('components/footer.html') -->
+            @@include('components/sprite.html')
         </div>
+        <script src="./js/oneProject.bundle.js"></script>
     </body>
 </html>

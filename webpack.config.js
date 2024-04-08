@@ -5,8 +5,9 @@ const config = {
         news: "./src/js/news.js",
         contacts: "./src/js/contacts.js",
         pageNews: "./src/js/one-news.js",
-      about: "./src/js/about.js",
-        projects:"./src/js/projects.js",
+        about: "./src/js/about.js",
+        projects: "./src/js/projects.js",
+        oneProject: "./src/js/oneProject.js",
     },
 
     output: {

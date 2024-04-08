@@ -12,23 +12,66 @@
 
                 <ul class="descr__tabs">
                     <li class="descr__tabs-item">
-                        <a href="#" class="descr__tabs-link descr__tabs-link" data-tab="#cards-1"
+                        <a
+                            href="#"
+                            class="descr__tabs-link descr__tabs-link"
+                            data-tab="#cards-1"
                             >House</a
                         >
                     </li>
 
                     <li class="descr__tabs-item">
-                        <a href="#" class="descr__tabs-link" data-tab="#cards-2">Apartments</a>
+                        <a href="#" class="descr__tabs-link" data-tab="#cards-2"
+                            >Apartments</a
+                        >
                     </li>
 
                     <li class="descr__tabs-item">
-                        <a href="#" class="descr__tabs-link" data-tab="#cards-3">Commerce</a>
+                        <a href="#" class="descr__tabs-link" data-tab="#cards-3"
+                            >Commerce</a
+                        >
                     </li>
 
                     <li class="descr__tabs-item">
-                        <a href="#" class="descr__tabs-link" data-tab="#cards-4">Architecture</a>
+                        <a href="#" class="descr__tabs-link" data-tab="#cards-4"
+                            >Architecture</a
+                        >
                     </li>
                 </ul>
+
+                <!-- <div class="descr__select-box">
+                    <select class="descr__select">
+                        <option value="1" class="descr__select-option">
+                            House
+                        </option>
+                        <option value="2" class="descr__select-option">
+                            Apartments
+                        </option>
+                        <option value="3" class="descr__select-option">
+                            Commerce
+                        </option>
+                        <option value="4" class="descr__select-option">
+                            Architecture
+                        </option>
+                    </select>
+                    <svg class="descr__select-svg">
+                      <use href="#arrow-modal"></use>
+                    </svg>
+                </div> -->
+                <div class="select">
+                    <button class="select__button">
+                        House
+                    </button>
+                    <svg class="select__button-svg">
+                            <use href="#arrow-modal"></use>
+                        </svg>
+                    <ul class="select__list">
+                      <li class="select__item" data-value="House" data-tab="#cards-1">House</li>
+                      <li class="select__item" data-value="Apartments" data-tab="#cards-2">Apartments</li>
+                      <li class="select__item" data-value="Commerce" data-tab="#cards-3">Commerce</li>
+                      <li class="select__item" data-value="Architecture" data-tab="#cards-4">Architecture</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

@@ -1,0 +1,93 @@
+.gallary {
+    background: radial-gradient(
+            50% 50% at 50% 50%,
+            rgb(15, 15, 15) 0%,
+            rgb(8, 8, 8) 100%
+        );
+        padding: 180px 0 526px;
+    &__inner {
+        max-width: 1046px;
+        margin: 0 auto;
+        position: relative;
+      
+        // display: flex;
+        // flex-direction: column;
+        z-index: 1;
+        margin-bottom: 230px;
+
+        @include breakpoints(md) {
+            max-width: 455px;
+            margin-bottom: 146px;
+        }
+    }
+
+    &__descr {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 142%;
+        color: $whiteColor;
+        opacity: 1;
+        max-width: 424px;
+        margin-bottom: 23px;
+
+        @include breakpoints(md) {
+            text-align: center;
+            max-width: 366px;
+            margin: 0 auto 23px;
+            font-size: 32px;
+            line-height: 142%;
+        }
+    }
+
+    &__box {
+        // align-self: flex-end;
+        max-width: 339px;
+        margin: 0 0 0 auto;
+
+        @include breakpoints(md) {
+            margin-left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 455px;
+        }
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 171%;
+        color: $whiteColor;
+        margin-bottom: 53px;
+        max-width: 339px;
+
+        @include breakpoints(md) {
+            text-align: center;
+            max-width: 455px;
+            margin: 0 auto 70px;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        aspect-ratio: 1.57 / 1;
+        width: 738px;
+        top: -68px;
+        right: 168px;
+        z-index: -1;
+
+        @include breakpoints(md) {
+            display: none;
+        }
+    }
+
+    // &__button {
+    //     margin-left: 20px;
+    //     color: $blackColor;
+    //     border: 1px solid rgba(0, 0, 0, 0.32);
+    // }
+
+    .button {
+      background: $whiteColor;
+    }
+}
