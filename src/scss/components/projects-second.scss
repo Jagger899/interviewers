@@ -1,6 +1,7 @@
 .projects-second {
     height: 814px;
     position: relative;
+    overflow: hidden;
 
     @include breakpoints(md) {
         height: 790px;
@@ -145,7 +146,7 @@
             }
 
             @include breakpoints(xs) {
-              display: none;
+                display: none;
             }
         }
 
@@ -234,10 +235,10 @@
             }
 
             @include breakpoints(xs) {
-              display: block;
-              width: 146px;
-              bottom: 69px;
-              left: -60px;
+                display: block;
+                width: 146px;
+                bottom: 69px;
+                left: -60px;
             }
         }
     }

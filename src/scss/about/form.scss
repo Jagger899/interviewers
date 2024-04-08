@@ -1,0 +1,145 @@
+.form {
+    &__content {
+        width: 79%;
+        margin: 138px auto 0;
+        padding-bottom: 90px;
+        display: flex;
+        justify-content: space-between;
+
+        @include breakpoints(xl) {
+            width: 90%;
+        }
+
+        @include breakpoints(md) {
+            flex-direction: column;
+            padding-bottom: 110px;
+            width: 70%;
+        }
+
+        @include breakpoints(sm) {
+            padding-bottom: 150px;
+            width: 95%;
+        }
+    }
+
+    &__title-block {
+        width: 40%;
+
+        @include breakpoints(md) {
+            width: 100%;
+        }
+    }
+
+    &__title {
+        line-height: 142%;
+
+        @include breakpoints(xl) {
+            font-size: 32px;
+        }
+
+        @include breakpoints(sm) {
+            font-size: 26px;
+        }
+    }
+
+    &__input-block {
+        width: 382px;
+        margin-top: 127px;
+        font-size: 20px;
+        font-family: Montserrat, sans-serif;
+        font-weight: 300;
+        position: relative;
+
+        @include breakpoints(md) {
+            margin-top: 50px;
+        }
+
+        @include breakpoints(sm) {
+            width: 90%;
+        }
+    }
+
+    &__input {
+        padding: 0 35px 11px 0;
+        width: 382px;
+        border-bottom: 1px solid $grayArrow;
+        opacity: 0.5;
+        transition: border-bottom 0.5s ease-in-out;
+
+        @include breakpoints(sm) {
+            width: 100%;
+        }
+
+        &:focus {
+            border-bottom: solid 1px $grayArrow;
+            opacity: 1;
+        }
+
+        &::placeholder {
+            color: $blackColor;
+            opacity: 0.7;
+        }
+    }
+
+    &__button {
+        position: absolute;
+        right: 8%;
+        opacity: 0.5;
+
+        @include breakpoints(xl) {
+            right: 1%;
+        }
+
+        &:focus,
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &__svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    &__text-block {
+        width: 36%;
+
+        @include breakpoints(md) {
+            width: 85%;
+        }
+
+        @include breakpoints(sm) {
+            width: 100%;
+        }
+    }
+
+    &__text {
+        margin-top: 225px;
+
+        @include breakpoints(xl) {
+            margin-top: 190px;
+        }
+
+        @include breakpoints(md) {
+            margin-top: 70px;
+        }
+    }
+
+    &__link-block {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 18px;
+    }
+
+    &__link {
+    }
+
+    &__items {
+        display: flex;
+        gap: 16px;
+    }
+
+    &__item {
+    }
+}
