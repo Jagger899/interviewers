@@ -16,10 +16,9 @@
     }
 
     &__container {
-
-      @include breakpoints(xl) {
-        max-width: 1354px;
-      }
+        @include breakpoints(xl) {
+            max-width: 1354px;
+        }
     }
 
     &__title {
@@ -88,6 +87,8 @@
 
     &__card {
         height: 653px;
+        position: relative;
+        cursor: pointer;
 
         @include breakpoints(md) {
             height: 453px;
@@ -121,13 +122,29 @@
             padding: 32px;
         }
 
-        &__list {
-            display: none;
-            gap: 24px;
+        &__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 0;
+            opacity: 0;
+            // visibility: hidden;
+            transition: opacity 300ms ease-in-out;
+        }
 
-            @include breakpoints(md) {
-                display: flex;
-            }
+        &__list {
+            position: relative;
+            z-index: 1;
+            opacity: 0;
+            visibility: hidden;
+            display: flex;
+            gap: 24px;
+            transition:
+                opacity 300ms ease-in-out,
+                visibility 300ms ease-in-out;
         }
 
         &__item {
@@ -138,12 +155,36 @@
         }
 
         &__descr {
-            display: none;
+            position: relative;
+            z-index: 1;
+            opacity: 0;
+            visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            transition:
+                opacity 300ms ease-in-out,
+                visibility 300ms ease-in-out;
 
             @include breakpoints(md) {
-                display: flex;
+            }
+        }
+
+        &:hover {
+            .card__list {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .card__descr {
+                opacity: 1;
+                visibility: visible;
                 flex-direction: column;
                 gap: 24px;
+            }
+
+            .card__overlay {
+                opacity: 1;
             }
         }
 
@@ -184,19 +225,6 @@
             grid-column: 1 / -1;
             padding-right: 85px;
 
-            .card__descr {
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-
-                @include breakpoints(sm) {
-                    flex-direction: column;
-                }
-            }
-
-            .card__text {
-                max-width: 179px;
-            }
         }
 
         &_fourth {

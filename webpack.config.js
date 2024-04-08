@@ -6,6 +6,7 @@ const config = {
         contacts: "./src/js/contacts.js",
         pageNews: "./src/js/one-news.js",
         about: "./src/js/about.js",
+        notFound: "./src/js/notFound.js",
         projects: "./src/js/projects.js",
         oneProject: "./src/js/oneProject.js",
     },
