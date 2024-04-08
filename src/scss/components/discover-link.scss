@@ -1,23 +1,32 @@
 .discover-link {
-  position: relative;
-  font-family: "Montserrat";
-  display: flex;
-  justify-content: space-between;
-  font-weight: 700;
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+    position: relative;
+    font-family: "Montserrat";
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
 
     &::after {
-      position: absolute;
-      content: "";
-      top: 50%;
-      left: 202px;
-      transform: translate(-50%);
-      height: 1px;
-      width: 8px;
-      background: rgba(255, 255, 255, 0.4);
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 202px;
+        transform: translate(-50%);
+        height: 1px;
+        width: 8px;
+        background: rgba(255, 255, 255, 0.4);
+
+        @include breakpoints(md) {
+            left: 154px;
+        }
+
+        @include breakpoints(xs) {
+            left: 14px;
+        }
     }
+
     &::before {
         position: absolute;
         content: "";
@@ -27,5 +36,13 @@
         height: 1px;
         width: 56px;
         background: rgba(255, 255, 255, 0.4);
+
+        @include breakpoints(md) {
+            left: 315px;
+        }
+
+        @include breakpoints(xs) {
+            left: 175px;
+        }
     }
 }

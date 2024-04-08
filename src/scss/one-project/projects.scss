@@ -1,6 +1,18 @@
 .projects {
     overflow: hidden;
-    padding: 140px 263px;
+    padding: 140px 0 124px;
+
+    @include breakpoints(md) {
+        padding: 124px 0;
+    }
+
+    @include breakpoints(sm) {
+        padding: 104px 0;
+    }
+
+    @include breakpoints(xs) {
+        padding: 80px 0;
+    }
 
     &__container {
         @include breakpoints(xl) {
@@ -11,6 +23,22 @@
     &__descr-box {
         max-width: 715px;
         margin-bottom: 140px;
+        margin-left: 133px;
+
+        @include breakpoints(md) {
+            margin-bottom: 124px;
+            max-width: 602px;
+            margin-left: 103px;
+        }
+
+        @include breakpoints(sm) {
+            width: 520px;
+            margin: 0 auto 104px;
+        }
+
+        @include breakpoints(xs) {
+            margin-bottom: 80px;
+        }
     }
 
     &__descr-title {
@@ -107,18 +135,19 @@
         gap: 8px;
         margin-bottom: 80px;
 
-        // @include breakpoints(md) {
-        //     margin-bottom: 124px;
-        // }
+        @include breakpoints(md) {
+            margin-bottom: 124px;
+            gap: 6px;
+        }
 
-        // @include breakpoints(sm) {
-        //     display: flex;
-        //     flex-direction: column;
-        // }
+        @include breakpoints(sm) {
+            margin-bottom: 56px;
+        }
 
-        // @include breakpoints(md) {
-        //     gap: 6px;
-        // }
+        @include breakpoints(xs) {
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     &__card {
@@ -260,6 +289,10 @@
             grid-column: 1 / -1;
             padding-right: 85px;
 
+            @include breakpoints(xs) {
+                height: 163px;
+            }
+
             .card__descr {
                 flex-direction: row;
                 justify-content: space-between;
@@ -277,28 +310,39 @@
 
         &_fourth {
             background-image: url("../images/one-projects/one-projects-3.png");
+
+            @include breakpoints(xs) {
+                height: 392px;
+            }
         }
 
         &_fivth-pr {
             background-image: url("../images/one-projects/one-projects-4.png");
+
+            @include breakpoints(xs) {
+                height: 392px;
+            }
         }
 
         &_sixth {
             background-image: url("../images/one-projects/one-projects-5.png");
             grid-column: 1 / -1;
+
+            @include breakpoints(xs) {
+                height: 163px;
+            }
         }
     }
 
     .button {
-      margin: 0 auto 140px;
-      width: 204px;
-      text-align: center;
-      padding: 17px 48px;
-      font-weight: 600;
-      font-size: 11px;
-      letter-spacing: 0.06em;
-      cursor: pointer;
-      
+        margin: 0 auto;
+        width: 204px;
+        text-align: center;
+        padding: 17px 48px;
+        font-weight: 600;
+        font-size: 11px;
+        letter-spacing: 0.06em;
+        cursor: pointer;
     }
 
     &__gallary {

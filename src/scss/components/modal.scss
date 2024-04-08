@@ -244,8 +244,7 @@
                 position: absolute;
                 width: 96%;
                 height: 1px;
-                background: rgba(0, 0, 0, 0.04);
-                background: red;
+                background: rgba(156, 154, 154, 0.4);
                 bottom: 9px;
                 z-index: 0;
                 left: 13px;
@@ -263,8 +262,8 @@
                     content: "";
                     position: absolute;
                     // width: 520px;
+                    background: rgba(156, 154, 154, 0.4);
                     width: 96%;
-                    background: green;
                     left: 13px;
                     height: 1px;
                     bottom: 89px;
