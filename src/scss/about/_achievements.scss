@@ -65,7 +65,7 @@
         @include breakpoints(md) {
             gap: 30px;
             width: 40%;
-            margin: 40px auto;
+            margin: 40px auto 0;
         }
 
         @include breakpoints(sm) {
