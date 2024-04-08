@@ -7,8 +7,8 @@
         justify-content: space-between;
 
         @include breakpoints(xl) {
-            margin: 160px auto 0;
-            width: 77%;
+            margin: 162px auto 0;
+            width: 72%;
             flex-direction: column;
             align-items: start;
         }
@@ -19,6 +19,7 @@
 
         @include breakpoints(sm) {
             margin: 115px auto 0;
+            gap: 18px;
             width: 100%;
         }
     }
@@ -45,10 +46,15 @@
         @include breakpoints(md) {
             margin-top: 20px;
         }
+
+        @include breakpoints(sm) {
+            display: none;
+        }
     }
 
     &__link-item {
         color: $inactiveBlackColor;
+        cursor: pointer;
     }
 
     &__link_active {
@@ -83,7 +89,7 @@
         }
 
         @include breakpoints(sm) {
-            margin-top: 73px;
+            margin-top: 63px;
             display: flex;
             flex-direction: column;
         }
@@ -111,11 +117,6 @@
         &-img {
             display: flex;
             position: relative;
-            transition: transform 0.5s ease-in-out;
-
-            &:hover {
-                transform: scale(1.1);
-            }
         }
 
         &-img-hidden {
@@ -154,6 +155,7 @@
             position: absolute;
             bottom: 56px;
             left: 56px;
+            z-index: 2;
 
             @include breakpoints(xl) {
                 font-size: 20px;
@@ -246,6 +248,14 @@
                     left: -15%;
                 }
             }
+        }
+    }
+
+    &__img-link {
+        transition: transform 0.5s ease-in-out;
+
+        &:hover {
+            transform: scale(1.1);
         }
     }
 
