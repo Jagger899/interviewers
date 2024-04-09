@@ -23,7 +23,7 @@
 
         @include breakpoints(xl) {
             margin-top: 119px;
-            padding: 124px 0 0 125px;
+            padding: 124px 0 0 140px;
         }
 
         @include breakpoints(md) {
@@ -60,7 +60,7 @@
             margin-top: 25px;
 
             @include breakpoints(xl) {
-                width: 85%;
+                width: 83%;
                 margin-top: 20px;
             }
 
