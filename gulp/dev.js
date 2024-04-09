@@ -21,9 +21,9 @@ const plumberNotify = function (title) {
   };
 };
 const webpack = require("webpack-stream");
-// const imagemin = require("gulp-imagemin");
+const imagemin = require("gulp-imagemin");
 const changed = require("gulp-changed");
-
+const webp = require("gulp-webp");
 
 task("html:dev", function () {
   return src(["src/html/**/*.html", "!src/html/blocks/*.html"])
