@@ -7,25 +7,12 @@
         <title>News</title>
     </head>
     <body>
-        <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="css/main.css" />
-        <title>Document</title>
-    </head>
-    <body>
         <div class="preloader" id="preloader">
-            <div class="preloader__loader">
-                <p class="preloader__text">HI</p>
-                <span class="preloader__percents">
-                  <span id="percents">0</span>%
-                </span>
-            </div>
-        </div>
-    </body>
-</html>
+    <div class="preloader__loader">
+        <p class="preloader__text">HI</p>
+        <span class="preloader__percents"> <span id="percents">0</span>% </span>
+    </div>
+</div>
 
         <div class="modal">
     <a href="#" class="modal__close">
@@ -206,14 +193,18 @@
 </div>
 
         <div class="wrapper">
-            <header class="header header__background background-trriger-tr ">
+            <header
+    class="header header__background background-trriger-tr "
+>
     <div class="header header__container">
         <div class="header__content">
             <nav class="header__link-block">
                 <a class="header__logo text-trriger" href="index.html">Logo</a>
                 <ul class="header__link-items">
                     <li>
-                        <a class="link text-trriger" href="projects.html">Projects</a>
+                        <a class="link text-trriger" href="projects.html"
+                            >Projects</a
+                        >
                     </li>
                     <li>
                         <a class="link text-trriger" href="about.html"
@@ -236,84 +227,98 @@
                         <span></span>
                     </div>
                     <div class="header__burger-background">
-                        <ul class="header__burger-items header__container">
-                            <li class="header__burger-item-container">
-                                <a class="header__burger-item" href="#">Home</a>
-                            </li>
-                            <li class="header__burger-item-container">
-                                <a class="header__burger-item" href="projects.html"
-                                    >Projects</a
-                                >
-                            </li>
-                            <li class="header__burger-item-container">
-                                <a class="header__burger-item" href="about.html"
-                                    >About us</a
-                                >
-                            </li>
-                            <li class="header__burger-item-container">
-                                <a class="header__burger-item" href="news.html"
-                                    >Blog</a
-                                >
-                            </li>
-                            <li class="header__burger-item-container">
-                                <a
-                                    class="header__burger-item"
-                                    href="contacts.html"
-                                    >Contacts</a
-                                >
-                            </li>
-                            <li class="header__burger-section">
-                                <a class="button-trriger header__burger-button" href="#"
-                                    >Send Request</a
-                                >
-                            </li>
-                        </ul>
-                        <div class="header__burger-contact header__container">
-                            <ul class="header__burger-contact-items">
-                                <li>
-                                    <a
-                                        class="header__burger-contact-item"
-                                        href="#"
-                                        >Fb</a
+                        <div class="header__scroll">
+                            <ul class="header__burger-items header__container">
+                                <li class="header__burger-item-container">
+                                    <a class="header__burger-item" href="#"
+                                        >Home</a
                                     >
                                 </li>
-                                <li>
+                                <li class="header__burger-item-container">
                                     <a
-                                        class="header__burger-contact-item"
-                                        href="#"
-                                        >In</a
+                                        class="header__burger-item"
+                                        href="projects.html"
+                                        >Projects</a
                                     >
                                 </li>
-                                <li>
+                                <li class="header__burger-item-container">
                                     <a
-                                        class="header__burger-contact-item"
+                                        class="header__burger-item"
+                                        href="about.html"
+                                        >About us</a
+                                    >
+                                </li>
+                                <li class="header__burger-item-container">
+                                    <a
+                                        class="header__burger-item"
+                                        href="news.html"
+                                        >Blog</a
+                                    >
+                                </li>
+                                <li class="header__burger-item-container">
+                                    <a
+                                        class="header__burger-item"
+                                        href="contacts.html"
+                                        >Contacts</a
+                                    >
+                                </li>
+                                <li class="header__burger-section">
+                                    <a
+                                        class="button-trriger header__burger-button"
                                         href="#"
-                                        >Be</a
+                                        >Send Request</a
                                     >
                                 </li>
                             </ul>
-                            <div class="header__burger-select">
-                                <select class="select__city" name="city">
-                                    <option class="select__value" value="1">
-                                        Berlin
-                                    </option>
-                                    <option class="select__value" value="2">
-                                        Kyiv
-                                    </option>
-                                    <option class="select__value" value="3">
-                                        Lviv
-                                    </option>
-                                </select>
-                                <svg class="header__burger-svg">
-                                    <use xlink:href="#geolocation"></use>
-                                </svg>
-                                <div class="header__burger-contact-sm">
-                                    <p class="header__burger-tel">
-                                        +380935705222
-                                    </p>
-                                    <a class="header__burger-link" href="#"
-                                        >info@hi-light.pl</a
-                                    >
+                            <div
+                                class="header__burger-contact header__container"
+                            >
+                                <ul class="header__burger-contact-items">
+                                    <li>
+                                        <a
+                                            class="header__burger-contact-item"
+                                            href="#"
+                                            >Fb</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="header__burger-contact-item"
+                                            href="#"
+                                            >In</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="header__burger-contact-item"
+                                            href="#"
+                                            >Be</a
+                                        >
+                                    </li>
+                                </ul>
+                                <div class="header__burger-select">
+                                    <select class="select__city" name="city">
+                                        <option class="select__value" value="1">
+                                            Berlin
+                                        </option>
+                                        <option class="select__value" value="2">
+                                            Kyiv
+                                        </option>
+                                        <option class="select__value" value="3">
+                                            Lviv
+                                        </option>
+                                    </select>
+                                    <svg class="header__burger-svg">
+                                        <use xlink:href="#geolocation"></use>
+                                    </svg>
+                                    <div class="header__burger-contact-sm">
+                                        <p class="header__burger-tel">
+                                            +380935705222
+                                        </p>
+                                        <a class="header__burger-link" href="#"
+                                            >info@hi-light.pl</a
+                                        >
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -330,19 +335,6 @@
         </div>
     </div>
 </header>
-
-<div class="header__none">
-    <svg>
-        <symbol id="geolocation" viewBox="0 0 10 10">
-            <g>
-                <path
-                    d="M5.00053 0C3.00355 0 1.37891 1.62465 1.37891 3.6216C1.37891 6.09988 4.6199 9.73815 4.75789 9.89182C4.8875 10.0362 5.11379 10.0359 5.24316 9.89182C5.38115 9.73815 8.62215 6.09988 8.62215 3.6216C8.62211 1.62465 6.99748 0 5.00053 0ZM5.00053 5.44373C3.9958 5.44373 3.17842 4.62633 3.17842 3.6216C3.17842 2.61688 3.99582 1.79949 5.00053 1.79949C6.00523 1.79949 6.82262 2.61689 6.82262 3.62162C6.82262 4.62635 6.00523 5.44373 5.00053 5.44373Z"
-                    fill="white"
-                />
-            </g>
-        </symbol>
-    </svg>
-</div>
 
             <main class="main">
                 <section class="news news__container">
@@ -361,9 +353,70 @@
                 Advice from the designer
             </li>
         </ul>
+
+        <!-- <div class="select">
+            <button class="select__button">All</button>
+            <svg class="select__button-svg">
+                <use href="#arrow-modal"></use>
+            </svg>
+            <ul class="select__list">
+                <li
+                    class="select__item"
+                    data-value="House"
+                    data-filter="all"
+                    data-tab="#cards-1"
+                >
+                    All
+                </li>
+                <li
+                    class="select__item"
+                    data-value="Apartments"
+                    data-filter="blog"
+                    data-tab="#cards-2"
+                >
+                    Blog
+                </li>
+                <li
+                    class="select__item"
+                    data-value="Commerce"
+                    data-filter="news"
+                    data-tab="#cards-3"
+                >
+                    News
+                </li>
+                <li
+                    class="select__item"
+                    data-value="Architecture"
+                    data-filter="advice"
+                    data-tab="#cards-4"
+                >
+                    Advice designer
+                </li>
+            </ul>
+        </div> -->
+
+        <div class="select">
+            <button class="select__button">All</button>
+            <svg class="select__button-svg">
+                <use href="#arrow-modal"></use>
+            </svg>
+            <ul class="news__link-items">
+                <li
+                    data-filter="all"
+                    class="news__link-item link news__link_active"
+                >
+                    All
+                </li>
+                <li data-filter="blog" class="news__link-item link">Blog</li>
+                <li data-filter="news" class="news__link-item link">News</li>
+                <li data-filter="advice" class="news__link-item link">
+                    Advice 
+                </li>
+            </ul>
+        </div>
     </div>
     <div class="news__cards">
-        <div class="news__card cards blog">
+        <div class="news__card cards cards_active blog" id="cards-1">
             <div class="news__card-text-area">
                 <h3 class="news__card-title">
                     5 smart tips for productive collaboration with the designer
@@ -374,12 +427,14 @@
                     ullamcorper euismod. Nam tempus pellentesque ligula ut
                     aliquam.
                 </p>
-                <a class="news__card-link" href="#">Discover more</a>
+                <a class="news__card-link" href="/one-news.html"
+                    >Discover more</a
+                >
             </div>
             <img class="news__img" src="./images/news/news-1.png" alt="" />
         </div>
-        <div class="news__card-img-hidden cards news">
-            <a href="#" class="news__card-img">
+        <div class="news__card-img-hidden news cards" id="cards-2">
+            <a href="/one-news.html" class="news__card-img">
                 <h3 class="news__card-title-white">
                     Non-standard plinth options
                 </h3>
@@ -391,7 +446,7 @@
             </a>
         </div>
 
-        <div class="news__card-img-hidden cards news">
+        <div class="news__card-img-hidden news cards" id="cards-3">
             <a href="/one-news.html" class="news__card-img">
                 <h3 class="news__card-title-white">
                     Interior design, LCD Rybalsky
@@ -404,7 +459,7 @@
             </a>
         </div>
 
-        <div class="news__card cards advice">
+        <div class="news__card cards advice" id="cards-4">
             <div class="news__card-text-area">
                 <h3 class="news__card-title">
                     5 smart tips for productive collaboration with the designer
@@ -415,7 +470,9 @@
                     ullamcorper euismod. Nam tempus pellentesque ligula ut
                     aliquam.
                 </p>
-                <a class="news__card-link" href="#">Discover more</a>
+                <a class="news__card-link" href="/one-news.html"
+                    >Discover more</a
+                >
             </div>
             <img class="news__img" src="./images/news/news-1.png" alt="" />
         </div>
@@ -821,6 +878,15 @@
             stroke-width="0.75"
         />
     </symbol>
+
+        <symbol id="geolocation" viewBox="0 0 10 10">
+            <g>
+                <path
+                    d="M5.00053 0C3.00355 0 1.37891 1.62465 1.37891 3.6216C1.37891 6.09988 4.6199 9.73815 4.75789 9.89182C4.8875 10.0362 5.11379 10.0359 5.24316 9.89182C5.38115 9.73815 8.62215 6.09988 8.62215 3.6216C8.62211 1.62465 6.99748 0 5.00053 0ZM5.00053 5.44373C3.9958 5.44373 3.17842 4.62633 3.17842 3.6216C3.17842 2.61688 3.99582 1.79949 5.00053 1.79949C6.00523 1.79949 6.82262 2.61689 6.82262 3.62162C6.82262 4.62635 6.00523 5.44373 5.00053 5.44373Z"
+                    fill="white"
+                />
+            </g>
+        </symbol>
 </svg>
 
         </div>
