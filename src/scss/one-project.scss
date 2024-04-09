@@ -3,6 +3,8 @@
 @import "./config/reset";
 @import "./config/global";
 
+@import "./components/preloader.scss";
+@import "./components/modal.scss";
 @import "./components/button";
 @import "./components/header";
 @import "./components/footer";

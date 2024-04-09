@@ -2,13 +2,12 @@
 @import "./config/reset";
 @import "./config/mixins";
 @import "./config/global";
-@import "./components/preloader.scss";
-@import "./404.scss";
 
+@import "./components/preloader.scss";
+@import "./components/modal.scss";
 @import "./components/button";
 @import "./components/header";
 @import "./news/news-card";
 @import "./news/news-communication";
 @import "./components/footer";
-
 @import "./components/select";

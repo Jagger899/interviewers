@@ -5,7 +5,7 @@ import { preloaderLoad } from "./components/preloader";
 import { modalOpen } from "./components/modal";
 import { dropdownWork } from "./components/dropdown";
 // import { projectsTabsWork } from "./components/projectsTabs";
-import { selectWork } from "./components/select";
+// import { selectWork } from "./components/select";
 
 document.addEventListener("DOMContentLoaded", async function () {
     preloaderLoad();
@@ -15,5 +15,5 @@ document.addEventListener("DOMContentLoaded", async function () {
     colorFooter();
     filterPage();
     // projectsTabsWork();
-    selectWork();
+    // selectWork();
 });

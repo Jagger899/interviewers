@@ -2,11 +2,7 @@ export const preloaderLoad = function () {
     const preloader = document.querySelector(".preloader");
     const preloaderInfo = document.querySelector(".preloader__loader");
     const percentsBox = document.querySelector(".preloader__percents");
-    const url = getCurrentURL();
 
-    function getCurrentURL() {
-        return window.location.href;
-    }
     window.addEventListener("load", () => {
         preloader.classList.add("preloader_hidden");
 

@@ -2,9 +2,12 @@
 @import "./config/mixins";
 @import "./config/reset";
 @import "./config/global";
+
 @import "./components/button";
+
+@import "./components/preloader.scss";
+@import "./components/modal.scss";
 @import "./components/header";
 @import "./components/discover-link.scss";
 @import "./404/not-found.scss";
 @import "./components/footer";
-

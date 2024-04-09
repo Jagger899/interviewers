@@ -1,6 +1,6 @@
 export const projectsTabsWork = function () {
   const tabsLinks = document.querySelectorAll(".descr__tabs-link");
-  const cardBlocks = document.querySelectorAll('.projects__cards')
+  const cardBlocks = document.querySelectorAll('.cards')
 
   tabsLinks.forEach((tabLink) => {
     tabLink.addEventListener('click', event => {
@@ -13,12 +13,12 @@ export const projectsTabsWork = function () {
       });
 
       cardBlocks.forEach((cardBlock) => {
-          cardBlock.classList.remove("projects__cards_active");
+          cardBlock.classList.remove("cards_active");
       });
 
       tabLink.classList.add("descr__tabs-link_active");
       
-      currentTab.classList.add('projects__cards_active');
+      currentTab.classList.add('cards_active');
     })
   })
 

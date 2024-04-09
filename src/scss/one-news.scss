@@ -2,10 +2,11 @@
 @import "./config/reset";
 @import "./config/mixins";
 @import "./config/global";
+
+
 @import "./components/button";
 @import "./components/preloader.scss";
-@import "./404.scss";
-
+@import "./components/modal.scss";
 @import "./components/header";
 @import "./one-news/news-description";
 @import "./one-news/news-swiper";

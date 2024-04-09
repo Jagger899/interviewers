@@ -4,7 +4,7 @@ export const selectWork = function () {
     const selectList = document.querySelector(".select__list");
     const selectItems = document.querySelectorAll(".select__item");
     const selectSvg = document.querySelector(".select__button-svg");
-    const cardBlocks = document.querySelectorAll(".projects__cards");
+    const cardBlocks = document.querySelectorAll(".cards");
 
     selectButton.addEventListener("click", () => {
         selectList.classList.toggle("select__list_active");
@@ -19,9 +19,10 @@ export const selectWork = function () {
             selectList.classList.remove("select__list_active");
             selectSvg.classList.remove("select__button-svg_rotate");
             cardBlocks.forEach((cardBlock) => {
-                cardBlock.classList.remove("projects__cards_active");
+                cardBlock.classList.remove("cards_active");
             });
-            currentTab.classList.add("projects__cards_active");
+            currentTab.classList.add("cards_active");
         });
     });
+  
 };
