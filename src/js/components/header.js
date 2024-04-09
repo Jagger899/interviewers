@@ -5,6 +5,7 @@ export function burgerFunction() {
     const bottom = document.querySelector(".header__button");
     const logo = document.querySelector(".header__logo");
     const language = document.querySelector(".header__language");
+    const body = document.body;
 
     window.addEventListener("scroll", function () {
         if (this.window.scrollY > 0) {
@@ -20,5 +21,6 @@ export function burgerFunction() {
         bottom.classList.toggle("header__button_active");
         logo.classList.toggle("header__logo_active");
         language.classList.toggle("header__language_active");
+        body.classList.toggle("block");
     });
 }
