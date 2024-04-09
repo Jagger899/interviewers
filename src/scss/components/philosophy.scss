@@ -103,7 +103,7 @@
         }
 
         @include breakpoints(xs) {
-          margin-bottom: 33px;
+            margin-bottom: 33px;
         }
     }
 
@@ -122,20 +122,20 @@
     &__link {
         left: 17px;
         &::before {
-            background: red;
+            background: rgba(49, 49, 49, 0.2);
             left: 160px;
 
             @include breakpoints(xs) {
-              left: 138px;
+                left: 138px;
             }
         }
 
         &::after {
-            background: red;
+            background: rgba(49, 49, 49, 0.2);
             left: -34px;
 
             @include breakpoints(xs) {
-              left: -13px;
+                left: -13px;
             }
         }
     }
@@ -172,7 +172,7 @@
         height: 393px;
 
         @include breakpoints(md) {
-          height: 221px;
+            height: 221px;
         }
 
         @include breakpoints(xs) {
@@ -223,7 +223,7 @@
         }
 
         @include breakpoints(xs) {
-          width: 131px;
+            width: 131px;
         }
     }
 
@@ -250,7 +250,7 @@
             }
 
             @include breakpoints(xs) {
-              left: -41px;
+                left: -41px;
             }
         }
 

@@ -45,12 +45,14 @@ task("sass:dev", function () {
 });
 
 task("images:dev", function () {
-  return (
-    src("src/images/**/*")
+  return src("src/images/**/*")
       .pipe(changed("build/images"))
-      // .pipe(imagemin({ verbose: true }))
+      .pipe(webp())
       .pipe(dest("build/images"))
-  );
+      .pipe(src("src/images/**/*"))
+      .pipe(changed("docs/images"))
+      .pipe(imagemin({ verbose: true }))
+      .pipe(dest("build/images"));
 });
 
 task("fonts:dev", function () {

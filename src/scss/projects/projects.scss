@@ -79,27 +79,6 @@
         @include breakpoints(md) {
             gap: 6px;
         }
-
-        // &_active {
-        //     display: grid;
-        //     grid-template-columns: repeat(2, 1fr);
-        //     gap: 8px;
-        //     margin-bottom: 178px;
-
-        //     @include breakpoints(md) {
-        //         margin-bottom: 124px;
-        //     }
-
-        //     @include breakpoints(sm) {
-        //         // grid-template-columns: 1fr;
-        //         // justify-items: center;
-        //         // align-items: center;
-        //         display: flex;
-        //         flex-direction: column;
-        //         // justify-content: center;
-        //         // align-items: center;
-        //     }
-        // }
     }
 
     &__card {
@@ -336,6 +315,12 @@
         margin-left: 20px;
         color: $blackColor;
         border: 1px solid rgba(0, 0, 0, 0.32);
+        margin: 0 auto;
+    }
+
+    .button {
+        display: block;
+        width: 207px;
     }
 
     &__gallary-img {

@@ -3,6 +3,17 @@
     position: relative;
     overflow: hidden;
 
+    &_black {
+        background: $blackColor;
+
+        .projects-second__title {
+            color: $whiteColor;
+        }
+        .projects-second__text {
+            color: $whiteColor;
+        }
+    }
+
     @include breakpoints(md) {
         height: 790px;
     }
