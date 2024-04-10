@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="css/about.css" />
         <title>About</title>
     </head>
-    <body>
+    <body class="castom-scrollbar">
         @@include('./components/preloader.html')
         @@include('./components/modal.html')
         <div class="wrapper">
@@ -16,8 +16,7 @@
                 @@include('about/achievements.html')
                 @@include('about/director.html')
                 @@include('components/projects-second.html', { 'colors':'black'
-                })
-                @@include('about/form.html')
+                }) @@include('about/form.html')
             </main>
             @@include('components/footer.html')
             @@include('components/sprite.html')

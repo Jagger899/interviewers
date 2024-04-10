@@ -241,6 +241,7 @@
         display: none;
 
         @include breakpoints(xl) {
+            cursor: pointer;
             display: flex;
             flex-direction: column;
             position: relative;
@@ -277,13 +278,17 @@
     }
 
     &__scroll {
-        overflow: scroll;
+        overflow: auto;
         //padding: 98px 0 0 0;
         height: 100%;
 
         @include breakpoints(sm) {
             //padding: 68px 0 0 0;
         }
+    }
+
+    &__scroll::-webkit-scrollbar {
+        display: none;
     }
 
     &__burger-background {
@@ -468,55 +473,6 @@
             color: $whiteColor;
             border: $whiteColor 1px solid;
         }
-    }
-
-    &__none {
-        display: none;
-    }
-
-    // color
-
-    &__link {
-        color: $whiteColor;
-
-        &:hover {
-            color: $whiteColor;
-        }
-    }
-
-    &__white-text {
-        color: $whiteColor;
-        z-index: 2;
-
-        &::after {
-            background: $whiteColor;
-        }
-
-        &:hover {
-            color: $whiteColor;
-        }
-    }
-
-    &__white-button {
-        color: $whiteColor;
-        border: $whiteColor 1px solid;
-        transition: all 0.5s ease-in-out;
-
-        &:hover {
-            color: $blackColor;
-            background: $whiteColor;
-            border: $whiteColor 1px solid;
-        }
-    }
-
-    &__white-background {
-        span {
-            background: $whiteColor;
-        }
-    }
-
-    &__transperent {
-        background: transparent;
     }
 }
 

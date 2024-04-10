@@ -9,9 +9,25 @@ html {
     scroll-behavior: smooth;
 }
 
-// body {
-//   position: relative;
-// }
+body {
+    //overflow: auto;
+}
+
+body::-webkit-scrollbar {
+    //overflow: overlay;
+    width: 3px;
+}
+
+body::-webkit-scrollbar-track {
+    display: none;
+    //position: absolute;
+    background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: $swiperTitle;
+    border-radius: 2px;
+}
 
 .wrapper {
     min-height: 100%;
@@ -22,13 +38,12 @@ html {
 
 .main {
     flex: 1 1 auto;
-    // overflow: hidden;
 }
 
 .body {
-  &_lock {
-    overflow: hidden;
-  }
+    &_lock {
+        overflow: hidden;
+    }
 }
 // fonts
 
@@ -99,7 +114,7 @@ html {
 
 // breakpoints
 
-[class*=__container] {
+[class*="__container"] {
     max-width: 1312px;
     width: 100%;
     margin: 0 auto;
