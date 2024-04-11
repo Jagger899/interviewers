@@ -147,9 +147,9 @@
         }
 
         .link {
-           &::after {
-                  display: none;
-                }
+            &::after {
+                display: none;
+            }
         }
     }
 
@@ -167,6 +167,7 @@
 
         @include breakpoints(md) {
             margin-top: 95px;
+            width: 100%;
         }
 
         @include breakpoints(sm) {
@@ -175,14 +176,6 @@
             flex-direction: column;
         }
     }
-
-    // .cards {
-    //   display: none;
-
-    //   &_active {
-    //     display: grid;
-    //   }
-    // }
 
     &__card {
         display: flex;
@@ -413,7 +406,7 @@
 @keyframes anim {
     to {
         opacity: 0;
-        //height: 0;
+        height: 0;
         display: none;
     }
 }

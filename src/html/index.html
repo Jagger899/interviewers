@@ -1,33 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/main.css" />
-    <title>Main</title>
-  </head>
-  <body class="body">
-    @@include('./components/preloader.html')
-    @@include('./components/modal.html')
-    <div class="wrapper">
-      @@include('./components/header.html',{
-        'colors': 'white'
-      })
-      <main class="main">
-        @@include('components/promo.html')
-        @@include('components/philosophy.html')
-        @@include('components/projects-first.html')
-        @@include('components/projects-second.html')
-        @@include('contacts/contacts.html')
-
-      </main>
-    </div>
-
-    @@include('components/footer.html', {
-      'colors':'white'
-    })
-
-    @@include('components/sprite.html')
-    <script src="./js/index.bundle.js"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/main.css" />
+        <title>Main</title>
+    </head>
+    <body class="body">
+        @@include('./components/preloader.html')
+        @@include('./components/modal.html')
+        <div class="wrapper">
+            @@include('./components/header.html',{ 'colors': 'white' })
+            <main class="main">
+                @@include('components/promo.html')
+                @@include('components/philosophy.html')
+                @@include('components/projects-first.html')
+                @@include('components/projects-second.html')
+                @@include('contacts/contacts.html')
+            </main>
+            @@include('components/footer.html', { 'colors':'white' })
+            @@include('components/sprite.html')
+        </div>
+        <script src="./js/index.bundle.js"></script>
+    </body>
 </html>
