@@ -20,6 +20,14 @@
         }
     }
 
+    &__slide-block {
+        height: 482px;
+        width: 316px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
     &__block {
         margin-top: 70px;
         width: 130%;
@@ -74,7 +82,17 @@
         }
     }
 
+    &__block-img {
+        overflow: hidden;
+    }
+
     &__slide-img {
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
         @include breakpoints(xl) {
             width: 87%;
         }
@@ -89,10 +107,14 @@
     }
 
     &__slide-title {
-        width: 80%;
+        width: 75%;
         padding-top: 25px;
+        padding-left: 5px;
         font-size: 14px;
         line-height: 137%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
 
         @include breakpoints(sm) {
             padding-top: 23px;
@@ -100,7 +122,8 @@
     }
 
     &__slide-text {
-        padding-top: 15px;
+        margin-top: auto;
+        //padding-top: 15px;
         font-size: 10px;
         line-height: 171%;
 

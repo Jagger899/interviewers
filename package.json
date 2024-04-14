@@ -53,6 +53,6 @@
     "gh-pages": "^6.1.1",
     "prettier": "^3.2.5",
     "smooth-scrollbar": "^8.8.4",
-    "swiper": "^11.1.0",
+    "swiper": "^11.1.0"
   }
 }

@@ -1,16 +1,14 @@
 .contacts {
     &__background-container {
-        background: url(../images/reused/reused-10.webp) no-repeat;
-        min-height: 100vh;
+        background: url(../images/reused/reused-10.png) no-repeat;
+        height: 100vh;
         background-position: center center;
         background-size: cover;
+    }
 
-        @include breakpoints(md) {
-            //height: 123vh;
-        }
-
-        @include breakpoints(sm) {
-            //height: 100vh;
+    &_not_cover {
+        .contacts__background-container {
+            height: 100%;
         }
     }
 
