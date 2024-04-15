@@ -1,14 +1,24 @@
 export const preloaderLoad = function () {
+    const body = document.querySelector("body");
     const preloader = document.querySelector(".preloader");
     const preloaderInfo = document.querySelector(".preloader__loader");
     const percentsBox = document.querySelector(".preloader__percents");
+    const scrollController = {
+        disabledScroll() {
+            body.classList.add("body_lock");
+        },
 
+        enableScroll() {},
+    };
+
+    scrollController.disabledScroll();
     window.addEventListener("load", () => {
         preloader.classList.add("preloader_hidden");
-
-        setTimeout(() => {
-            preloader.remove();
-        }, 900);
+        body.classList.remove("body_lock");
+        // setTimeout(() => {
+        //     preloader.remove();
+        // }, 300);
+        preloader.remove();
     });
 
     const media = document.querySelectorAll("img");

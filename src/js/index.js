@@ -4,9 +4,10 @@ import { dropdownWork } from "./components/dropdown";
 import { preloaderLoad } from "./components/preloader";
 import { modalOpen } from "./components/modal";
 
+
 document.addEventListener("DOMContentLoaded", async function () {
-  preloaderLoad();
-  modalOpen()
+    preloaderLoad();
+    modalOpen();
     burgerFunction();
     mainSwiper();
     dropdownWork();
@@ -21,20 +22,3 @@ window.addEventListener("scroll", function () {
         header.classList.remove("header_black");
     }
 });
-
-// function getCurrentURL() {
-//     return window.location.href;
-// }
-
-// // Example
-// const url = getCurrentURL();
-// console.log(url);
-
-// if (
-//     url === "http://localhost:8000/index.html" ||
-//     url === "http://localhost:8000"
-// ) {
-//     header.classList.add("header_white-colors");
-// } else {
-//     header.classList.remove("header_white-colors");
-// }

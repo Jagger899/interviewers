@@ -1,31 +1,133 @@
+import JustValidate from "just-validate";
+
 export const modalOpen = function () {
-  const buttons = document.querySelectorAll('.button-trriger');
-  const modal = document.querySelector('.modal');
-  const modalContent = document.querySelector(".modal__content");
-  const modalClose = document.querySelector(".modal__close");
-  const modalFormButton = document.getElementById("modal-first-button");
-  const requestButton = document.getElementById("modal-second-button");
-  const modalRequest = document.querySelector(".modal__request");
-  
-  buttons.forEach((button) => {
-    button.addEventListener('click', () => {
-      modal.classList.add("modal_active");
-      modalContent.classList.add("modal__content_active");
-      modalRequest.classList.remove("modal__request_active");
-    })
-  })
+    const validator = new JustValidate("#form", {
+        tooltip: {
+            position: "top",
+        },
+    });
 
-  modalClose.addEventListener('click', () => {
-    modal.classList.remove("modal_active");
-    modalContent.classList.remove("modal__content_active");
-  })
+    // validator
+    //     .addField(document.querySelector("#name"), [
+    //         {
+    //             rule: "required",
+    //         },
+    //         {
+    //             rule: "minLength",
+    //             value: 3,
+    //         },
+    //         {
+    //             rule: "maxLength",
+    //             value: 15,
+    //         },
+    //     ])
+    //     .addField(document.querySelector("#email"), [
+    //         {
+    //             rule: "required",
+    //         },
+    //         {
+    //             rule: "email",
+    //         },
+    //     ])
+    //     .addField(document.querySelector("#last-name"), [
+    //         {
+    //             rule: "required",
+    //         },
+    //         {
+    //             rule: "number",
+    //         },
+    //     ]);
+    validator
+        .addField("#name", [
+            {
+                rule: "required",
+            },
+        ])
+        .addField("#email", [
+            {
+                rule: "required",
+            },
+            {
+                rule: "email",
+            },
+        ])
+        .addField("#phone", [
+            {
+                rule: "required",
+            },
+            {
+                rule: "number",
+            },
+        ])
+        .addField("#city", [
+            {
+                rule: "required",
+            },
+        ])
 
-  modalFormButton.addEventListener('click', () => {
-    modalContent.classList.remove("modal__content_active");
-    modalRequest.classList.add('modal__request_active');
-  });
+        .addField("#comment", [
+            {
+                rule: "required",
+            },
+        ])
 
-  requestButton.addEventListener('click', () => {
-    modal.classList.remove("modal_active");
-  });
-}
+        .addField(
+            "#last-name",
+            [
+                {
+                    rule: "required",
+                },
+            ],
+            // {
+            //   errorsContainer: "#form_consent_checkbox-errors-container",
+            // },
+        );
+
+    const buttons = document.querySelectorAll(".button-trriger");
+    const modal = document.querySelector(".modal");
+    const modalContent = document.querySelector(".modal__form");
+    const modalClose = document.querySelector(".modal__close");
+    const modalFormButton = document.getElementById("modal-first-button");
+    const requestButton = document.getElementById("modal-second-button");
+    const modalRequest = document.querySelector(".modal__request");
+    const body = document.querySelector("body");
+
+    modal.addEventListener("click", (event) => {
+        const modalClick = event.composedPath().includes(modalContent);
+        if (!modalClick) {
+            modal.classList.remove("modal_active");
+            modalContent.classList.remove("modal__form_active");
+            body.classList.remove("body_lock");
+        }
+    });
+
+    buttons.forEach((button) => {
+        button.addEventListener("click", (event) => {
+            event.preventDefault();
+            modal.classList.add("modal_active");
+            body.classList.add("body_lock");
+            modalContent.classList.add("modal__form_active");
+            modalRequest.classList.remove("modal__request_active");
+        });
+    });
+
+    modalClose.addEventListener("click", () => {
+        modal.classList.remove("modal_active");
+        modalContent.classList.remove("modal__form_active");
+        body.classList.remove("body_lock");
+    });
+
+    modalFormButton.addEventListener("click", () => {
+        if (validator.isValid === true) {
+            modalContent.classList.remove("modal__form_active");
+            modalRequest.classList.add("modal__request_active");
+        }
+
+        console.log(validator.isValid);
+    });
+
+    requestButton.addEventListener("click", () => {
+        modal.classList.remove("modal_active");
+        body.classList.remove("body_lock");
+    });
+};

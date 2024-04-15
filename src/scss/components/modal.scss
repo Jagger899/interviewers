@@ -8,7 +8,7 @@
     padding-top: 75px;
     padding-bottom: 93px;
     z-index: 30;
-    background: $blackColor;
+    background: rgba(0,0,0,0.9);
     left: 0;
     transition:
         opacity 900ms ease-in-out,
@@ -23,7 +23,7 @@
         visibility: visible;
     }
 
-    &__content {
+    &__form {
         max-width: 1046px;
         background: $newsCard;
         margin: 0 auto;
@@ -112,7 +112,7 @@
         }
     }
 
-    &__form {
+    &__form-box {
         // display: flex;
         // flex-wrap: wrap;
         display: grid;
@@ -127,6 +127,19 @@
     }
 
     .form {
+      .input-wrapper {
+        position: relative;
+      }
+
+      .just-validate-error-label {
+        position: absolute;
+        top: -32px !important;
+        left: 0 !important;
+        font-family: "Montserrat";
+        font-size: 10px;
+        background: rgba(66, 63, 63,06);
+      }
+
         &__input {
             font-family: "Montserrat";
             width: 312px;
@@ -152,6 +165,7 @@
             grid-column: 1 / -1;
             outline: none;
             border-bottom: 1px solid rgba(214, 214, 214, 0.3);
+            font-family: "Montserrat";
         }
     }
 
@@ -405,9 +419,14 @@
             }
         }
 
+        .button {
+          font-family: "Montserrat";
+        }
+
         .button__transparency {
             color: $whiteColor;
             background: $swiperTitle;
+            
 
             &:hover {
                 color: $swiperTitle;

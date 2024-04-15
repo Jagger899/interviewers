@@ -125,6 +125,12 @@
         }
     }
 
+    &__button {
+      &:hover {
+        background: $blackColor;
+      }
+    }
+
     &__subtitle {
         font-weight: 700;
         font-size: 8px;

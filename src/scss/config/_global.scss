@@ -15,7 +15,10 @@ body {
 
 body::-webkit-scrollbar {
     //overflow: overlay;
-    width: 3px;
+    width: 0 !important;
+    height: 0;
+    display: none !important;
+    background: transparent;
 }
 
 body::-webkit-scrollbar-track {
@@ -29,6 +32,15 @@ body::-webkit-scrollbar-thumb {
     border-radius: 2px;
 }
 
+.body {
+    overflow: auto;
+
+    &_lock {
+        overflow: hidden;
+        // background: red;
+    }
+}
+
 .wrapper {
     min-height: 100%;
     display: flex;
@@ -40,11 +52,6 @@ body::-webkit-scrollbar-thumb {
     flex: 1 1 auto;
 }
 
-.body {
-    &_lock {
-        overflow: hidden;
-    }
-}
 // fonts
 
 /* montserrat-300 */
@@ -182,4 +189,8 @@ ol {
 
 select {
     font-family: "Montserrat";
+}
+
+button {
+  font-family: "Montserrat";
 }
