@@ -37,8 +37,9 @@ export const preloaderLoad = function () {
         // console.log(loadImages, parseInt((loadImages / imagesCount) * 100));
         percents.innerText = parseInt((loadImages / imagesCount) * 100);
 
-        console.log("ParseInt:", parseInt((loadImages / imagesCount) * 100));
-        if (parseInt((loadImages / imagesCount) * 100) === 100) {
+      console.log("ParseInt:", parseInt((loadImages / imagesCount) * 100));
+      
+        if ( parseInt((loadImages / imagesCount) * 100) === 100) {
             percents.innerText = "LIGHT";
             preloaderInfo.classList.add("preloader__loader_isload");
             // console.log(percentsBox.innerText, percentsBox.innerText.length);
@@ -53,4 +54,6 @@ export const preloaderLoad = function () {
         img.onload = loadingImages;
         img.src = media[i].src;
     }
+  
+  
 };
