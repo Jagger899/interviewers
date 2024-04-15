@@ -313,18 +313,6 @@
         margin-left: 20px;
     }
 
-    // &__gallary-img {
-    //     position: absolute;
-    //     aspect-ratio: 1.57 / 1;
-    //     width: 738px;
-    //     top: -68px;
-    //     right: 168px;
-    //     z-index: -1;
-
-    //     @include breakpoints(md) {
-    //         display: none;
-    //     }
-    // }
 
     &__gallary-photo-container {
         position: absolute;
@@ -349,7 +337,7 @@
             transform 300ms ease-in-out,
             z-index 300ms ease-in-out;
 
-        &:first-child {
+        &_first {
             left: 20px;
             z-index: 0;
 
@@ -359,7 +347,7 @@
             }
         }
 
-        &:nth-child(2) {
+        &_second {
             left: 85px;
             z-index: 1;
 
@@ -369,7 +357,7 @@
             }
         }
 
-        &:nth-child(3) {
+        &_third {
             left: 126px;
             top: -92px;
             z-index: 2;
@@ -380,7 +368,7 @@
             }
         }
 
-        &:nth-child(4) {
+        &_fourth {
             top: -110px;
             left: 191px;
             z-index: 3;
@@ -391,7 +379,7 @@
             }
         }
 
-        &:nth-child(5) {
+        &_fivth {
             top: -137px;
             left: 239px;
             z-index: 4;
@@ -402,7 +390,7 @@
             }
         }
 
-        &:nth-child(6) {
+        &_sixth {
             top: -158px;
             left: 285px;
             z-index: 5;
@@ -413,7 +401,7 @@
             }
         }
 
-        &:nth-child(7) {
+        &_seventh {
             top: -160px;
             left: 348px;
             z-index: 6;
@@ -424,7 +412,7 @@
             }
         }
 
-        &:nth-child(8) {
+        &_eighth {
             top: -182px;
             left: 388px;
             z-index: 7;
@@ -435,7 +423,7 @@
             }
         }
 
-        &:nth-child(9) {
+        &_nine {
             top: -197px;
             right: 56px;
             z-index: 8;
@@ -446,7 +434,7 @@
             }
         }
 
-        &:nth-child(10) {
+        &_ten {
             top: -240px;
             right: -8px;
             z-index: 9;

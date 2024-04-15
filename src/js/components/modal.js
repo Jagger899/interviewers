@@ -7,36 +7,6 @@ export const modalOpen = function () {
         },
     });
 
-    // validator
-    //     .addField(document.querySelector("#name"), [
-    //         {
-    //             rule: "required",
-    //         },
-    //         {
-    //             rule: "minLength",
-    //             value: 3,
-    //         },
-    //         {
-    //             rule: "maxLength",
-    //             value: 15,
-    //         },
-    //     ])
-    //     .addField(document.querySelector("#email"), [
-    //         {
-    //             rule: "required",
-    //         },
-    //         {
-    //             rule: "email",
-    //         },
-    //     ])
-    //     .addField(document.querySelector("#last-name"), [
-    //         {
-    //             rule: "required",
-    //         },
-    //         {
-    //             rule: "number",
-    //         },
-    //     ]);
     validator
         .addField("#name", [
             {
@@ -78,9 +48,6 @@ export const modalOpen = function () {
                     rule: "required",
                 },
             ],
-            // {
-            //   errorsContainer: "#form_consent_checkbox-errors-container",
-            // },
         );
 
     const buttons = document.querySelectorAll(".button-trriger");
@@ -91,6 +58,15 @@ export const modalOpen = function () {
     const requestButton = document.getElementById("modal-second-button");
     const modalRequest = document.querySelector(".modal__request");
     const body = document.querySelector("body");
+    // const inputFile = document.getElementById("file");
+
+    // const inputFileLabel = document.querySelector(".change-box__file-label");
+    // console.log(inputFileLabel);
+
+    // inputFileLabel.addEventListener("click", () => {
+    //     // inputFile.classList.add('change-box__file_vis')
+    //     console.log(inputFile.files);
+    // });
 
     modal.addEventListener("click", (event) => {
         const modalClick = event.composedPath().includes(modalContent);
@@ -103,7 +79,8 @@ export const modalOpen = function () {
 
     buttons.forEach((button) => {
         button.addEventListener("click", (event) => {
-            event.preventDefault();
+          event.preventDefault();
+          console.log('click')
             modal.classList.add("modal_active");
             body.classList.add("body_lock");
             modalContent.classList.add("modal__form_active");
