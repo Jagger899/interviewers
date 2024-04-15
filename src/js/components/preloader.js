@@ -15,10 +15,10 @@ export const preloaderLoad = function () {
     window.addEventListener("load", () => {
         preloader.classList.add("preloader_hidden");
         body.classList.remove("body_lock");
-        // setTimeout(() => {
-        //     preloader.remove();
-        // }, 300);
-        preloader.remove();
+        setTimeout(() => {
+            preloader.remove();
+        }, 300);
+        // preloader.remove();
     });
 
     const media = document.querySelectorAll("img");
