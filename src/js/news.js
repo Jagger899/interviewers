@@ -1,5 +1,4 @@
 import { burgerFunction } from "./components/header";
-import { colorFooter } from "./news/news-communication";
 import { filterPage } from "./news/news-cards";
 import { preloaderLoad } from "./components/preloader";
 import { modalOpen } from "./components/modal";
@@ -10,6 +9,5 @@ document.addEventListener("DOMContentLoaded", async function () {
     modalOpen();
     dropdownWork();
     burgerFunction();
-    colorFooter();
     filterPage();
 });
