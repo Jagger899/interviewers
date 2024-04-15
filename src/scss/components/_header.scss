@@ -237,7 +237,7 @@
     &__burger-icon {
         display: none;
 
-        @include breakpoints(xl) {
+        @include breakpoints(md) {
             cursor: pointer;
             display: flex;
             flex-direction: column;
@@ -297,12 +297,8 @@
         transition: top 0.5s ease-in-out;
         z-index: 1;
 
-        @include breakpoints(md) {
-            top: -130vh;
-        }
-
         @include breakpoints(sm) {
-            top: -120vh;
+            //top: -120vh;
             width: 110%;
             padding: 68px 0 0 0;
         }
