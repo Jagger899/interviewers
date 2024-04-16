@@ -8,7 +8,7 @@
     padding-top: 75px;
     padding-bottom: 93px;
     z-index: 30;
-    background: rgba(0,0,0,0.9);
+    background: rgba(0, 0, 0, 0.9);
     left: 0;
     transition:
         opacity 900ms ease-in-out,
@@ -127,18 +127,23 @@
     }
 
     .form {
-      .input-wrapper {
-        position: relative;
-      }
+        .input-wrapper {
+            position: relative;
+        }
 
-      .just-validate-error-label {
-        position: absolute;
-        top: -32px !important;
-        left: 0 !important;
-        font-family: "Montserrat";
-        font-size: 10px;
-        background: rgba(66, 63, 63,0.6);
-      }
+        .just-validate-error-label {
+            position: absolute;
+            top: -32px !important;
+            left: 0 !important;
+            font-family: "Montserrat";
+            font-size: 10px;
+            background: rgba(66, 63, 63, 0.6);
+
+            &::before {
+                // background: rgba(66, 63, 63,0.6);
+                border-bottom: solid 5px rgba(66, 63, 63, 0.6);
+            }
+        }
 
         &__input {
             font-family: "Montserrat";
@@ -150,6 +155,7 @@
             color: $swiperTitle;
             padding: 0 0 11px;
             border-bottom: 1px solid rgba(214, 214, 214, 0.3);
+            background: transparent;
 
             @include breakpoints(md) {
                 font-weight: 500;
@@ -377,10 +383,16 @@
         }
 
         &__file {
-            display: none;
+            // display: none;
+            width: 0.1px;
+            height: 0.1px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            z-index: -1;
 
             &_vis {
-              display: inline;
+                display: inline;
             }
         }
 
@@ -394,6 +406,32 @@
             align-items: center;
             background: #f7f7f6;
             cursor: pointer;
+            position: relative;
+        }
+
+        &__file-label-add{
+          font-size: 20px;
+          font-family: "Montserrat";
+          transition: transform 300ms ease-in-out;
+
+          &_checked {
+            transform: rotate(45deg);
+          }
+        }
+
+        &__file-label-value {
+          font-size: 11px;
+          font-family: "Montserrat";
+          min-width: 160px;
+          display: none;
+
+          &_active {
+            display: block;
+            position: absolute;
+            top: 50px;
+            left: 0;
+          }
+
         }
 
         &__file-label svg {
@@ -424,13 +462,12 @@
         }
 
         .button {
-          font-family: "Montserrat";
+            font-family: "Montserrat";
         }
 
         .button__transparency {
             color: $whiteColor;
             background: $swiperTitle;
-            
 
             &:hover {
                 color: $swiperTitle;

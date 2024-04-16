@@ -17,8 +17,7 @@ export const preloaderLoad = function () {
         body.classList.remove("body_lock");
         setTimeout(() => {
             preloader.remove();
-        }, 300);
-        // preloader.remove();
+        }, 2000);
     });
 
     const media = document.querySelectorAll("img");
@@ -34,26 +33,21 @@ export const preloaderLoad = function () {
         }
 
         loadImages++;
-        // console.log(loadImages, parseInt((loadImages / imagesCount) * 100));
         percents.innerText = parseInt((loadImages / imagesCount) * 100);
 
-      console.log("ParseInt:", parseInt((loadImages / imagesCount) * 100));
+      // console.log("ParseInt:", parseInt((loadImages / imagesCount) * 100));
       
         if ( parseInt((loadImages / imagesCount) * 100) === 100) {
             percents.innerText = "LIGHT";
             preloaderInfo.classList.add("preloader__loader_isload");
-            // console.log(percentsBox.innerText, percentsBox.innerText.length);
             percentsBox.innerText = percentsBox.innerText.slice(0, 5);
         }
     }
-
-    // loadingImages();
 
     for (let i = 0; i < imagesCount; i++) {
         let img = new Image();
         img.onload = loadingImages;
         img.src = media[i].src;
     }
-  
   
 };

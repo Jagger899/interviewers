@@ -128,6 +128,20 @@
             line-height: 127%;
             text-align: center;
             margin-top: 81px;
+
+            @include breakpoints(md) {
+              margin-top: 33px;
+              font-size: 20px;
+            }
+
+            @include breakpoints(sm) {
+              margin-top: 113px;
+            }
+
+            @include breakpoints(xs) {
+              margin-top: -16px;
+              white-space: nowrap;
+            }
         }
 
         &__overlay {
@@ -246,6 +260,11 @@
             @include breakpoints(md) {
                 background-size: 168px 223px;
             }
+
+            @include breakpoints(xs) {
+              padding: 62px 52px;
+              background-size: 121px 161px;
+            }
         }
     }
 
@@ -339,6 +358,7 @@
 
         &_first {
             left: 20px;
+            top:-68px;
             z-index: 0;
 
             &:hover {
@@ -350,6 +370,7 @@
         &_second {
             left: 85px;
             z-index: 1;
+            top:-70px;
 
             &:hover {
                 transform: scale(1.2);

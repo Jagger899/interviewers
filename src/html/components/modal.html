@@ -20,7 +20,7 @@
                     />
                 </div>
 
-                 <div class="input-wrapper">
+                <div class="input-wrapper">
                     <input
                         id="last-name"
                         type="text"
@@ -215,12 +215,22 @@
 
                 <div class="change-box__user-req">
                     <div class="change-box__add-file">
+                        <input
+                            type="file"
+                            id="file"
+                            class="change-box__file"
+                            data-multiple-caption="{count} files selected"
+                            
+                        />
                         <label for="file" class="change-box__file-label">
-                            <svg>
+                            <!-- <svg>
                                 <use href="#add-file"></use>
-                            </svg>
+                            </svg> -->
+
+                            <span class="change-box__file-label-add">+</span>
+                            <span class="change-box__file-label-value"></span>
                         </label>
-                        <input type="file" id="file" class="change-box__file" />
+
                         <div class="change-box__text-box">
                             <p class="change-box__text">Attach your file</p>
                             <p class="change-box__text">

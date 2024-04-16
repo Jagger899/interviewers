@@ -6,7 +6,6 @@ import { modalOpen } from "./components/modal";
 import { projectsTabsWork } from "./components/projectsTabs";
 import { selectWork } from "./components/select";
 
-// console.log('projects')
 document.addEventListener("DOMContentLoaded", async function () {
     preloaderLoad();
     modalOpen();

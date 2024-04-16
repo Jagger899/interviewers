@@ -37,18 +37,18 @@ export const modalOpen = function () {
 
         .addField("#comment", [
             {
-                rule: "required",
+                validator: (value) => {
+                    return value !== undefined && value.length > 16;
+                },
+                errorMessage: "Message should be more than 16 letters.",
             },
         ])
 
-        .addField(
-            "#last-name",
-            [
-                {
-                    rule: "required",
-                },
-            ],
-        );
+        .addField("#last-name", [
+            {
+                rule: "required",
+            },
+        ]);
 
     const buttons = document.querySelectorAll(".button-trriger");
     const modal = document.querySelector(".modal");
@@ -58,15 +58,12 @@ export const modalOpen = function () {
     const requestButton = document.getElementById("modal-second-button");
     const modalRequest = document.querySelector(".modal__request");
     const body = document.querySelector("body");
-    // const inputFile = document.getElementById("file");
-
-    // const inputFileLabel = document.querySelector(".change-box__file-label");
-    // console.log(inputFileLabel);
-
-    // inputFileLabel.addEventListener("click", () => {
-    //     // inputFile.classList.add('change-box__file_vis')
-    //     console.log(inputFile.files);
-    // });
+    const inputFiles = document.querySelectorAll(".change-box__file");
+    const label = document.querySelector(".change-box__file-label");
+    const inputLabelText = document.querySelector(
+        ".change-box__file-label-value",
+    );
+    const inputLabelAdd = document.querySelector(".change-box__file-label-add");
 
     modal.addEventListener("click", (event) => {
         const modalClick = event.composedPath().includes(modalContent);
@@ -79,8 +76,8 @@ export const modalOpen = function () {
 
     buttons.forEach((button) => {
         button.addEventListener("click", (event) => {
-          event.preventDefault();
-          console.log('click')
+            event.preventDefault();
+            console.log("click");
             modal.classList.add("modal_active");
             body.classList.add("body_lock");
             modalContent.classList.add("modal__form_active");
@@ -88,7 +85,8 @@ export const modalOpen = function () {
         });
     });
 
-    modalClose.addEventListener("click", () => {
+    modalClose.addEventListener("click", (event) => {
+        event.preventDefault();
         modal.classList.remove("modal_active");
         modalContent.classList.remove("modal__form_active");
         body.classList.remove("body_lock");
@@ -99,12 +97,65 @@ export const modalOpen = function () {
             modalContent.classList.remove("modal__form_active");
             modalRequest.classList.add("modal__request_active");
         }
-
-        console.log(validator.isValid);
     });
 
     requestButton.addEventListener("click", () => {
         modal.classList.remove("modal_active");
         body.classList.remove("body_lock");
+    });
+
+    inputFiles.forEach(function (input) {
+        let label = input.nextElementSibling;
+        let labelVal = label.innerHTML;
+
+        input.addEventListener("change", function (event) {
+            // let fileName = "";
+            // if (this.files && this.files.length > 1) {
+            //     fileName = (
+            //         this.getAttribute("data-multiple-caption") || ""
+            //     ).replace("{count}", this.files.length);
+            // } else {
+            //     fileName = event.target.value.split("\\").pop();
+            // }
+
+            // if (this.files && this.files.length > 1) {
+            //     fileName = (
+            //         this.getAttribute("data-multiple-caption") || ""
+            //     ).replace("{count}", this.files.length);
+            // } else {
+            let fileName = event.target.value.split("\\").pop();
+            // }
+
+            if (fileName) {
+                inputLabelText.innerHTML = `${fileName} was added`;
+                inputLabelText.classList.add(
+                    "change-box__file-label-value_active",
+                );
+                inputLabelAdd.classList.add(
+                    "change-box__file-label-add_checked",
+                );
+            } else {
+                label.innerHTML = labelVal;
+                inputLabelAdd.classList.remove(
+                    "change-box__file-label-add_checked",
+                );
+            }
+        });
+    });
+
+    label.addEventListener("click", () => {
+        if (
+            inputLabelAdd.classList.contains(
+                "change-box__file-label-add_checked",
+            )
+        ) {
+            inputLabelAdd.classList.remove(
+                "change-box__file-label-add_checked",
+            );
+            inputLabelText.innerHTML = ``;
+            inputFiles[0].setAttribute("disabled", "");
+        } else {
+            inputFiles[0].removeAttribute("disabled");
+        }
     });
 };
