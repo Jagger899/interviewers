@@ -167,6 +167,8 @@
         }
 
         &__text-area {
+            font-size: 11px;
+            font-weight: 600;
             resize: none;
             grid-column: 1 / -1;
             outline: none;
@@ -409,29 +411,31 @@
             position: relative;
         }
 
-        &__file-label-add{
-          font-size: 20px;
-          font-family: "Montserrat";
-          transition: transform 300ms ease-in-out;
+        &__file-label-add {
+            font-size: 20px;
+            font-family: "Montserrat";
+            transition: transform 300ms ease-in-out;
 
-          &_checked {
-            transform: rotate(45deg);
-          }
+            &_checked {
+                transform: rotate(45deg);
+            }
         }
 
         &__file-label-value {
-          font-size: 11px;
-          font-family: "Montserrat";
-          min-width: 160px;
-          display: none;
+            font-size: 11px;
+            font-family: "Montserrat";
+            min-width: 160px;
+            display: none;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-align: center;
 
-          &_active {
-            display: block;
-            position: absolute;
-            top: 50px;
-            left: 0;
-          }
-
+            &_active {
+                display: block;
+                position: absolute;
+                top: 10px;
+                left: 45px;
+            }
         }
 
         &__file-label svg {
@@ -446,6 +450,10 @@
         }
 
         &__text {
+            &_hide {
+                display: none;
+            }
+
             &:first-child {
                 font-weight: 600;
                 font-size: 11px;

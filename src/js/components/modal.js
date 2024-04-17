@@ -64,6 +64,7 @@ export const modalOpen = function () {
         ".change-box__file-label-value",
     );
     const inputLabelAdd = document.querySelector(".change-box__file-label-add");
+    const addFileTitle = document.querySelectorAll(".change-box__text");
 
     modal.addEventListener("click", (event) => {
         const modalClick = event.composedPath().includes(modalContent);
@@ -134,6 +135,9 @@ export const modalOpen = function () {
                 inputLabelAdd.classList.add(
                     "change-box__file-label-add_checked",
                 );
+                addFileTitle.forEach((title) => {
+                    title.classList.add("change-box__text_hide");
+                });
             } else {
                 label.innerHTML = labelVal;
                 inputLabelAdd.classList.remove(
@@ -154,6 +158,9 @@ export const modalOpen = function () {
             );
             inputLabelText.innerHTML = ``;
             inputFiles[0].setAttribute("disabled", "");
+            addFileTitle.forEach((title) => {
+                title.classList.remove("change-box__text_hide");
+            });
         } else {
             inputFiles[0].removeAttribute("disabled");
         }
