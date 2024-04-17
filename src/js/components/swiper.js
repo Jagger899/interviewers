@@ -25,12 +25,17 @@ export const mainSwiper = function () {
     });
 
     let progressNumber = document.querySelector(".number_change");
+    const numberLength = document.querySelector(".total-number");
+    numberLength.textContent = "0" + mainSwiper.slides.length;
 
     mainSwiper.on("slideChange", function () {
-        let activeSlide = this.activeIndex + 1;
+        let activeSlide = this.realIndex + 1;
         progressNumber.textContent = "0" + activeSlide;
 
-        // if (mainSwiper.activeIndex == 0) mainSwiper.slideTo(1);
+        console.log(mainSwiper.activeIndex);
+        // if (mainSwiper.activeIndex === 3) {
+        //     mainSwiper.slideTo(3);
+        // }
         // else if (mainSwiper.activeIndex == mainSwiper.slides.length - 2)
         //     mainSwiper.slideTo(mainSwiper.slides.length - 2);
     });

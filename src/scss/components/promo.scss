@@ -25,21 +25,21 @@
     &__slide {
       width: 80% !important;
 
-      &:nth-child(1n) {
-        width: 85% !important;
-      }
+      // &:nth-child(1n) {
+      //   width: 85% !important;
+      // }
 
-      &:nth-child(2n) {
-        width: 80% !important;
-      }
+      // &:nth-child(2n) {
+      //   width: 80% !important;
+      // }
 
-      &:nth-child(3n) {
-        width: 80% !important; 
-      }
+      // &:nth-child(3n) {
+      //   width: 80% !important; 
+      // }
 
-      &:last-child {
-        width: 100% !important;
-      }
+      // &:last-child {
+      //   width: 80% !important;
+      // }
     }
 
     &__left-img {
