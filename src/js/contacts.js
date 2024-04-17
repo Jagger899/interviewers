@@ -5,9 +5,9 @@ import { modalOpen } from "./components/modal";
 import { dropdownWork } from "./components/dropdown";
 
 document.addEventListener("DOMContentLoaded", async function () {
-  modalOpen();
-  preloaderLoad();
-  dropdownWork();
+    modalOpen();
+    preloaderLoad();
+    dropdownWork();
     contactsFunction();
     burgerFunction();
 });

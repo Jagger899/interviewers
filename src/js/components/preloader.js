@@ -23,25 +23,37 @@ export const preloaderLoad = function () {
     const media = document.querySelectorAll("img");
     let loadImages = 0;
     let imagesCount = media.length;
+
+    console.log(imagesCount);
     const percents = document.getElementById("percents");
+
+    if (imagesCount === 0) {
+        percents.innerText = "LIGHT";
+        percentsBox.innerText = percentsBox.innerText.slice(0, 5);
+        preloaderInfo.classList.add("preloader__loader_isload");
+        
+    }
 
     function loadingImages() {
         console.log(imagesCount);
-        if (imagesCount === 0) {
-            percents.innerText = "LIGHT";
-            percentsBox.innerText = percentsBox.innerText.slice(0, 5);
-        }
+        // if (imagesCount === 0) {
+        //     percents.innerText = "LIGHT";
+        //     percentsBox.innerText = percentsBox.innerText.slice(0, 5);
+        //     console.log("yes");
+        // }
 
         loadImages++;
         percents.innerText = parseInt((loadImages / imagesCount) * 100);
 
-      // console.log("ParseInt:", parseInt((loadImages / imagesCount) * 100));
-      
-        if ( parseInt((loadImages / imagesCount) * 100) === 100) {
+        // console.log("ParseInt:", parseInt((loadImages / imagesCount) * 100));
+
+        if (parseInt((loadImages / imagesCount) * 100) === 100) {
             percents.innerText = "LIGHT";
             preloaderInfo.classList.add("preloader__loader_isload");
             percentsBox.innerText = percentsBox.innerText.slice(0, 5);
         }
+
+        console.log("yes");
     }
 
     for (let i = 0; i < imagesCount; i++) {
@@ -49,5 +61,4 @@ export const preloaderLoad = function () {
         img.onload = loadingImages;
         img.src = media[i].src;
     }
-  
 };
