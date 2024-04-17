@@ -29,5 +29,9 @@ export const mainSwiper = function () {
     mainSwiper.on("slideChange", function () {
         let activeSlide = this.activeIndex + 1;
         progressNumber.textContent = "0" + activeSlide;
+
+        // if (mainSwiper.activeIndex == 0) mainSwiper.slideTo(1);
+        // else if (mainSwiper.activeIndex == mainSwiper.slides.length - 2)
+        //     mainSwiper.slideTo(mainSwiper.slides.length - 2);
     });
 };
