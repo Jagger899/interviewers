@@ -12,13 +12,3 @@ document.addEventListener("DOMContentLoaded", async function () {
     mainSwiper();
     dropdownWork();
 });
-
-const header = document.querySelector(".header");
-
-window.addEventListener("scroll", function () {
-    if (this.window.scrollY > 0) {
-        header.classList.add("header_black");
-    } else {
-        header.classList.remove("header_black");
-    }
-});
