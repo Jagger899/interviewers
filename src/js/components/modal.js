@@ -73,8 +73,8 @@ export const modalOpen = function () {
                             "ai",
                             "cdr",
                         ],
-                        maxSize: 200000,
-                        minSize: 10000,
+                        // maxSize: 200000,
+                        // minSize: 10,
                         types: [
                             "image/jpeg",
                             "image/jpg",
@@ -181,7 +181,7 @@ export const modalOpen = function () {
             //     ).replace("{count}", this.files.length);
             // } else {
             let fileName = event.target.value.split("\\").pop();
-            console.log(input.files[0].type.includes("image"));
+            // console.log(input.files[0].type.includes("image"));
             // }
             // && input.files[0].type.includes("image")
 
@@ -198,7 +198,6 @@ export const modalOpen = function () {
                 });
             } else {
                 label.innerHTML = labelVal;
-                inputLabelText.innerHTML = "Please add only images files";
                 inputLabelAdd.classList.remove(
                     "change-box__file-label-add_checked",
                 );
