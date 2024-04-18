@@ -424,7 +424,7 @@
         &__file-label-value {
             font-size: 11px;
             font-family: "Montserrat";
-            min-width: 160px;
+            width: 160px;
             display: none;
             font-weight: 600;
             letter-spacing: 0.06em;
@@ -435,12 +435,26 @@
                 position: absolute;
                 top: 10px;
                 left: 45px;
+                width: 160px;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
             }
         }
 
-        &__file-label svg {
-            width: 9px;
-            height: 9px;
+        .just-validate-error-label {
+            position: absolute;
+            top: 652.188px !important;
+            left: 195.375px !important;
+            font-family: "Montserrat";
+            font-size: 10px;
+            background: rgba(66, 63, 63, 0.6);
+
+            &::before {
+                // background: rgba(66, 63, 63,0.6);
+                border-bottom: solid 5px rgba(66, 63, 63, 0.6);
+            }
         }
 
         &__text-box {

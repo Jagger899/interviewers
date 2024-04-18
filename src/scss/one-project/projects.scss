@@ -277,15 +277,18 @@
         }
 
         &_first {
-            background-image: url("../images/one-projects/one-projects-2.png");
+            background-image: url("../images/one-projects/one-projects-2.webp"),
+                url("../images/one-projects/one-projects-2.png");
         }
 
         &_second {
-            background-image: url("../images/projects/projects-2.png");
+            background-image: url("../images/projects/projects-2.webp"),
+                url("../images/projects/projects-2.png");
         }
 
         &_third {
-            background-image: url("../images/one-projects/one-projects-2.png");
+            background-image: url("../images/one-projects/one-projects-2.webp"),
+                url("../images/one-projects/one-projects-2.png");
             grid-column: 1 / -1;
             padding-right: 85px;
 
@@ -309,7 +312,8 @@
         }
 
         &_fourth {
-            background-image: url("../images/one-projects/one-projects-3.png");
+            background-image: url("../images/one-projects/one-projects-3.webp"),
+                url("../images/one-projects/one-projects-3.png");
 
             @include breakpoints(xs) {
                 height: 392px;
@@ -317,7 +321,8 @@
         }
 
         &_fivth-pr {
-            background-image: url("../images/one-projects/one-projects-4.png");
+            background-image: url("../images/one-projects/one-projects-4.webp"),
+                url("../images/one-projects/one-projects-4.png");
 
             @include breakpoints(xs) {
                 height: 392px;
@@ -325,7 +330,8 @@
         }
 
         &_sixth {
-            background-image: url("../images/one-projects/one-projects-5.png");
+            background-image: url("../images/one-projects/one-projects-5.webp"),
+                url("../images/one-projects/one-projects-5.png");
             grid-column: 1 / -1;
 
             @include breakpoints(xs) {

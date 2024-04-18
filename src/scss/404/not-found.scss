@@ -1,5 +1,6 @@
 .not-found {
-    background-image: url("../images/reused/reused-10.png");
+    background-image: url("../images/reused/reused-10.webp"),
+        url("../images/reused/reused-10.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -14,11 +15,11 @@
         margin-left: 200px;
 
         @include breakpoints(sm) {
-          margin-left: 185px;
+            margin-left: 185px;
         }
 
         @include breakpoints(xs) {
-          margin-left: 20px;
+            margin-left: 20px;
         }
     }
 
@@ -34,7 +35,7 @@
         color: $backgroundColor;
 
         @include breakpoints(md) {
-          font-size: 32px;
+            font-size: 32px;
         }
     }
 

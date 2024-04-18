@@ -15,14 +15,14 @@ body {
 
 body::-webkit-scrollbar {
     //overflow: overlay;
-    width: 0 !important;
-    height: 0;
-    display: none !important;
+    width: 1px !important;
+    height: 1px;
+    // display: none !important;
     background: transparent;
 }
 
 body::-webkit-scrollbar-track {
-    display: none;
+    // display: none;
     //position: absolute;
     background-color: transparent;
 }

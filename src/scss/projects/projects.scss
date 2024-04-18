@@ -108,6 +108,7 @@
         justify-content: space-between;
         padding: 32px;
         position: relative;
+        cursor: pointer;
 
         @include breakpoints(md) {
             padding: 32px 30px 34px;
@@ -208,33 +209,35 @@
         }
 
         &_first {
-            background-image: url("../images/projects/projects-1.png");
+            background-image: url("../images/projects/projects-1.webp"),
+                url("../images/projects/projects-1.png");
         }
 
         &_second {
-            background-image: url("../images/projects/projects-2.png");
+            background-image: url("../images/projects/projects-2.webp"),
+                url("../images/projects/projects-2.png");
         }
 
         &_third {
-            background-image: url("../images/projects/projects-3.png");
+            background-image: url("../images/projects/projects-3.webp"),
+                url("../images/projects/projects-3.png");
             grid-column: 1 / -1;
             padding-right: 85px;
-
-            .card__text {
-                max-width: 179px;
-            }
         }
 
         &_fourth {
-            background-image: url("../images/projects/projects-4.png");
+            background-image: url("../images/projects/projects-4.webp"),
+                url("../images/projects/projects-4.png");
         }
 
         &_fivth-pr {
-            background-image: url("../images/projects/projects-5.png");
+            background-image: url("../images/projects/projects-5.webp"),
+                url("../images/projects/projects-5.png");
         }
 
         &_sixth {
-            background-image: url("../images/projects/projects-6.png");
+            background-image: url("../images/projects/projects-6.webp"),
+                url("../images/projects/projects-6.png");
             grid-column: 1 / -1;
         }
     }

@@ -130,17 +130,17 @@
             margin-top: 81px;
 
             @include breakpoints(md) {
-              margin-top: 33px;
-              font-size: 20px;
+                margin-top: 33px;
+                font-size: 20px;
             }
 
             @include breakpoints(sm) {
-              margin-top: 113px;
+                margin-top: 113px;
             }
 
             @include breakpoints(xs) {
-              margin-top: -16px;
-              white-space: nowrap;
+                margin-top: -16px;
+                white-space: nowrap;
             }
         }
 
@@ -235,26 +235,30 @@
         }
 
         &_first {
-            background-image: url("../images/projects/projects-1.png");
-            
+            background-image: url("../images/projects/projects-1.webp"),
+                url("../images/projects/projects-1.png");
         }
 
         &_second {
-            background-image: url("../images/projects/projects-2.png");
+            background-image: url("../images/projects/projects-2.webp"),
+                url("../images/projects/projects-2.png");
         }
 
         &_third {
-            background-image: url("../images/projects/projects-3.png");
+            background-image: url("../images/projects/projects-3.webp"),
+                url("../images/projects/projects-3.png");
             grid-column: 1 / -1;
             padding-right: 85px;
         }
 
         &_fourth {
-            background-image: url("../images/projects/projects-4.png");
+            background-image: url("../images/projects/projects-4.webp"),
+                url("../images/projects/projects-4.png");
         }
 
         &_fivth {
-            background-image: url("../images/projects/projects-5.png");
+            background-image: url("../images/projects/projects-5.webp"),
+                url("../images/projects/projects-5.png");
             background-size: 243px 323px;
             background-color: $backgroundColor;
 
@@ -263,8 +267,8 @@
             }
 
             @include breakpoints(xs) {
-              padding: 62px 52px;
-              background-size: 121px 161px;
+                padding: 62px 52px;
+                background-size: 121px 161px;
             }
         }
     }
@@ -333,7 +337,6 @@
         margin-left: 20px;
     }
 
-
     &__gallary-photo-container {
         position: absolute;
         height: 469px;
@@ -359,7 +362,7 @@
 
         &_first {
             left: 20px;
-            top:-68px;
+            top: -68px;
             z-index: 0;
 
             &:hover {
@@ -371,7 +374,7 @@
         &_second {
             left: 85px;
             z-index: 1;
-            top:-70px;
+            top: -70px;
 
             &:hover {
                 transform: scale(1.2);

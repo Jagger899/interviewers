@@ -2,6 +2,7 @@ import JustValidate from "just-validate";
 
 export const modalOpen = function () {
     const validator = new JustValidate("#form", {
+        validateBeforeSubmitting: true,
         tooltip: {
             position: "top",
         },
@@ -41,6 +42,61 @@ export const modalOpen = function () {
                     return value !== undefined && value.length > 16;
                 },
                 errorMessage: "Message should be more than 16 letters.",
+            },
+        ])
+
+        .addField("#file", [
+            {
+                rule: "minFilesCount",
+                value: 1,
+            },
+            {
+                rule: "files",
+                value: {
+                    files: {
+                        extensions: [
+                            "jpeg",
+                            "jpg",
+                            "png",
+                            "ico",
+                            "gif",
+                            "raw",
+                            "tiff",
+                            "bmp",
+                            "psd",
+                            "webp",
+                            "heif",
+                            "avif",
+                            "svg",
+                            "pdf",
+                            "eps",
+                            "ai",
+                            "cdr",
+                        ],
+                        maxSize: 200000,
+                        minSize: 10000,
+                        types: [
+                            "image/jpeg",
+                            "image/jpg",
+                            "image/png",
+                            "image/ico",
+                            "image/gif",
+                            "image/raw",
+                            "image/tiff",
+                            "image/bmp",
+                            "image/psd",
+                            "image/webp",
+                            "image/heif",
+                            "image/avif",
+                            "image/svg",
+                            "image/pdf",
+                            "image/eps",
+                            "image/ai",
+                            "image/cdr",
+                        ],
+                    },
+                },
+                errorMessage: "Upload file should be only image type",
             },
         ])
 
@@ -125,7 +181,9 @@ export const modalOpen = function () {
             //     ).replace("{count}", this.files.length);
             // } else {
             let fileName = event.target.value.split("\\").pop();
+            console.log(input.files[0].type.includes("image"));
             // }
+            // && input.files[0].type.includes("image")
 
             if (fileName) {
                 inputLabelText.innerHTML = `${fileName} was added`;
@@ -140,6 +198,7 @@ export const modalOpen = function () {
                 });
             } else {
                 label.innerHTML = labelVal;
+                inputLabelText.innerHTML = "Please add only images files";
                 inputLabelAdd.classList.remove(
                     "change-box__file-label-add_checked",
                 );
