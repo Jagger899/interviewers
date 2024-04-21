@@ -3,7 +3,7 @@ import { mainSwiper } from "./components/swiper";
 import { dropdownWork } from "./components/dropdown";
 import { preloaderLoad } from "./components/preloader";
 import { modalOpen } from "./components/modal";
-
+import { funcBodyScrollLock } from "./components/scroll-lock";
 
 document.addEventListener("DOMContentLoaded", async function () {
     preloaderLoad();
@@ -11,4 +11,5 @@ document.addEventListener("DOMContentLoaded", async function () {
     burgerFunction();
     mainSwiper();
     dropdownWork();
+    funcBodyScrollLock();
 });

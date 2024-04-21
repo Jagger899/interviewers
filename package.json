@@ -50,9 +50,11 @@
     "last 10 versions"
   ],
   "dependencies": {
+    "body-scroll-lock": "^4.0.0-beta.0",
     "gh-pages": "^6.1.1",
     "just-validate": "^4.3.0",
     "prettier": "^3.2.5",
+    "scroll-lock": "^2.1.5",
     "smooth-scrollbar": "^8.8.4",
     "swiper": "^11.1.0"
   }
